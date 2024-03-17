@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+* {
+    word-break: break-all;
+}
+
+@media screen and (min-width:376px) {
+    /* iphone 6/7/8 plus 이상 */
+    html{font-size: 17px;}    
+}
+@media screen and (max-width:375px) {
+    /* iphone 6/7/8/x */
+    html{font-size: 16px;}    
+}
+@media screen and (max-width:360px) {
+    /* 갤럭시 */
+    html{font-size: 15px;}   
+}
+@media screen and (max-width:320px) {
+    /* iphone 5/se 이하 */
+    html{font-size: 13px;}   
+}

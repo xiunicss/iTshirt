@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>이화여대 guide</title>
+<link rel="stylesheet" href="../resources/css/base.css">
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script src="../resources/js/jquery.touchSwipe.js"></script>
+<style>
+  .contents {padding:0 0 2rem}
+  .h1{margin: 0 0 1.5rem;padding: 1rem 1.5rem;background: #00643E;color: #fff;font-size: 1.3rem;}
+  .service-wrap ol {padding:0 1.5rem}
+  .service-wrap ol > li {display: flex;flex-direction: column;}
+  .service-wrap ol > li > div {display:flex;align-items: center;margin:0 0 0.5rem;}
+  .service-wrap ol > li + li {margin-top: 0.875rem;padding-top: 0.875rem;border-top: 1px solid #ddd;}
+  .service-wrap ol > li .ico { width: 1.5rem; height: 1.5rem; background-position: center; background-repeat:no-repeat; background-size: contain;}
+  .service-wrap .menu-lst > li {display: flex;align-items: center;position:relative;padding-left:0.5rem;font-size:0.875rem;line-height:130%}
+  .service-wrap .menu-lst > li:before {position:absolute;top:50%;left:0;width:0.125rem;height:0.125rem;background:#333;content:'';display:block}
+  .service-wrap .menu-lst > li + li {margin:0.5rem 0 0}
+  .ico {margin:0 1rem 0 0.5rem}
+  .service-wrap .menu-lst .ico {width:2rem;height:2rem;margin-right:0.5rem}
+
+</style>
+</head>
+
+<body>
+    <!-- wrapper -->
+	<div class="wrapper p-EWHA" id="wrapper">
+		<!-- contents -->
+		<div class="contents" id="contents">
+			<div class="service-wrap">
+				<h1 class="h1" >이화단독// eh_menu</h1>
+				<ol>
+					<li>
+						<div class="eh_menu01">01 등록금<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu01_1"><i class="ico"></i>01_1 등록금고지내역</li>
+							<li class="eh_menu01_2"><i class="ico"></i>01_2 분납고지내역</li>
+							<li class="eh_menu01_3"><i class="ico"></i>01_3 등록금납부내역 확인</li>
+							<li class="eh_menu01_4"><i class="ico"></i>01_4 계절학기 등록금 고지내역</li>
+							<li class="eh_menu01_5"><i class="ico"></i>01_5 0원 등록신청</li>
+							<li class="eh_menu01_6"><i class="ico"></i>01_6 등록금납부확인 SMS신청</li>
+						</ul>
+					</li>
+					<li>
+						<div class="eh_menu02">02 교과<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu02_1"><i class="ico"></i>02_1 강의평가</li>
+							<li class="eh_menu02_2"><i class="ico"></i>02_2 학수번호별 강의평가조회</li>
+							<li class="eh_menu02_3"><i class="ico"></i>02_3 강의시간표/강의계획안 조회</li>
+						</ul>
+					</li>
+					<li>
+						<div class="eh_menu03">03 수강/채플<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu03_1"><i class="ico"></i>03_1 수강신청내역조회</li>
+							<li class="eh_menu03_2"><i class="ico"></i>03_2 계절학기수요조사</li>
+							<li class="eh_menu03_3"><i class="ico"></i>03_3 훈련학점좌석조회</li>
+							<li class="eh_menu03_4"><i class="ico"></i>03_4 훈련학점일일보충신청</li>
+							<li class="eh_menu03_5"><i class="ico"></i>03_5 훈련학점결석누계조회</li>
+							<li class="eh_menu03_6"><i class="ico"></i>03_6 훈련학점특별보충신청</li>
+						</ul>
+					</li>
+					<li>
+						<div class="eh_menu04">04 성적<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu04_1"><i class="ico"></i>04_1 금학기성적조회</li>
+							<li class="eh_menu04_2"><i class="ico"></i>04_2 개인성적조회(학부,대학원)</li>
+							<li class="eh_menu04_3"><i class="ico"></i>04_3 개인이수학점조회</li>
+							<li class="eh_menu04_4"><i class="ico"></i>04_4 석차조회</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu05">05 장학<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu05_1"><i class="ico"></i>05_1 장학금신청</li>
+							<li class="eh_menu05_2"><i class="ico"></i>05_2 장학금신청결과조회</li>
+							<li class="eh_menu05_3"><i class="ico"></i>05_3 성적우수장학금 관련석차조회</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu06">06 학적<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu06_1"><i class="ico"></i>06_1 복학신청/취소(학부,대학원)</li>
+							<li class="eh_menu06_2"><i class="ico"></i>06_2 조기복학신청/취소</li>
+							<li class="eh_menu06_3"><i class="ico"></i>06_3 부복수전공조회</li>
+							<li class="eh_menu06_4"><i class="ico"></i>06_4 학과/전공결정신청 및 결과조회</li>
+							<li class="eh_menu06_5"><i class="ico"></i>06_5 전공변경신청 및 결과조회</li>
+							<li class="eh_menu06_6"><i class="ico"></i>06_6 수료학년조회</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu07">07 졸업<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu07_1"><i class="ico"></i>07_1 졸업예정여부1차조회</li>
+							<li class="eh_menu07_2"><i class="ico"></i>07_2 졸업확정여부조회</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu08">08 학생종합정보<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu08_1"><i class="ico"></i>08_1 지도교사조회</li>
+							<li class="eh_menu08_2"><i class="ico"></i>08_2 나의계좌정보</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu09">09 공간예약<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu09_1"><i class="ico"></i>09_1 공간사용신청</li>
+							<li class="eh_menu09_2"><i class="ico"></i>09_2 공간사용신청결과조회</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu10">10 기숙사<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu10_1"><i class="ico"></i>10_1 입사지원신청</li>
+							<li class="eh_menu10_2"><i class="ico"></i>10_2 입사신청 결과조희</li>
+							<li class="eh_menu10_3"><i class="ico"></i>10_3 외박신고</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu11">11 이화에바란다<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu11_1"><i class="ico"></i>11_1 내민원보기</li>
+							<li class="eh_menu11_2"><i class="ico"></i>11_2 Q&A</li>
+							<li class="eh_menu11_3"><i class="ico"></i>11_3 불편/건의사항</li>
+							<li class="eh_menu11_4"><i class="ico"></i>11_4 친절 불친절행정서비스</li>
+							<li class="eh_menu11_5"><i class="ico"></i>11_5 홍보아이템</li>
+							<li class="eh_menu11_6"><i class="ico"></i>11_6 온라인악성게시물제보</li>
+							<li class="eh_menu11_7"><i class="ico"></i>11_7 정책제안</li>
+							<li class="eh_menu11_8"><i class="ico"></i>11_8 익명청원</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu12">12 다기능카드<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu12_1"><i class="ico"></i>12_1 다기능카드 분실 신고</li>
+							<li class="eh_menu12_2"><i class="ico"></i>12_2 다기능카드 분실해제 신고</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu13">13 설정<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu13_1"><i class="ico"></i>13_1 관리용로그인</li>
+							<li class="eh_menu13_2"><i class="ico"></i>13_2 이화앱매뉴얼</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="global-nav-tab">
+							<div  class="m_school_22">14 관련서비스<i class="ico"></i></div>
+						</div>
+						<ul class="menu-lst">
+							<li class="eh_menu14_1"><i class="ico"></i>14_1 포탈정보시스템</li>
+							<li class="eh_menu14_2"><i class="ico"></i>14_2 학교홈페이지</li>
+							<li class="eh_menu14_3"><i class="ico"></i>14_3 중앙도서관</li>
+							<li class="eh_menu14_4"><i class="ico"></i>14_4 인터넷증명서 발급</li>
+							<li class="eh_menu14_5"><i class="ico"></i>14_5 생협</li>
+							<li class="eh_menu14_6"><i class="ico"></i>14_6 기숙사</li>
+							<li class="eh_menu14_7"><i class="ico"></i>14_7 G-suite</li>
+							<li class="eh_menu14_8"><i class="ico"></i>14_8 인재개발원</li>
+							<li class="eh_menu14_9"><i class="ico"></i>14_9 안전가이드</li>
+							<li class="eh_menu14_10"><i class="ico"></i>14_10 발전기금</li>
+							<li class="eh_menu14_11"><i class="ico"></i>14_11 셔틀버스</li>
+							<li class="eh_menu14_12"><i class="ico"></i>14_12 교직원검색</li>
+							<li class="eh_menu14_13"><i class="ico"></i>14_13 장학안내</li>
+							<li class="eh_menu14_14"><i class="ico"></i>14_14 the포트폴리오</li>
+							<li class="eh_menu14_15"><i class="ico"></i>14_15 좌석예약 앱</li>
+							<li class="eh_menu14_16"><i class="ico"></i>14_16 (이화)사이버캠퍼스 앱</li>
+						</ul>
+					</li>
+
+					<li>
+						<div>00 기존헤이영<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="m_service_01"><i class="ico"></i>언어설정</li>
+							<li class="m_service_03"><i class="ico"></i>흔들기</li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="eh_menu15">15 설정<i class="ico"></i></div>
+						<ul class="menu-lst">
+							<li class="eh_menu15_1"><i class="ico"></i>15_1 나의 일정</li>
+						</ul>
+					</li>
+
+
+				</ol>
+			</div>
+    	</div><!-- //contents -->
+	</div><!-- // wrapper -->
+</body>
+</html>

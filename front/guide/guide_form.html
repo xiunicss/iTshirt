@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>hey young guide</title>
+<link rel="stylesheet" href="../resources/css/base.css">
+<link rel="stylesheet" href="css/prism.css">
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script src="js/prism.js"></script>
+<script src="../resources/js/jquery.touchSwipe.js"></script>
+<style>
+    .h1{font-size: 1.3rem; padding: 10px 2rem; margin:-1.25rem -1.25rem 10px; background: #153e99; color: #fff;}
+	.h1:not(:first-child){margin-top: 10px;}
+    .h2{font-size: 1.2rem; padding: 10px; margin-bottom: 10px; border-bottom: 1px solid #153e99; color:#153e99;}
+    .h3{font-size: 1.1rem; padding: 20px 10px 10px; color:#153e99;}
+    .h4{font-size: 0.875rem; padding: 10px; color:#74A4FD;}
+    .code-view{position: relative; overflow:hidden; height:7em; margin-top: 5px; background: #f5f2f0; transition:'height' .2s; font-size: 12px;}
+    .code-view.open{height: auto;}
+    .code-view .btn-code-view{position: absolute; top: 0; right: 0; height: auto; padding: 5px; font-size: 10px; border: 0; background: #fff;}
+</style>
+</head>
+
+<body>
+    <!-- wrapper -->
+	<div class="wrapper sookmyung" id="wrapper">
+		<!-- contents -->
+		<div class="contents" id="contents">
+            <div class="school_img">
+                <div class="wrapper logo" style="min-height: auto;"></div>
+            </div>
+            <h1 class="h1">input</h1>
+            <h2 class="h2">valid</h2>
+            <div class="form-control valid">
+                <input type="text" placeholder="placeholder">
+            </div>
+            <p class="guide-text valid">사용할 수 있는 닉네임 입니다.</p>
+            <h2 class="h2">invalid</h2>
+            <div class="form-control invalid">
+                <input type="text" placeholder="placeholder">
+            </div>
+            <p class="guide-text invalid">이미 사용 중인 별명입니다.</p>
+            <br>
+
+            <h2 class="h2">input + btn</h2>
+            <div class="form-control">
+                <input type="text" placeholder="placeholder">
+                <button type="button" class="btn-sm-bdr">버튼</button>
+            </div>
+            <div class="form-control">
+                <input type="text" id="userNickName" title="닉네임 입력" placeholder="닉네임 입력">
+                <button type="button" class="btn-sm-primary">중복확인</button>
+            </div> <br><br>
+
+            <!-- disabled -->
+            <h2 class="h2">input + btn + disabled 일때</h2>
+            <div class="form-control">
+                <input type="text" placeholder="인증번호" disabled>
+                <button type="button" class="btn-sm-bdr disabled">버튼</button>
+            </div>
+            
+
+            <br>
+            <h2 class="h2">상태/유효성</h2>
+            <!-- readonly -->
+            <div class="form-control">
+                <input type="text" value="readonly" readonly>
+            </div>
+            <br>
+            <!-- disabled -->
+            <div class="form-control">
+                <input type="text" value="disabled" disabled>
+            </div>
+            <br>
+            <!-- 값이 입력되어 있는 경우 -->
+            <div class="form-control">
+                <input type="tel" value="12345">
+            </div>
+            <br>
+            <!-- 유효성 error -->
+            <div class="form-control invalid">
+                <input type="text" value="홍..">
+            </div>
+            <p class="guide-text valid">유효성 통과 메세지</p>
+            <p class="guide-text invalid">유효성 error 메세지</p>
+<br><br>
+
+
+            <h1 class="h1">select box</h1>
+            <h2 class="h2">select type</h2>
+            <div class="form-control"> <!-- 선택 후 valued or valid or invalid 클래스  -->
+                <select name="" id="select">
+                    <option value="">선택</option>
+                </select>
+            </div>
+            <div class="form-control disabled">
+                <select name="" id="select" disabled>
+                    <option value="">선택</option>
+                </select>
+            </div>
+            <br>
+            <h2 class="h2">select button type</h2>
+            <div class="form-control valued"> <!-- 선택 후 valued or valid or invalid 클래스  -->
+                <button type="button" class="btn-select">선택 완료</button>
+            </div>
+
+            <div class="form-control color-inherit"> <!-- 선택 후 데이터 들어갈때  클래스 추가 -->
+                <button type="button" class="btn-select">선택 완료</button>
+            </div>
+
+            <div class="form-control disabled"> 
+                <button type="button" class="btn-select">선택 완료</button>
+            </div>
+            <br> <br>    
+            <h2 class="h2">date picker button type</h2>
+            <div class="form-control"> 
+                <button type="button" class="btn-datepicker">시작일</button>
+            </div>
+
+            <br> <br>
+            <h2 class="h2">textarea</h2>
+            <div class="form-control">
+                <textarea name="" id="" cols="" rows=""></textarea>
+            </div><br><br>
+
+            <h2 class="h2">input 에 icon 있을때- form-icon</h2> <!--  class="form-icon"을 붙여줌 -->
+            <fieldset class="form">
+                <dl class="form-icon class-num">
+                    <dt class="sr-only">학번</dt>
+                    <dd>
+                        <div class="form-control">
+                            <input type="text"  title="학번 입력" placeholder="학번을 입력하세요">
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="form-icon password">
+                    <dt class="sr-only">비밀번호</dt>
+                    <dd>
+                        <div class="form-control">
+                            <input type="password" title="비밀번호 입력" placeholder="비밀번호를 입력하세요">
+                        </div>
+                    </dd>
+                </dl>
+            </fieldset>
+            <br><br>
+
+            <h1 class="h1">search</h1>
+            <!-- search  -->
+            <fieldset class="search-form">
+                <legend>메뉴명 검색에 관한 폼</legend>
+                <dl>
+                    <dt class="sr-only">메뉴명 검색</dt>
+                    <dd>
+                        <div class="form-control">
+                            <input type="search" title="메뉴명 입력" placeholder="메뉴명을 입력해 주세요~">
+                        </div>
+                        <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+                    </dd>
+                </dl>
+            </fieldset>
+            <!-- search  -->
+           
+
+
+            <h1 class="h1">radio, check</h1>
+            <h2 class="h2">check inline 일때</h2>
+            <div class="form-chk-set">
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox1" checked>
+                    <label for="checkbox1">check box1</label>
+                </span> 
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox2" disabled>
+                    <label for="checkbox2">check box disabled</label>
+                </span>
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox3" checked disabled>
+                    <label for="checkbox3">check box checked disabled</label>
+                </span>
+            </div>
+
+            <h2 class="h2">check block 일때</h2>
+            <div class="form-chk-set">
+                <div class="form-chk">
+                    <input type="checkbox" name="" id="checkbox4" checked>
+                    <label for="checkbox4">check box1</label>
+                </div> 
+                <div class="form-chk">
+                    <input type="checkbox" name="" id="checkbox5" disabled>
+                    <label for="checkbox5">check box disabled</label>
+                </div>
+                <div class="form-chk">
+                    <input type="checkbox" name="" id="checkbox6" checked disabled>
+                    <label for="checkbox6">check box checked disabled</label>
+                </div>
+            </div>
+
+            <h2 class="h2">radio inline 일때</h2>
+            <div class="form-chk-set">
+                <span class="form-chk">
+                    <input type="radio" name="" id="radio1" checked>
+                    <label for="radio1">radio box1</label>
+                </span>
+                <span class="form-chk">
+                    <input type="radio" name="" id="radio2" disabled>
+                    <label for="radio2">radio box disabled</label>
+                </span>
+                <span class="form-chk">
+                    <input type="radio" name="" id="radio3" checked disabled>
+                    <label for="radio3">radio box checked disabled</label>
+                </span>
+            </div>
+
+            <h2 class="h2">radio block 일때</h2>
+            <div class="form-chk-set">
+                <div class="form-chk">
+                    <input type="radio" name="" id="radio4" checked>
+                    <label for="radio4">radio box1</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="" id="radio5" disabled>
+                    <label for="radio5">radio box disabled</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="" id="radio6" checked disabled>
+                    <label for="radio6">radio box checked disabled</label>
+                </div>
+            </div>
+
+            <h2 class="h2">radio  버튼 타입 일때</h2>
+            <div class="form-chk-btns">
+                <div class="form-chk">
+                    <input type="radio" name="radio" id="radio7">
+                    <label for="radio7">radio</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="radio" id="radio8">
+                    <label for="radio8">radio</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="radio" id="radio5" disabled>
+                    <label for="radio5">radio box disabled</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="radio" id="radio6" checked disabled>
+                    <label for="radio6">radio box checked disabled</label>
+                </div>
+            </div>
+
+            <h2 class="h2">radio wide type - form-chk-wide</h2>
+            <div class="form-chk-set form-chk-wide">
+                <div class="form-chk">
+                    <input type="radio" name="da11" id="radio11">
+                    <label for="radio11">퀴즈를 풀어보자</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="da11" id="radio21">
+                    <label for="radio21">퀴즈를 풀어보자dsddfsdf</label>
+                </div>
+                <div class="form-chk">
+                    <input type="radio" name="da11" id="radio31">
+                    <label for="radio31">퀴즈를 풀어보자dsddfsdf</label>
+                </div>
+            </div>
+            <br><br>
+
+
+            <h1 class="h1">Toggle</h1>
+            <h2 class="h2">Toggle default</h2>
+            <div class="form-toggle">
+                <input type="checkbox" name="" id="togglechk1">
+                <label for="togglechk1">체크</label>
+            </div>
+
+            <h2 class="h2">Toggle 금융</h2>
+            <div class="form-toggle form-toggle_type2">
+                <input type="checkbox" name="" id="togglechk2">
+                <label for="togglechk2">체크</label>
+            </div>
+
+            <h2 class="h2">Toggle alram</h2>
+            <div class="form-toggle form-toggle_type3">
+                <input type="checkbox" name="" id="togglechk3">
+                <label for="togglechk3">체크</label>
+            </div>
+<br><br>
+          
+
+            <h1 class="h1">더보기 버튼</h1>
+            <a href="#" class="btn-more">더보기</a>
+
+            <br><br>
+
+            <div class="title-wrap">
+                <h2 class="title-d2">선택 화살표버튼</h2>
+                <button type="button" class="btn-select arrow-btn">전체</button><!-- 선택한 내용으로 텍스트 바뀜 -->
+            </div>
+            
+           
+
+           
+
+            
+
+
+           
+        </div><!-- //contents -->
+	</div><!-- // wrapper -->
+</body>
+<script>
+    //datepicker
+    $.fn.datepicker.language['ko'] = {
+        days: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+        daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+        months: ['1월','2월','3월','4월','5월','6월', '7월','8월','9월','10월','11월','12월'],
+        monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        today: '오늘',
+        clear: 'Clear',
+        dateFormat: 'yyyy.mm.dd',
+        timeFormat: 'hh:ii aa',
+        firstDay: 0
+    };
+    $('.my-datepicker').datepicker({
+        language: 'ko'
+    })
+</script>
+
+</html>

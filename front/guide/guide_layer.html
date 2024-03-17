@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>layer guide</title>
+<link rel="stylesheet" href="../resources/css/base.css">
+<script src="../resources/js/jquery-1.11.1.min.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script src="../resources/js/jquery.touchSwipe.js"></script>
+<style>
+    .h1{font-size: 1.3rem; padding: 10px 2rem; margin:-1.25rem -1.25rem 10px; background: #153e99; color: #fff;}
+	.h1:not(:first-child){margin-top: 10px;}
+    .h2{font-size: 1.2rem; padding: 10px; margin-bottom: 10px; border-bottom: 1px solid #153e99; color:#153e99;}
+    .h3{font-size: 1.1rem; padding: 10px; color:#153e99;}
+    .code-view{position: relative; overflow:hidden; height:7em; margin-top: 5px; background: #f5f2f0; font-size: 12px;}
+    .code-view.open{height: auto;}
+    .code-view .btn-code-view{position: absolute; top: 0; right: 0; height: auto; padding: 5px; font-size: 10px; border: 0; background: #fff;}
+</style>
+
+</head>
+
+<body>
+    <!-- wrapper -->
+	<div class="guide-wrapper" id="wrapper">
+		<!-- contents -->
+		<div class="contents" id="contents">
+            <h1 class="h1">layer popup</h1>
+            <section>
+                <h2 class="h2">alert</h2>
+                <!-- alert -->
+                <button type="button" class="btn-md-bdr" onclick="designAlert1();">기본형</button>
+                <!-- confirm -->
+                <button type="button" class="btn-md-bdr" onclick="designAlert2();">confirm형(예, 아니오)</button>
+                <!-- titleless -->
+                <button type="button" class="btn-md-bdr" onclick="designAlert3();">title없는</button>
+
+                <!-- 버튼1,버튼2 닫기 -->
+                <button type="button" class="btn-md-bdr" onclick="UI.layerPop('#alert4');">버튼1,버튼2 닫기</button>
+
+                <div class="code-view">
+                    <button type="button" class="btn-code-view">js 더보기</button>
+                <pre><code class="language-js">// script 로 호출
+function designAlert(){
+    UI.alert({
+        title : 'alert 제목', // 생략 가능
+        innerHtml : '텍스트나 html 태그 입력',
+        cancel : true, // default cancel 버튼 없음
+        cancelTxt : '아니요', // 취소 버튼 텍스트 변경
+        confirmTxt : '예', // 확인버튼 텍스트 변경
+        onCancel : function(){
+            console.log( '알럿 취소 클릭' );
+        },
+        onConfirm : function(){
+            console.log( '알럿 확인 클릭' );
+        }
+    });
+}
+                </code></pre>
+                </div>
+            </section>
+            <section>
+                <h2 class="h2">일반 레이어팝업</h2>
+                <button type="button" class="btn-md-primary" onclick="UI.layerPop('#alert');">alert형</button>
+                <button type="button" class="btn-md-primary" onclick="UI.layerPop('#bottomSheet');">bottom-sheet</button>
+                <button type="button" class="btn-md-primary" onclick="UI.layerPop('#midSheet');">mid-sheet</button>
+                <!-- <button type="button" class="btn-md-primary" onclick="UI.layerPop('#fullpage');">fullpage</button> -->
+                <div class="code-view">
+                    <button type="button" class="btn-code-view">html 더보기</button>
+                    <pre><code class="language-html"><!-- class로 구분 alert bottom-sheet -->
+<div class="layer alert" id="cumstomId">
+    <div class="layer-header">
+        <h1 class="layer-title">제목</h2>
+        <button type="button" class="layer-close">레이어 닫기</button>
+    </div>
+    <div class="layer-contents">
+        컨텐츠 내용
+    </div>
+    <div class="layer-btns">
+        <button type="button" class="btn-tertiary confirm">버튼</button>
+        <button type="button" class="btn-primary confirm">버튼</button>
+    </div>
+</div>
+                    </code></pre>
+                </div>
+                <div class="code-view">
+                    <button type="button" class="btn-code-view">js 더보기</button>
+                    <pre><code class="language-js">//레이어팝업 호출 : alert, bottom-sheet, fullpage 동일하게 사용
+//선택자 호출
+UI.layerPop('팝업의 #고유ID 또는 .고유class');
+
+// 옵션 호출 (onClose 로 닫힘 이벤트 확인 가능)
+UI.layerPop({
+    selector : '팝업의 #고유ID 또는 .고유class',
+    onClose : function(){
+        console.log('닫힘');
+    }
+});
+
+// 닫기 호출
+UI.layerPopClose('팝업의 #고유ID 또는 .고유class');
+                </code></pre></div>
+            </section>
+            <section>
+                <h2 class="h2">목록 layer popup</h2>
+                <!-- alert -->
+                <button type="button" class="btn-md-bdr" id="sample" onclick="UI.layerPop('#list');">목록형</button>
+                <button type="button" class="btn-md-bdr" id="sample" onclick="UI.layerPop('#list02');">심플목록형</button>
+                <button type="button" class="btn-md-bdr" id="sample" onclick="UI.layerPop('#list03');">검색목록형</button>
+            </section>
+            </section>
+            <section>
+                <h2 class="h2">토스트 popup</h2>
+                <!-- alert -->
+                <button type="button" class="btn-md-primary sample" onclick="toast()">Show toast</button>
+            </section>
+        </div><!-- //contents -->
+	</div><!-- // wrapper -->
+    <div class="layer alert" id="alert">
+        <div class="layer-header">
+            <h1 class="layer-title">레이어 제목</h2>
+            <button type="button" class="layer-close">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <p class="align-center">일반 레이어 팝업 컨텐츠 내용</p>
+        </div>
+        <div class="layer-btns">
+            <button type="button" class="btn-tertiary confirm">버튼</button>
+            <button type="button" class="btn-primary confirm">버튼</button>
+        </div>
+    </div>
+
+    <div class="layer alert" id="alert4">
+        <div class="layer-header">
+            <h1 class="layer-title">레이어 제목</h2>
+        </div>
+        <!-- 닫기 버튼 -->
+        <div class="alert-page-close">
+            <button type="button" class="cancel"><span class="ico"></span>닫기</button>
+        </div>
+        <div class="layer-contents">
+            <p class="align-center">일반 레이어 팝업 컨텐츠 내용</p>
+        </div>
+        <div class="layer-btns">
+            <button type="button" class="btn-tertiary confirm">버튼2</button>
+            <button type="button" class="btn-primary confirm">버튼1</button>
+        </div>
+    </div>
+
+    
+    <div class="layer bottom-sheet" id="bottomSheet">
+        <div class="layer-header">
+            <h1 class="layer-title">레이어 제목</h2>
+            <button type="button" class="layer-close">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <!-- scroll 샘플 -->
+            <div style="height:1000px; background-color: #eaeaea;">
+                바텀시트 레이어 컨텐츠 내용
+            스크롤 영역
+            </div>
+        </div>
+        <div class="layer-btns">
+            <button type="button" class="btn-lg-tertiary cancel">취소</button>
+            <button type="button" class="btn-lg-primary confirm">확인</button>
+        </div>
+    </div>
+    <div class="layer fullpage" id="fullpage">
+        <div class="layer-header">
+            <h1 class="layer-title">레이어 제목</h2>
+            <button type="button" class="layer-close">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <!-- scroll 샘플 -->
+            <div style="height:1000px; background-color: #eaeaea;">
+                풀페이지 레이어 컨텐츠 내용
+                스크롤 영역
+            </div>
+        </div>
+        <div class="layer-btns">
+            <button type="button" class="btn-lg-secondary confirm">로그인</button>
+            <button type="button" class="btn-lg-primary confirm">비밀번호 재설정</button>
+        </div>
+    </div>
+    <div class="layer mid-sheet" id="midSheet">
+        <div class="layer-header">
+            <h1 class="layer-title">레이어 제목</h2>
+            <button type="button" class="layer-close">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <!-- scroll 샘플 -->
+            <div style="height:1000px; background-color: #eaeaea;">
+                바텀시트 레이어 컨텐츠 내용
+            스크롤 영역
+            </div>
+        </div>
+        <div class="layer-btns">
+            <button type="button" class="btn-lg-tertiary cancel">취소</button>
+            <button type="button" class="btn-lg-primary confirm">확인</button>
+        </div>
+    </div>
+
+    <!-- 목록형 layer -->
+    <div class="layer bottom-sheet" id="list">
+        <div class="layer-header">
+            <h1 class="layer-title">강의 목록</h1>
+            <button type="button" class="layer-close layer-bar">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <div class="my-lecture-sel">
+                <ul>
+                    <li class="on">
+                        <a href="">
+                            <div class="info-area">
+                                <i class="ico"></i>
+                                <div class="infor-box">
+                                    <strong>김신한 (202012345)</strong>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info-area">
+                                <i class="ico"></i>
+                                <div class="infor-box">
+                                    <strong>김신한 (202012345)</strong>
+                                    <div class="flex-justify">
+                                        <span>서울캠퍼스, 사무처</span>
+                                        <span>대리인</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 심플 목록형 layer -->
+    <div class="layer bottom-sheet" id="list02">
+        <div class="layer-header">
+            <h1 class="layer-title">간단한 목록</h1>
+            <button type="button" class="layer-close layer-bar">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <div class="tbl-link-list no-arrow">
+                <ul>
+                    <li class="on">
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">5아이콘없는한줄짜리리스트</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 검색 목록형 layer -->
+    <div class="layer bottom-sheet fixedTop" id="list03">
+        <div class="layer-header">
+            <h1 class="layer-title">검색창이있는 목록</h1>
+            <button type="button" class="layer-close layer-bar">레이어 닫기</button>
+        </div>
+        <div class="layer-contents">
+            <!-- search  -->
+            <div class="search-form-wrap pdt0 pdb20 "> <!--231017 폼 스타일 추가-->
+                <fieldset class="form search-form">
+                    <legend>검색에 관한 폼</legend>
+                    <dl>
+                        <dt class="sr-only">검색</dt>
+                        <dd>
+                            <div class="form-control">
+                                <input type="search" title="강의실 입력" placeholder="강의실 검색">
+                            </div>
+                            <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+                        </dd>
+                    </dl>
+                </fieldset>
+            </div>
+            
+            <div class="tbl-link-list no-arrow">
+                <ul>
+                    <li class="on">
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘없는한줄짜리리스트</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- toast popup -->
+	<div id="toast">토스트 알림창...</div>
+
+
+    
+</body>
+<script>
+    
+    $('.code-view').each(function(){
+        var $this = $(this);
+        var $btn = $('>button', $this);
+        var $code = $('code', $this);
+
+        $btn.on('click', function(){
+            $this.toggleClass('open');
+        });
+        var text = $code.html().replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
+        $code.html(text);
+    })
+    function designAlert1(){
+        UI.alert({
+            title : 'alert형 기본',
+            innerHtml : '<p>html 태그로 입력가능,<br><strong>알럿 타이틀은 생략 가능</strong>합니다.</p>',
+            onCancel : function(){
+                console.log( '알럿 취소 클릭' );
+            },
+            onConfirm : function(){
+                console.log( '알럿 확인 클릭' );
+            }
+        });
+    }
+    function designAlert2(){
+        UI.alert({
+            title : 'confirm형 ',
+            innerHtml : '<p>html 태그로 입력가능,<br><strong>알럿 타이틀은 생략 가능</strong>합니다.</p>',
+            cancel : true,
+            onCancel : function(){
+                console.log( '알럿 취소 클릭' );
+            },
+            onConfirm : function(){
+                console.log( '알럿 확인 클릭' );
+            }
+        });
+    }
+    function designAlert3(){
+        UI.alert({
+            innerHtml : '<p>제목이 없는 alert형태<br> cancel false 하면 확인버튼만 사용</p>',
+            cancel : true,
+            cancelTxt : '취소',
+            confirmTxt : '확인',
+            onCancel : function(){
+                console.log( '알럿 취소 클릭' );
+            },
+            onConfirm : function(){
+                console.log( '알럿 확인 클릭' );
+            }
+        });
+    }
+   
+</script>
+
+
+
+<script>
+    //button 클릭시 text 처리 관련 스크립트
+	$(document).ready(function() {
+		$('.my-lecture-sel').find('li>a').click(function(e) {
+            e.preventDefault();
+			$('#sample').text($(this).text());
+			UI.layerPopClose('#list');
+		});
+	});
+</script>
+
+</html>

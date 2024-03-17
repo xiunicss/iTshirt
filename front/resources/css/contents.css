@@ -1,0 +1,6 @@
+/* contents */
+
+/* 로그인 */
+.sns-login{width: 100%;}
+.sns-login li + li{margin-top: 8px;}
+.sns-login li button{width: 100%;}

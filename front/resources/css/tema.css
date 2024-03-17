@@ -1,0 +1,3258 @@
+/*
+
+-----------/ 코드 적용 /-----------
+wrapper
+logo 이미지명
+모바일 인증 팝업 title
+.floating-btn .btn-open
+.layer
+
+로고 이미지 추가 및 css
+ .main-header .main-logo  -> .main-header .main-logo.학교코드명 - 개발요청
+ .logo
+---------------------------------
+
+
+
+-----------/ 학교코드 /-----------
+- 숙명여대 : SMUV
+- 한양대 : HYUV - 모바일 신분증 background, 전자출결  main background
+- 숙명여대 : SMUV
+- 용인대 : YIUV
+- 수원대 : USWU
+- 수원과학대 : SSCU
+- 인천재능대 : JEIU
+- 동서대 : DSUV
+- 경기대 : KGUV
+- 인덕대 : IDUV
+- 청암대 : CAUV 
+- 홍익대 : HIUV
+
+*/
+
+ 
+
+/**** 다크테마 ****/
+/* 공통*/
+.TMDARK {color:var(--cm-gray999)}
+.TMDARK [class^="btn"][class*="-primary"],
+.TMDARK [class^="btn"][class*="-secondary"],
+.TMDARK [class^="btn"][class*="-quinary"] {color:var(--cm-gray900)}
+.TMDARK [class^="btn"][class*="-tertiary"] {color:var(--cm-gray500);background-color:var(--cm-gray300)}
+.TMDARK [class^="btn"][class*="-tertiary2"] {color:var(--cm-gray900);background-color:var(--sc-color200)}
+.TMDARK [class^="btn"][class*="-tertiary3"]{background-color: var(--cm-gray400); color: var(--cm-gray900) !important;}
+.TMDARK [class^="btn"]:disabled, .TMDARK [class^="btn"].disabled {color:var(--cm-gray500)}
+.TMDARK [class^="btn"][class*="-quinary"].active {color:var(--cm-gray900)}
+.TMDARK .page-btns .cancel {color: var(--cm-gray700);}
+.TMDARK .form-control.disabled, .TMDARK .form-control.readonly, .TMDARK .form-control-group.readonly .form-control {background-color: var(--cm-gray100);}
+.TMDARK .form-control.disabled input:disabled {color:var(--cm-gray300)}
+.TMDARK .form-control textarea {background-color:var(--cm-gray000);}
+.TMDARK .form-chk>input[type="checkbox"]:disabled,
+.TMDARK .form-chk>input[type="checkbox"]:checked:disabled,
+.TMDARK .form-chk>input[type="radio"]:disabled {background-color:var(--cm-gray100)!important;}
+.TMDARK .form-toggle input + label::after {background:var(--cm-gray700)}
+.TMDARK .ui-tab .tab-menu ul>li > *,
+.TMDARK .ui-tab .tab-menu .active>*>*, .TMDARK .ui-tab .tab-menu ul>li.active>button>span,
+.TMDARK .ui-tab.ui-tab_type2 ul > li.active .hax span,
+.TMDARK .ui-tab.ui-tab_type2 ul > li.active .count-txt,
+.TMDARK .hax span {color:var(--cm-gray900)}
+.TMDARK .hax {background:var(--sc-color200)}
+.TMDARK .btn-term span,
+.TMDARK .floating-menu li a {color:var(--cm-gray999)}
+.TMDARK .floating-menu li a .ico{background-color:var(--cm-gray900)}
+.TMDARK [class^="btn"][class*="-goTop"] {background:var(--cm-gray900) url(../images/btn_top.svg) no-repeat center center/0.625rem auto}
+.TMDARK.bottom-nav {background:var(--cm-gray100)}
+.TMDARK.bottom-nav .nav-item:before {filter:invert(76%) sepia(1%) saturate(397%) hue-rotate(176deg) brightness(99%) contrast(97%)}
+.TMDARK .change-thema .thema_dark .form-chk label {border-color:var(--cm-gray300)}
+.TMDARK .layer-header,
+.TMDARK .layer-contents {background-color:var(--cm-gray100);}
+.TMDARK header [class^="btn-"][class*="prev"],
+.TMDARK header [class^="btn-"][class*="menu"],
+.TMDARK header [class^="btn-"][class*="home"] {filter:grayscale(70%) brightness(205%)}
+.TMDARK [class^="panel"],
+.TMDARK.refacility-bg .reservation-infor {background-color:var(--cm-gray100)}
+.TMDARK[class*="-bg"] header {color:var(--cm-gray900)}
+.TMDARK.revert header {background:var(--bg-color000);color:var(--cm-gray900)}
+.TMDARK.revert header .sub-title {color:var(--cm-gray900)}
+.TMDARK .period-box .time {color:var(--cm-gray100)}
+.TMDARK .panel-top.user-thumb .user-thumb_img {border-color:var(--cm-gray100)}
+.TMDARK .attence-time {color:var(--cm-gray900)}
+.TMDARK [class^="panel"][class*="-bgb"] .account-info dt,
+.TMDARK [class^="panel"][class*="-bgb"] .account-info dd,
+.TMDARK [class^="panel"][class*="-bgb"] .total-balance {color:var(--cm-gray999)}
+.TMDARK .sort li a {color:var(--cm-gray500)}
+.TMDARK .cupon-list li {background:var(--cm-gray100)}
+.TMDARK .facility-main .facility-list,
+.TMDARK .facility-list li {background:var(--cm-gray100)}
+.TMDARK .notification-cnt.new-noti {background:rgba(77, 82, 174, 0.5)}
+.TMDARK .ui-tab_icon.ui-tab .tab-menu ul>li>button>span,
+.TMDARK.ui-tab_icon.ui-tab .tab-menu .active>*,
+.TMDARK .ui-tab_icon.ui-tab .tab-menu ul>li.active>button>span {color:var(--cm-gray100)}
+.TMDARK .menu-datail .eat-time {color:var(--cm-gray900)}
+.TMDARK .lectureDetail-list li [class^="btn"][class*="-xs"] {color: var(--cm-gray500);    background: var(--cm-gray300);}
+.TMDARK .lecture-infor {border-color:var(--cm-gray300)}
+.TMDARK .lecture-infor.bg_none {background:var(--cm-gray000)}
+.TMDARK .progressbar-list .grade-all div[role="progressbar"]  {--fg: var(--pm-color900);}
+.TMDARK .board-gallery-list ul li {background:var(--cm-gray100)}
+.TMDARK .recruit-list ul li {background:var(--cm-gray100)}
+.TMDARK .situation .situation-bar {background:var(--pm-color900)}
+.TMDARK .flag-area .flag-in {color:var(--cm-gray999)}
+.TMDARK .sns-list ul li {background:var(--cm-gray100);}
+.TMDARK .global-nav-tab.ui-tab .tab-menu .active>*,
+.TMDARK .global-nav-tab.ui-tab .tab-menu ul>li.active>button>span {color:var(--cm-gray999)}
+.TMDARK .my-lecture-sel li.on a {background:var(--sc-color100)}
+.TMDARK .file-attach {border: 1px solid var(--cm-gray300);background: var(--cm-gray100);}
+.TMDARK .layer-contents .search-form-wrap {background:var(--cm-gray100)}
+.TMDARK .notice-wrap {background:var(--cm-gray100)}
+.TMDARK .notice-wrap.no-icon {background:var(--cm-gray100)}
+.TMDARK .invite-list li,
+.TMDARK .noti-txtarea,
+.TMDARK .major-list > li {background:var(--cm-gray100)}
+.TMDARK .noti-img .board-name,
+.TMDARK .myboard_wrap dt,
+.TMDARK .myboard_wrap dd,
+.TMDARK .top3-info .board-info .name {color:var(--cm-gray900)}
+.TMDARK .noti-txtarea .noti-bottom {color:#66737F}
+.TMDARK .my-community h3 .arr {filter: brightness(5) grayscale(1);}
+.TMDARK .top3-bottom {border-color:var(--pm-color300);}
+.TMDARK .setting-edit .form-chk>input[type="checkbox"]:checked {background:var(--sc-color200);color:var(--cm-gray900)}
+.TMDARK .ui-tab_type4.ui-tab .tab-menu .more-menu ul > li .icon_search,
+.TMDARK .ui-tab_type4.ui-tab .tab-menu .more-menu ul > li .icon_write,
+.TMDARK .ui-tab_type4.ui-tab .tab-menu .more-menu ul > li .icon_setting,
+.TMDARK .ui-tab_type4.ui-tab .tab-menu .more-menu ul > li .icon_modify,
+.TMDARK .ui-tab_type4.ui-tab .tab-menu .more-menu ul > li .icon_del,
+.TMDARK .new-board-view .board-contents .board-count .like .ico,
+.TMDARK .activity .card .card-bottom .comment .ico {filter: brightness(5) grayscale(1);}
+.TMDARK .new-board-view .card-comment {background: var(--cm-gray100);}
+.TMDARK.mid-sheet .new-board-view .card-comment {background:rgba(75,86,97,0.5);}
+.TMDARK .new-board-view .card-comment.nest,
+.TMDARK .new-board-view .card-comment.connect-nest {background:#422F3A}
+.TMDARK .new-board-view .card-comment.re-nest {background: var(--cm-gray100);}
+.TMDARK.mid-sheet .new-board-view .card-comment.re-nest {background:rgba(75,86,97,0.5);}
+.TMDARK .activity .card {background: var(--cm-gray100);border: 1px solid var(--cm-gray100);}
+.TMDARK .activity .card .card-bottom {border-top: 1px solid var(--pm-color300);}
+.TMDARK input:-webkit-autofill {-webkit-text-fill-color:var(--cm-gray900);}
+.TMDARK .event-list li {background:var(--cm-gray100)}
+.TMDARK option {background:var(--cm-gray000)}
+.TMDARK .new-board-view .more-menu ul > li button > span {filter: brightness(5);}
+.TMDARK .new-board.ui-tab_type4 .btn-more {background:url(../images/icon_dot_row.svg) no-repeat center center var(--pm-color900)}
+.TMDARK .new-board.ui-tab_type4.ui-tab .tab-menu .more-menu,
+.TMDARK .new-board-view .more-menu {background-color:var(--cm-gray100)}
+.TMDARK .TMDARK .se-toolbar ul li label,
+.TMDARK .TMDARK .se-toolbar ul li.vote a .ico,
+.TMDARK .activity .card .card-bottom .like .ico,
+.TMDARK .global-nav-tab .m_school_21 .ico,
+.TMDARK .activity .card .card-bottom .smgroup .ico {filter:grayscale(1) brightness(5)}
+.TMDARK .activity .card .card-bottom .like.on .ico {filter:none }
+.TMDARK .my-community .cate_wrap {background:var(--cm-gray100)}
+.TMDARK .community .new-board.ui-tab_type4.ui-tab .tab-menu:before {background:linear-gradient(269.69deg, #191919 4%, rgba(0, 0, 0, 0.4) 56.9%)}
+.TMDARK .small-group .board-list .group-add {color: var(--cm-gray999);}
+.TMDARK .small-group .board-list .group-add .ico {filter: brightness(100);}
+.TMDARK .new-board.ui-tab_type4.ui-tab .tab-menu .more-menu > a .ico {filter: brightness(5);}
+.TMDARK .top3-info .title .board-name {background:var(--pt2-color500);color:var(--cm-gray100)}
+.TMDARK .my-community .community-cate button {filter:brightness(0.5)}
+.TMDARK .new-board-view .board-contents .board-count .like.on .ico {filter:none}
+.TMDARK .small-group .message-bottom {background: var(--pm-color300);}
+.TMDARK .pay-link li {background:var(--cm-gray100);border-color:var(--cm-gray100)}
+.TMDARK .small-group .board-list .letter .card,
+.TMDARK .small-group .join_wrap .join-list {background: var(--cm-gray100);}
+.TMDARK .small-group .cm_list .letter .card {background:transparent;}
+.TMDARK .file-view .file-attach {background:transparent;}
+.TMDARK .file-view .file-attach ul li {margin-bottom: 0.25rem;border: 0;border-radius: 0.375rem; background: var(--cm-gray100);}
+.TMDARK .floating-btn.type1 [class^="btn-"][class*="open"] {opacity: 1;background: var(--sc-color500);}
+.TMDARK .floating-btn.type1 [class^="btn-"][class*="open"] .write {background: url(../images/icon_write.svg) no-repeat center center;}
+.TMDARK .new {filter: brightness(1000%);}
+.TMDARK .new-board.notice .must-read {background: var(--sc-color100);}
+.TMDARK .new-board.notice .must-read .panel {color: var(--cm-gray700)}
+.TMDARK .community .tab-menu .dim {position: absolute;z-index: 1;display: block;content:'';width: 3rem;height: 2.313rem; background: linear-gradient(90deg, rgba(25, 25, 25, 0) 0%, #191919 7.95%);}
+.TMDARK .activity .board-list .thumb_img.comment .cate {color: var(--cm-gray400);}
+.TMDARK .comment-area .comment-box .user-write {color: var(--cm-gray700);background: var(--cm-gray300);}
+.TMDARK .btn-del {background: var(--cm-gray500) url(../images/icon_xd.svg) no-repeat center center/10px;}
+.TMDARK .reservation-user .form-control.readonly {background-color:transparent;border-color:var(--cm-gray300)}
+.TMDARK .btn-wrap .ico, 
+.TMDARK .btn-nick .ico {filter: brightness(100);}
+.TMDARK .notice-accordion.ui-accordion {background: var(--cm-gray100)}
+.TMDARK .small-group .board-list .btn-bottom .btn-sm-primary {color: var(--cm-gray999);}
+.TMDARK .new-write .se-toolbar ul li label,
+.TMDARK .new-write .se-toolbar ul li.vote a .ico {filter: brightness(5) grayscale(1);}
+.TMDARK .new-write .form-control.write > .textarea-wrap:before {color: var(--cm-gray900);}
+.TMDARK .small-group.member .user-list .info-area .btn-secess {background: url(../images/icon_minus2.svg) no-repeat center center;}
+.TMDARK .small-group.member .user-list .info-area .infor-box .ico {filter: grayscale(1);}
+.TMDARK .small-group.member .card {background: var(--cm-gray100);}
+.TMDARK .small-group.member .card .member-text {background: var(--cm-gray300);}
+.TMDARK .board-view .vote-close .sel > span {background:#72491A url(../images/icon_vote_sel.svg) no-repeat 50% 50%;}
+.TMDARK.layer.mid-sheet .fixed-bottom .page-btm.fixed {background-color:var(--cm-gray100)}
+.TMDARK .bottom-nav {background:var(--cm-gray100)}
+.TMDARK .small-group .letter-box {background-image: url(../images/bg_letter_dk.svg);}
+.TMDARK .small-group .message-bottom .scroll::after {background:linear-gradient(180deg, rgba(250, 250, 255, 0) 0%, rgba(250, 250, 255, 0) 0.01%, var(--pm-color300) 92.5%)}
+.TMDARK .my-lecture-sel li {border-bottom: 1px solid var(--cm-gray300);}
+.TMDARK .small-group .info-panel {background-color: var(--cm-gray100);}
+.TMDARK .small-group .letter-box .user-nick {background-color: var(--pt2-color500);color:var(--cm-gray100)}
+.TMDARK .small-group .letter-box .user-nick .box {background-color: var(--pt2-color500);}
+.TMDARK .small-group .board-list.type1 .ui-tab-type1 .tab-menu-type1 ul > li.active span {color: var(--cm-gray900);}
+.TMDARK .f-connect-box .f-connect-bottom .swiper-slide, 
+.TMDARK .f-connect-box .f-connect-box .swiper-slide:last-child .img-box,
+.TMDARK .f-connect-box .f-bottom,
+.TMDARK .f-connect-box .swiper-slide:last-child .img-box,
+.TMDARK .f-connect-box .f-connect.bg:before,
+.TMDARK .f-connect-box .f-connect {background-color: var(--cm-gray100);}
+.TMDARK .small-group .message-bottom .info {background-color: var(--pm-color300);}
+.TMDARK .form-chk>input[type="radio"]:checked {background:var(--cm-gray999)}
+.TMDARK .small-group .user-info {background-color: var(--cm-gray100);}
+.TMDARK .admin-top {color: var(--cm-gray900);}
+.TMDARK .small-group .btn-bottom li a.emp {color: var(--cm-gray999);border: 1px solid var(--cm-gray999);}
+.TMDARK .small-group .btn-bottom li a.btn-md-primary {color: var(--pm-color900); background-color: var(--cm-gray999)}
+.TMDARK .small-group .group_search .tab-menu ul > li.active span {color:var(--cm-gray900)}
+.TMDARK .small-group .search .search-form .btn-search {filter: brightness(3);}
+.TMDARK .small-group .member-box .card {background-color: var(--cm-gray100);}
+.TMDARK .small-group .member .card .member-text,
+.TMDARK.small-group .quantity_wrap button {background-color: #39414C;}
+.TMDARK .small-group .member-join .info .name_wrap > a,
+.TMDARK .small-group .btn-bottom .message {color:var(--cm-gray900);}
+.TMDARK .tbl-list > ul > li > div + .btn-moreDetail{background:var(--cm-gray100); box-shadow: 0 0 0.312rem rgb(0 0 0 / 20%);}
+.TMDARK.myProfile .thumb-wrap {border:9px solid var(--pm-color300)}
+.TMDARK .profile-name {background:var(--pm-color300);border:1px solid var(--cm-gray100);}
+.TMDARK .tbl-link-list > ul > li > a:after {content: "";filter: brightness(1.2);}
+.TMDARK .search-form .btn-search{filter: brightness(0.6) sepia(0.5)invert(1);}
+.TMDARK.refacility-bg .use .state {color:var(--cm-gray100)}
+.TMDARK .timetable-list .form-control button.freind {background:var(--cm-gray100);color:var(--cm-gray500)}
+.TMDARK .timetable-list .online-class{background:var(--cm-gray100)}
+.TMDARK .small-group .badge-ico,
+.TMDARK .small-group2 .badge-ico {background:var(--cm-gray300) url(../images/icon_badge.svg) no-repeat center center;}
+.TMDARK .survey-list li {background:var(--cm-gray100)}
+.TMDARK .survey-list .right button {color:var(--cm-gray900)}
+.TMDARK.full-bg,
+.TMDARK .survey_top {color:var(--cm-gray999)}
+.TMDARK .survey_common .info > span:first-child::after {background:var(--cm-gray999)}
+.TMDARK .survey_con .swiper-slide {background:var(--cm-gray100)}
+.TMDARK .survey_con .swiper-slide:before,
+.TMDARK .survey_con .swiper-slide:after {background:linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, var(--cm-gray100) 80.56%)}
+.TMDARK .survey_con .slide-form .form-chk label {background:#39414C}
+.TMDARK .survey_con .slide-form .form-chk input[type="radio"]:checked + label,
+.TMDARK .survey_con .slide-form .form-chk input[type="checkbox"]:checked + label {color:var(--cm-gray100)}
+.TMDARK .survey_con .paging .swiper-pagination-current,
+.TMDARK .survey_con .paging .swiper-button-next,
+.TMDARK .survey_con .paging .swiper-button-prev,
+.TMDARK.full-bg.revert header .sub-title {color:var(--cm-gray900)}
+.TMDARK .survey_con .paging .swiper-pagination-fraction {color: var(--cm-gray600);}
+.TMDARK .timetable-list .btn-lg-tertiary2 {background:var(--sc-color200);color:var(--cm-gray600)}
+.TMDARK .student-council .pledge {background:#39414C}
+.TMDARK .chat-setting li .edit_wrap2 li .me {color:var(--cm-gray900)}
+.TMDARK .small-group a.group-made {background:var(--cm-gray100);border:1px solid var(--cm-gray100)}
+.TMDARK .small-group a.group-made .swiper .swiper-slide {background:var(--cm-gray100)}
+.TMDARK.bg-after:after {background:var(--cm-gray100);}
+.TMDARK .chat .top_like {color:var(--cm-gray900);}
+.TMDARK .chat .btm_list {background:var(--cm-gray100);}
+.TMDARK .chat .tab-menu .search > span {filter:invert(59%) sepia(57%) saturate(2344%) hue-rotate(209deg) brightness(101%) contrast(68%)}
+.TMDARK .chat .request_list {background:var(--pm-color300)} 
+.TMDARK .chat .standby_list {background:#39414C} 
+.TMDARK .chat_content .form-control2 > textarea {background:#39414C}
+.TMDARK.chat-bg-gray header [class^="btn-"][class*="prev"],
+.TMDARK.chat-bg-gray header [class^="btn-"][class*="menu"],
+.TMDARK.chat-bg-gray header [class^="btn-"][class*="home"] {filter:none}
+.TMDARK .chat_dialogue .other .talk_con,
+.TMDRAK .chat_dialogue .form_wrap,
+.TMDARK .chat_dialogue .file_add .talk_con {background:var(--cm-gray100);color: var(--cm-gray900);}
+.TMDARK .chat_dialogue .file_add .file_con.loading .down .ico {background:var(--cm-gray300) url(../images/icon_chat_down.svg) no-repeat center}
+.TMDARK .chat_dialogue .file_add .file_con.loading .load .ico {background:var(--cm-gray300) url(../images/icon_chat_close.svg) no-repeat center}
+.TMDARK .chat-setting li dd .ico,
+.TMDARK .chat-setting li dd.on .ico {filter:brightness(7) grayscale(1)}
+.TMDARK .chat-setting li .edit_wrap .form-control {background:none}
+.TMDARK .chat-setting .last-btn button .ico {filter: invert(44%) sepia(11%) saturate(579%) hue-rotate(167deg) brightness(200%) contrast(82%);}
+.TMDARK .card-comment.point {background:#333D53}
+.TMDARK .card-comment.nest.point {background:#5A404F}
+.TMDARK .card-comment.re-nest.point {background:#333D53}
+.TMDARK .card-comment.connect-nest.point {background:#5A404F}
+.TMDARK .chat .layer-contents .check {background: #444A4E;}
+.TMDARK .chat_dialogue .msg_state > span {color:var(--cm-gray900)}
+.TMDARK .small-group .group_search .tab-menu2 ul > li.active span {color:var(--cm-gray900)}
+.TMDARK .sticker2 .ui-tab .tab-menu .active2>*>*,
+.TMDARK .sticker2 .ui-tab .tab-menu ul>li.active2>button>span {color:var(--cm-gray900)}
+.TMDARK.small-group .quantity_wrap button[name="minus"]:after,
+.TMDARK.small-group .quantity_wrap button[name="plus"]:after {filter:invert(40%) sepia(16%) saturate(114%) hue-rotate(169deg) brightness(94%) contrast(92%)}
+.TMDARK.small-group .quantity_wrap button.on:after {filter:none}
+.TMDARK .small-group .user-info .user-nick .badge {color:var(--cm-gray900)}
+.TMDARK .survey-list .right button.check {background: var(--sc-color200);color: var(--cm-gray600);}
+.TMDARK .survey-list .right button.check:before {filter: grayscale(1) brightness(1.35)}
+.TMDARK .survey-list.past-survey .right button {background:var(--cm-gray300);color:var(--cm-gray500)}
+.TMDARK .survey_con .btn_submit.col3 button.btn-lg-se2 {color:var(--cm-gray900)}
+.TMDARK .survey_con01 .btn_submit.col3 button.btn-lg-se2 {color:var(--cm-gray900)}
+.TMDARK .success-checkmark .check-icon .icon-fix,
+.TMDARK .success-checkmark .check-icon::before,
+.TMDARK .success-checkmark .check-icon::after {background-color: var(--cm-gray100);}
+.TMDARK .panel-attendance-light.ui-accordion .acc-cont > div {background: var(--sc-color100);}
+.TMDARK .progressbar-list02.progressbar-list .grade-major div[role="progressbar"]{--fg: #787FEF}
+.TMDARK.bank-select .bank_wrap .img {background-color:#3A3E47;}
+.TMDARK .cupon-detail .coupon_wrap {background:var(--cm-gray100)}
+.TMDARK .my_shpoint [class^="btn"]:disabled,
+.TMDARK .my_shpoint [class^="btn"].disabled {background:var(--cm-gray300)}
+.TMDARK.heyoungpay_sl .swiper-pagination .swiper-pagination-bullet::before {filter:brightness(500)}
+.TMDARK .bn_wrap .img {background: #313457;}
+.TMDARK .bn_wrap .img .ev_top {color: #787FEF;}
+.TMDARK .bn_wrap .img .ev_top > span,
+.TMDARK .bn_wrap .img .ev_btm .sec:before  {background:#191919}
+.TMDARK .bn_wrap .img .ev_btm {color:#F3F6F9 }
+.TMDARK .bn_wrap .img .ev_btm .pt {color: #B1B5F1;}
+.TMDARK .exam-timetable .exam-title div > em{background: var(--pm-color900);color: var(--pm-color100);}
+.TMDARK .panel-lecture-drop button::after, 
+.TMDARK .panel-chapel button::after {filter:brightness(0.5)}
+.TMDARK .library-mu .book-info-list > li > a:before{background-color: var(--cm-gray300)}
+.TMDARK .evaluation .slide-form .form-chk label{background: #39414C;}
+.TMDARK .evaluation .slide-form .form-chk input[type="radio"]:checked,
+.TMDARK .evaluation .slide-form .form-chk input[type="checkbox"]:checked{filter: grayscale(1) brightness(0.2);}
+.TMDARK .tips-guide-box {background-color:var(--cm-gray100);border:1px solid var(--cm-gray300);}
+.TMDARK .tips-guide-btn::after{filter:invert(98%) sepia(1%) saturate(2964%) hue-rotate(179deg) brightness(97%) contrast(95%)}
+.TMDARK .my_shpoint .mp_pop:after,
+.TMDARK .my_shpoint .mp_pop2:after {filter:brightness(10)}
+.TMDARK .equipment-manager .more-menu ul > li span{filter: brightness(10)}
+.TMDARK .sh_wallet .account-info dt,
+.TMDARK .sh_wallet [class^="btn"][class*="-refresh"] {filter:invert(100%) sepia(78%) saturate(0%) hue-rotate(116deg) brightness(150%) contrast(103%)}
+.TMDARK .sh_wallet .my_shinhan .account-info dt {filter:none}
+.TMDARK .sh_wallet .quick-menu {background:var(--pm-color300)}
+.TMDARK .sh_wallet .quick-menu ul li .ico {background-color:rgba(102, 115, 127, 0.6)}
+.TMDARK .sh_wallet .quick-menu li span {color: var(--cm-gray999);}
+.TMDARK .sh_wallet .quick-menu ul li:first-child:after {background:var(--cm-gray700);}
+.TMDARK .contents.identification .layer-header{background-color: var(--cm-gray100);}
+.TMDARK.term_pop2 .w100-btn{background-color: var(--cm-gray100);}
+
+/* main */
+.TMDARK .main-quick-menu .btn-setting button span.point-color {background:var(--pm-color300)}
+.TMDARK .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.TMDARK .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.TMDARK .wallet-slide .account-info dt {background-image: url(../images/ico_bank_jeju.svg);filter:invert(100%) sepia(78%) saturate(0%) hue-rotate(116deg) brightness(150%) contrast(103%)}
+.TMDARK .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.4}
+.TMDARK .main-setting-edit .shortcut-item {background:var(--cm-gray100);}
+.TMDARK .setting-edit .form-chk>input[type="checkbox"]:checked + label {color:var(--cm-gray900)}
+.TMDARK .service-inschool .ico {filter:brightness(10)}
+.TMDARK .layer-contents.bg_none {background:var(--cm-gray000)}
+.TMDARK .board-view .vote-box {background:var(--cm-gray100)}
+.TMDARK .board-view .vote-box .page-btns > button:first-child {color:var(--cm-gray900)}
+.TMDARK .top-bar [class^="btn-"],
+.TMDARK .menu-header .btn-menu-close {filter:grayscale(70%) brightness(205%) }
+.TMDARK.hpay_bg,
+.TMDARK.hpay_bg header {background:var(--cm-gray000)}
+.TMDARK .hpay_main .card_sl .swiper-slide,
+.TMDARK .hpay_main .pay_right button,
+.TMDARK .hpay_main .no_card {background:var(--cm-gray100)}
+.TMDARK .hpay_main .card_info {background:var(--cm-gray300)}
+.TMDARK .hpay_main .m_card .card_img {border-color:var(--cm-gray300)}
+.TMDARK .hpay_main .last .card_img .ico {background-color:var(--cm-gray900)}
+.TMDARK .pay_receipt h2 > a {background:var(--cm-gray300)}
+.TMDARK.heyoungpay .code_wrap,
+.TMDARK.heyoungpay .card_info {background:var(--cm-gray100)}
+.TMDARK .mw-menu-cnt .img-area img{filter: brightness(0);}
+.TMDARK .id-issued .notice-accordion.ui-accordion .acc-cont {background: var(--cm-gray100)}
+.TMDARK.floating-coin .btn-coin {background:url(../images/ico_float_coin_w.png) no-repeat center center;background-size:contain}
+.TMDARK .main-quick-menu .new {filter:none!important}
+.TMDARK .identification .form-chk.all-check .btn-arrow{filter: brightness(2);}
+.TMDARK .identification .btn-sm-bdr{color:var(--cm-gray900);border-color: var(--cm-gray300);}
+/* 다크테마 학교로고 흰색 */
+.TMDARK .logo{filter: contrast(0) brightness(10)!important;}
+
+
+
+/**** 블루테마 ****/
+/* main */
+.TMBLUE .today-notification li em {color:var(--main-box-sub2)}
+.TMBLUE .sel-certification li {background:var(--main-primary900)}
+.TMBLUE .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.TMBLUE .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.TMBLUE .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.TMBLUE .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.TMBLUE .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.TMBLUE .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.TMBLUE .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.TMBLUE .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.TMBLUE .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.TMBLUE .wallet-slide .status-sm {background:#5D9EF2}
+.TMBLUE .my-community .community-cate .interest .ico,
+.TMBLUE .new-board .board-top .search .ico,
+.TMBLUE .small-group .member .user-area .btn-oper .ico,
+.TMBLUE .small-group .group-image .image-attach .ico,
+.TMBLUE .timetable-list .form-control_icon .btn-select::after,
+.TMBLUE .registration .title-wrap .btn-select::after,
+.TMBLUE .btn-select.arrow-btn::after,
+.TMBLUE .arrow-purple,
+.TMBLUE .hpay_sign .sign_tit.fir .image-attach .ico,
+.TMBLUE .hpay .new_add .btn .ico_arrow_right,
+.TMBLUE .sm-chk > input[type="checkbox"]:checked {filter:invert(57%) sepia(64%) saturate(707%) hue-rotate(187deg) brightness(88%) contrast(82%) !important}
+/* black to pm-color900 */
+.TMBLUE .evaluation .paging .swiper-button-prev:after,
+.TMBLUE .evaluation .paging .swiper-button-next:after,
+.TMBLUE .bk_primary{filter: invert(45%) sepia(13%) saturate(5289%) hue-rotate(201deg) brightness(90%) contrast(86%) !important}
+.TMBLUE.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.TMBLUE.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 헤더 아이콘 색상 */
+.TMBLUE .main-header .main-logo {filter:contrast() brightness();}
+.TMBLUE .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.TMBLUE .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.TMBLUE .main-header [class^="btn-"][class*="setting"],
+.TMBLUE.bg-main [class^="btn-"][class*="id"],
+.TMBLUE .main-header [class^="btn-"][class*="menu"],
+.TMBLUE .main-header [class^=btn-][class*=talk],
+.TMBLUE .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+
+/**** 그린테마 ****/
+/* main */
+.TMGREEN .sel-certification li {background:var(--main-primary900)}
+.TMGREEN .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.TMGREEN .today-notification li .ico {filter:invert(0%) sepia(2%) saturate(35%) hue-rotate(330deg) brightness(115%) contrast(93%)}
+.TMGREEN .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.TMGREEN .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.TMGREEN .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.TMGREEN .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.TMGREEN .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.TMGREEN .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.TMGREEN .wallet-slide .status-sm {background:#72D5B2;color:#2B7A5E}
+.TMGREEN .wallet-slide .info-txt,
+.TMGREEN .facility-list .reading-room dl dd a,
+.TMGREEN .today-none-alarm p {color:var(--main-box-tit)}
+.TMGREEN .attendance-slide .infor-con dd {color:var(--main-box-sub)}
+.TMGREEN .today-noti-recent .tit .right {color:var(--main-status-left)}
+.TMGREEN .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.TMGREEN .facility-slide .facility-list .facility-menu,
+.TMGREEN .facility-slide .facility-list .facility-menu dl dt {color:var(--main-status-right)}
+.TMGREEN .my-community .community-cate .interest .ico,
+.TMGREEN .new-board .board-top .search .ico,
+.TMGREEN .small-group .member .user-area .btn-oper .ico,
+.TMGREEN .small-group .group-image .image-attach .ico,
+.TMGREEN .timetable-list .form-control_icon .btn-select::after,
+.TMGREEN .registration .title-wrap .btn-select::after,
+.TMGREEN .btn-select.arrow-btn::after,
+.TMGREEN .arrow-purple,
+.TMGREEN .hpay_sign .sign_tit.fir .image-attach .ico,
+.TMGREEN .hpay .new_add .btn .ico_arrow_right,
+.TMGREEN .sm-chk > input[type="checkbox"]:checked {filter:invert(47%) sepia(75%) saturate(1081%) hue-rotate(124deg) brightness(77%) contrast(80%) !important}
+/* black to pm-color900 */
+.TMGREEN .evaluation .paging .swiper-button-prev:after,
+.TMGREEN .evaluation .paging .swiper-button-next:after,
+.TMGREEN .bk_primary{filter: invert(44%) sepia(97%) saturate(390%) hue-rotate(107deg) brightness(99%) contrast(84%) !important;}
+.TMGREEN.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.TMGREEN.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 헤더 아이콘 색상 */
+.TMGREEN .main-header .main-logo {filter:contrast() brightness();}
+.TMGREEN .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.TMGREEN .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.TMGREEN .main-header [class^="btn-"][class*="setting"],
+.TMGREEN.bg-main [class^="btn-"][class*="id"],
+.TMGREEN .main-header [class^="btn-"][class*="menu"],
+.TMGREEN .main-header [class^=btn-][class*=talk],
+.TMGREEN .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+
+
+/**** 핑크테마 ****/
+/* main*/
+.TMPINK .sel-certification li {background:var(--main-primary900)}
+.TMPINK .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.TMPINK .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.TMPINK .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.TMPINK .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.TMPINK .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.TMPINK .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.TMPINK .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.TMPINK .wallet-slide .total-balance p {color:#F3F6F9}
+.TMPINK .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.TMPINK .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.TMPINK .my-community .community-cate .interest .ico,
+.TMPINK .new-board .board-top .search .ico,
+.TMPINK .small-group .member .user-area .btn-oper .ico,
+.TMPINK .small-group .group-image .image-attach .ico,
+.TMPINK .timetable-list .form-control_icon .btn-select::after,
+.TMPINK .registration .title-wrap .btn-select::after,
+.TMPINK .btn-select.arrow-btn::after,
+.TMPINK .arrow-purple,
+.TMPINK .hpay_sign .sign_tit.fir .image-attach .ico,
+.TMPINK .hpay .new_add .btn .ico_arrow_right,
+.TMPINK .sm-chk > input[type="checkbox"]:checked {filter: invert(40%) sepia(21%) saturate(3012%) hue-rotate(303deg) brightness(110%) contrast(96%) !important}
+/* black to pm-color900 */
+.TMPINK .evaluation .paging .swiper-button-prev:after,
+.TMPINK .evaluation .paging .swiper-button-next:after,
+.TMPINK .bk_primary{filter: invert(67%) sepia(64%) saturate(2635%) hue-rotate(301deg) brightness(103%) contrast(96%)!important;}
+.TMPINK.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.TMPINK.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+
+/* 헤더 아이콘 색상 */
+.TMPINK .main-header .main-logo {filter:contrast() brightness();}
+.TMPINK .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.TMPINK .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.TMPINK .main-header [class^="btn-"][class*="setting"],
+.TMPINK.bg-main [class^="btn-"][class*="id"],
+.TMPINK .main-header [class^="btn-"][class*="menu"],
+.TMPINK .main-header [class^=btn-][class*=talk],
+.TMPINK .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+
+
+
+/** 숙명여대 **/
+/* 공통 */
+.SMUV .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.SMUV .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.SMUV .my-community .community-cate .interest .ico,
+.SMUV .new-board .board-top .search .ico,
+.SMUV .small-group .member .user-area .btn-oper .ico,
+.SMUV .small-group .group-image .image-attach .ico,
+.SMUV .timetable-list .form-control_icon .btn-select::after,
+.SMUV .registration .title-wrap .btn-select::after,
+.SMUV .btn-select.arrow-btn::after,
+.SMUV .arrow-purple,
+.SMUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.SMUV .sm-chk > input[type="checkbox"]:checked {filter:invert(73%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(96%) contrast(87%) !important}
+.SMUV .chat .tab-menu .search > span {filter:invert(50%) sepia(49%) saturate(823%) hue-rotate(181deg) brightness(92%) contrast(93%)}
+/* black to pm-color900 */
+.SMUV .bk_primary{filter: invert(30%) sepia(7%) saturate(6177%) hue-rotate(190deg) brightness(92%) contrast(91%) !important}
+.SMUV .hpay .new_add .btn .ico_arrow_right {filter:invert(58%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(66%) contrast(87%)}
+
+
+
+/* main */
+.main-header .main-logo.SMUV {background-image: url(../images/logo_SMUV.svg)!important;width: 10.125rem!important;}
+
+/* 전자출결 
+.attendance-bg.SMUV::before, .my-community-bg.SMUV::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}*/
+
+/* 회원가입 */
+.logo.SMUV {background-image: url(../images/logo_SMUV.svg)!important; width: 11.5rem!important;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SMUV {background:url(../images/logo_school_SMUV.svg) no-repeat,linear-gradient(81.72deg, #334D93 46.11%, #5179BC 113.69%)}
+.layer.campus-pop.bg_SMUV .layer-contents {background:#F0F3F9}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.SMUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.SMUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+/** 한양대 **/
+/* 공통 */
+.HYUV .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.HYUV .my-community .community-cate .interest .ico,
+.HYUV .new-board .board-top .search .ico,
+.HYUV .small-group .member .user-area .btn-oper .ico,
+.HYUV .small-group .group-image .image-attach .ico,
+.HYUV .timetable-list .form-control_icon .btn-select::after,
+.HYUV .registration .title-wrap .btn-select::after,
+.HYUV .btn-select.arrow-btn::after,
+.HYUV .arrow-purple,
+.HYUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.HYUV .sm-chk > input[type="checkbox"]:checked {filter:invert(73%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(96%) contrast(87%) !important}
+.HYUV .chat .top_right button > span,
+.HYUV .hpay .new_add .btn .ico_arrow_right  {filter:invert(47%) sepia(48%) saturate(823%) hue-rotate(181deg) brightness(85%) contrast(87%)}
+/* black to pm-color900 */
+.HYUV .bk_primary{filter: invert(10%) sepia(88%) saturate(4915%) hue-rotate(196deg) brightness(90%) contrast(101%) !important}
+
+/* main */
+.main-header .main-logo.HYUV {background-image: url(../images/logo_HYUV.svg)!important;width:6.875rem!important;}
+
+/* 전자출결
+.attendance-bg.HYUV::before, .my-community-bg.HYUV::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.HYUV {background-image: url(../images/logo_HYUV.svg)!important; width: 10.5rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_HYUV {background:url(../images/logo_HYUV_symbol.svg) no-repeat,linear-gradient(81.72deg, #00457E 46.11%, #447CE2 113.69%)}
+.layer.campus-pop.bg_HYUV .layer-contents {background:#F0F3F9}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.HYUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.HYUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/** 한양여대 **/
+/* 공통 */
+.HYWU .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.HYWU .my-community .community-cate .interest .ico,
+.HYWU .new-board .board-top .search .ico,
+.HYWU .small-group .member .user-area .btn-oper .ico,
+.HYWU .small-group .group-image .image-attach .ico,
+.HYWU .timetable-list .form-control_icon .btn-select::after,
+.HYWU .registration .title-wrap .btn-select::after,
+.HYWU .btn-select.arrow-btn::after,
+.HYWU .arrow-purple,
+.HYWU .hpay_sign .sign_tit.fir .image-attach .ico,
+.HYWU .sm-chk > input[type="checkbox"]:checked {filter:invert(73%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(96%) contrast(87%) !important}
+.HYWU .chat .top_right button > span,
+.HYWU .hpay .new_add .btn .ico_arrow_right  {filter:invert(47%) sepia(48%) saturate(823%) hue-rotate(181deg) brightness(85%) contrast(87%)}
+/* black to pm-color900 */
+.HYWU .bk_primary{filter: invert(10%) sepia(88%) saturate(4915%) hue-rotate(196deg) brightness(90%) contrast(101%) !important}
+
+/* main */
+.main-header .main-logo.HYWU {background-image: url(../images/logo_HYWU.svg)!important;width:9.1875rem!important;}
+
+/* 전자출결
+.attendance-bg.HYWU::before, .my-community-bg.HYWU::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.HYWU {background-image: url(../images/logo_HYWU.svg)!important; width: 12rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_HYWU {background:url(../images/logo_HYWU_symbol.svg) no-repeat,linear-gradient(81.72deg, #00457E 46.11%, #447CE2 113.69%)}
+.layer.campus-pop.bg_HYWU .layer-contents {background:#F0F3F9}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.HYWU .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.HYWU .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/** 헤이영 **/ /* 개발용 */
+/* 공통 */
+.HEYU .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.HEYU .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.HEYU .my-community .community-cate .interest .ico,
+.HEYU .new-board .board-top .search .ico,
+.HEYU .small-group .member .user-area .btn-oper .ico,
+.HEYU .small-group .group-image .image-attach .ico,
+.HEYU .timetable-list .form-control_icon .btn-select::after,
+.HEYU .registration .title-wrap .btn-select::after,
+.HEYU .btn-select.arrow-btn::after,
+.HEYU .arrow-purple,
+.HEYU .hpay_sign .sign_tit.fir .image-attach .ico,
+.HEYU .hpay .new_add .btn .ico_arrow_right,
+.HEYU .sm-chk > input[type="checkbox"]:checked {filter:invert(73%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(84%) contrast(85%) !important}
+.HEYU .chat .top_right button > span {filter:invert(47%) sepia(48%) saturate(823%) hue-rotate(181deg) brightness(85%) contrast(87%)}
+/* black to pm-color900 */
+.HEYU .bk_primary{filter: invert(10%) sepia(88%) saturate(4915%) hue-rotate(196deg) brightness(90%) contrast(101%) !important}
+
+/* main */
+.main-header .main-logo.HEYU {background-image: url(../images/logo_HEYU.svg)!important;width: 7.875rem!important}
+
+/** .HEYU.campus-pop .layer-header .layer-title {background: url(../images/logo_HEYU_wh.svg) no-repeat center center/130px auto!important;color: transparent!important;} **/
+
+/* 전자출결 */
+.attendance-bg.HEYU::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}
+
+/* 회원가입 */
+.logo.HEYU {background-image: url(../images/logo_heyoung.svg)!important;width: 9.4375rem!important;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_HEYU {background:url(../images/logo_HEYU_symbol.svg) no-repeat,linear-gradient(111.91deg, #00457E 2.65%, #0B69C9 110.23%);}
+.layer.campus-pop.bg_HEYU .layer-contents {background:#F0F3F9}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.HEYU .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.HEYU .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/** 용인대 **/
+/* 공통 */
+.YIUV .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.YIUV .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.YIUV .today-notification li .ico {filter: invert(70%) sepia(68%) saturate(250%) hue-rotate(151deg) brightness(160%) contrast(90%);}
+.YIUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.YIUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.YIUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.YIUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.YIUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.YIUV .my-community .community-cate .interest .ico,
+.YIUV .new-board .board-top .search .ico,
+.YIUV .small-group .member .user-area .btn-oper .ico,
+.YIUV .small-group .group-image .image-attach .ico,
+.YIUV .timetable-list .form-control_icon .btn-select::after,
+.YIUV .registration .title-wrap .btn-select::after,
+.YIUV .btn-select.arrow-btn::after,
+.YIUV .arrow-purple,
+.YIUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.YIUV .hpay .new_add .btn .ico_arrow_right,
+.YIUV .sm-chk > input[type="checkbox"]:checked {filter:invert(50%) sepia(29%) saturate(4455%) hue-rotate(168deg) brightness(60%) contrast(48%) !important}
+.YIUV .survey-list .right button.check:before {filter:invert(70%) sepia(18%) saturate(829%) hue-rotate(149deg) brightness(97%) contrast(92%)}
+.YIUV .chat .top_right button > span{filter:invert(52%) sepia(53%) saturate(304%) hue-rotate(149deg) brightness(138%) contrast(89%)}
+/* black to pm-color900 */
+.YIUV .bk_primary{filter: invert(21%) sepia(41%) saturate(2957%) hue-rotate(167deg) brightness(99%) contrast(101%) !important}
+
+/* main */
+.main-header .main-logo.YIUV {background-image: url(../images/logo_YIUV.svg)!important;width: 7.875rem!important;height: 2.125rem!important;}
+
+/* 전자출결
+.attendance-bg.YIUV::before, .my-community-bg.YIUV::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.YIUV {background-image: url(../images/logo_YIUV.svg)!important; width: 10.5rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_YIUV {background:url(../images/logo_YIUV_symbol.svg) no-repeat,linear-gradient(81.72deg, #005871 46.11%, #6DB8D1 113.69%);}
+.layer.campus-pop.bg_YIUV .layer-contents {background:#F9FDFF}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.YIUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.YIUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+
+
+/** 수원대 **/
+/* 공통 */
+.USWU .form-chk.all-check input:checked{background-color: transparent!important;background-image: none!important;}
+.USWU .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.USWU .my-community .community-cate .interest .ico,
+.USWU .new-board .board-top .search .ico,
+.USWU .small-group .member .user-area .btn-oper .ico,
+.USWU .small-group .group-image .image-attach .ico,
+.USWU .timetable-list .form-control_icon .btn-select::after,
+.USWU .registration .title-wrap .btn-select::after,
+.USWU .btn-select.arrow-btn::after,
+.USWU .arrow-purple,
+.USWU .hpay_sign .sign_tit.fir .image-attach .ico,
+.USWU .hpay .new_add .btn .ico_arrow_right,
+.USWU .sm-chk > input[type="checkbox"]:checked {filter:invert(86%) sepia(87%) saturate(3645%) hue-rotate(207deg) brightness(89%) contrast(69%) !important}
+.USWU .chat .top_right button > span{filter:invert(38%) sepia(29%) saturate(1025%) hue-rotate(182deg) brightness(90%) contrast(94%)}
+/* black to pm-color900 */
+.USWU .bk_primary{filter: invert(14%) sepia(28%) saturate(7320%) hue-rotate(206deg) brightness(93%) contrast(96%) !important}
+
+/* main */
+.main-header .main-logo.USWU {background-image: url(../images/logo_USWU.svg)!important;width: 7.875rem!important;height: 2.125rem!important;}
+
+/* 전자출결 
+.attendance-bg.USWU::before, .my-community-bg.USWU::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}*/
+
+/* 회원가입 */
+.logo.USWU {background-image: url(../images/logo_USWU.svg)!important; width: 10.75rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_USWU {background:url(../images/logo_USWU_symbol.svg) no-repeat,linear-gradient(81.72deg, #0E4084 46.11%, #6295E2 113.69%)}
+.layer.campus-pop.bg_USWU .layer-contents {background:#F9FBFF}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.USWU .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.USWU .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/** 수원과학대 **/
+/* 공통 */
+.SSCU .form-chk.all-check input:checked{background-color: transparent!important;background-image: none!important;}
+.SSCU .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.SSCU .my-community .community-cate .interest .ico,
+.SSCU .new-board .board-top .search .ico,
+.SSCU .small-group .member .user-area .btn-oper .ico,
+.SSCU .small-group .group-image .image-attach .ico,
+.SSCU .timetable-list .form-control_icon .btn-select::after,
+.SSCU .registration .title-wrap .btn-select::after,
+.SSCU .btn-select.arrow-btn::after,
+.SSCU .arrow-purple,
+.SSCU .hpay_sign .sign_tit.fir .image-attach .ico,
+.SSCU .hpay .new_add .btn .ico_arrow_right,
+.SSCU .sm-chk > input[type="checkbox"]:checked {filter:invert(86%) sepia(87%) saturate(3645%) hue-rotate(207deg) brightness(89%) contrast(69%) !important}
+.SSCU .chat .top_right button > span{filter:invert(39%) sepia(19%) saturate(1425%) hue-rotate(178deg) brightness(95%) contrast(86%)}
+/* black to pm-color900 */
+.SSCU .bk_primary{filter: invert(14%) sepia(28%) saturate(7320%) hue-rotate(206deg) brightness(93%) contrast(96%) !important}
+
+/* main */
+.main-header .main-logo.SSCU {background-image: url(../images/logo_SSCU.svg)!important;width: 7.875rem!important;height: 2.125rem!important;}
+
+/* 전자출결 
+.attendance-bg.SSCU::before, .my-community-bg.SSCU::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}*/
+
+/* 회원가입 */
+.logo.SSCU {background-image: url(../images/logo_SSCU.svg)!important; width: 11.5rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SSCU {background:url(../images/logo_SSCU_symbol.svg) no-repeat,linear-gradient(81.72deg, #0E4084 46.11%, #6295E2 113.69%)}
+.layer.campus-pop.bg_SSCU .layer-contents {background:#F9FBFF}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.SSCU .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.SSCU .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/** 인천재능 **/
+/* 공통 */
+.JEIU .main-header .main-logo {background-image: url(../images/logo_JEIU.svg);width: 8rem;height: 1.819rem; filter: contrast() brightness();}
+.JEIU .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.JEIU .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.JEIU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.JEIU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.JEIU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.JEIU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.JEIU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.JEIU .facility-list .reading-room dl dd .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.8;}
+.JEIU .facility-slide .btn-area > button.btn-sm-tertiary2 {border: 1px solid #FFFFFF;background: #FFFFFF;color: #F26721;}
+.JEIU .sel-certification li:last-child{background: var(--main-secondary500);}
+.JEIU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.JEIU .professor-slide .page-btns [class^="btn"][class*="-lg"] {background: var(--main-secondary500);}
+.JEIU .attendance-slide .action_btn a.attend,
+.JEIU .wallet-slide .action_btn a.attend {background: var(--main-secondary500);}
+.JEIU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.JEIU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.JEIU .main-header [class^="btn-"][class*="setting"],
+.JEIU.bg-main [class^="btn-"][class*="id"],
+.JEIU .main-header [class^="btn-"][class*="menu"],
+.JEIU .main-header [class^=btn-][class*=talk],
+.JEIU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+.JEIU.facility-bg::before{background: #FF922B;}
+.JEIU .my-community .community-cate .interest .ico,
+.JEIU .new-board .board-top .search .ico,
+.JEIU .small-group .member .user-area .btn-oper .ico,
+.JEIU .small-group .group-image .image-attach .ico,
+.JEIU .timetable-list .form-control_icon .btn-select::after,
+.JEIU .registration .title-wrap .btn-select::after,
+.JEIU .btn-select.arrow-btn::after,
+.JEIU .arrow-purple,
+.JEIU .hpay_sign .sign_tit.fir .image-attach .ico,
+.JEIU .hpay .new_add .btn .ico_arrow_right,
+.JEIU .sm-chk > input[type="checkbox"]:checked {filter:invert(44%) sepia(100%) saturate(2216%) hue-rotate(351deg) brightness(103%) contrast(88%) !important}
+.JEIU .survey-list .right button.check:before{filter: hue-rotate(151deg) brightness(104.2%) contrast(154%);}
+.JEIU .chat .top_right button > span{filter:invert(31%) sepia(66%) saturate(714%) hue-rotate(331deg) brightness(101%) contrast(101%)}
+/* black to pm-color900 */
+.JEIU .bk_primary{filter: invert(66%) sepia(78%) saturate(5866%) hue-rotate(351deg) brightness(106%) contrast(90%) !important}
+
+/* main */
+.main-header .main-logo.JEIU {background-image: url(../images/logo_JEIU.svg)!important; width: 8rem; height: 1.819rem; }
+.JEIU.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.JEIU.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 전자출결 
+.attendance-bg.JEIU::before, .my-community-bg.JEIU::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}*/
+
+/* 회원가입 */
+.logo.JEIU {background-image: url(../images/logo_JEIU.svg)!important; width: 12.25rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_JEIU {background:url(../images/logo_JEIU_symbol.svg) no-repeat,linear-gradient(111.91deg, #F26521 2.65%, #FFA237 110.23%);}
+.layer.campus-pop.bg_JEIU .layer-contents {background:#FFFAF9}
+
+
+
+/**** 동서대 ****/
+/* DSUV*/
+.DSUV .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.DSUV .sel-certification li,
+.DSUV .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.DSUV .sel-certification li span {color:#FFFFFF}
+.DSUV .sel-certification li.nfc .ico,
+.DSUV .sel-certification li.qr .ico,
+.DSUV .sel-certification li.barcode .ico,
+.DSUV .sel-certification li.bluetooth .ico{filter:invert(0)}
+.DSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.DSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.DSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.DSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.DSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.DSUV .today-notification li .ico {filter: invert(54%) sepia(76%) saturate(5913%) hue-rotate(343deg) brightness(92%) contrast(91%);}
+.DSUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.DSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.DSUV .wallet-slide .total-balance p {color:#66737F}
+.DSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.DSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.DSUV.facility-bg::before{background:#E8686C; }
+.DSUV .my-community .community-cate .interest .ico,
+.DSUV .new-board .board-top .search .ico,
+.DSUV .small-group .member .user-area .btn-oper .ico,
+.DSUV .small-group .group-image .image-attach .ico,
+.DSUV .timetable-list .form-control_icon .btn-select::after,
+.DSUV .registration .title-wrap .btn-select::after,
+.DSUV .btn-select.arrow-btn::after,
+.DSUV .arrow-purple,
+.DSUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.DSUV .hpay .new_add .btn .ico_arrow_right,
+.DSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(51%) sepia(63%) saturate(6993%) hue-rotate(342deg) brightness(89%) contrast(96%) !important}
+.DSUV .survey-list .right button.check:before {filter:invert(58%) sepia(32%) saturate(730%) hue-rotate(308deg) brightness(94%) contrast(110%)}
+.DSUV .chat .top_right button > span{filter:invert(38%) sepia(26%) saturate(973%) hue-rotate(308deg) brightness(101%) contrast(97%)}
+/* black to pm-color900 */
+.DSUV .bk_primary{filter: invert(21%) sepia(67%) saturate(2513%) hue-rotate(328deg) brightness(96%) contrast(95%) !important}
+
+/* 헤더 아이콘 색상 */
+.DSUV .main-header .main-logo {background-image: url(../images/logo_DSUV.svg);width: 8rem;height: 1.819rem; filter: none !important}
+.DSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.DSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.DSUV .main-header [class^="btn-"][class*="setting"],
+.DSUV.bg-main [class^="btn-"][class*="id"],
+.DSUV .main-header [class^="btn-"][class*="menu"],
+.DSUV .main-header [class^=btn-][class*=talk],
+.DSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.DSUV {background-image: url(../images/logo_DSUV.svg)!important; width: 8rem; height: 1.819rem;}
+.DSUV .user-thumb_img{background-color: #FFFFFF}
+.DSUV.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+
+/* 전자출결
+.attendance-bg.DSUV::before, .my-community-bg.DSUV::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.DSUV {background-image: url(../images/logo_DSUV.svg)!important; width: 10.5rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_DSUV {background:url(../images/logo_DSUV_symbol.svg) no-repeat,linear-gradient(111.91deg, #D60027 2.65%, #F68C93 110.23%);}
+.layer.campus-pop.bg_DSUV .layer-contents {background:#FFF9FB}
+.DSUV .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.DSUV .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.DSUV .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+
+
+/** 경기대 **/
+/* 공통 */
+.KGUV .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.KGUV .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.KGUV .today-notification li .ico {filter: invert(70%) sepia(68%) saturate(250%) hue-rotate(151deg) brightness(160%) contrast(90%);}
+.KGUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.KGUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.KGUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.KGUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.KGUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.KGUV .my-community .community-cate .interest .ico,
+.KGUV .new-board .board-top .search .ico,
+.KGUV .small-group .member .user-area .btn-oper .ico,
+.KGUV .small-group .group-image .image-attach .ico,
+.KGUV .timetable-list .form-control_icon .btn-select::after,
+.KGUV .registration .title-wrap .btn-select::after,
+.KGUV .btn-select.arrow-btn::after,
+.KGUV .arrow-purple,
+.KGUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.KGUV .hpay .new_add .btn .ico_arrow_right,
+.KGUV .sm-chk > input[type="checkbox"]:checked {filter:invert(72%) sepia(56%) saturate(1236%) hue-rotate(197deg) brightness(96%) contrast(87%) !important}
+.KGUV .survey-list .right button.check:before {filter:invert(70%) sepia(13%) saturate(1085%) hue-rotate(149deg) brightness(97%) contrast(95%)}
+.KGUV .chat .top_right button > span{filter:invert(19%) sepia(33%) saturate(502%) hue-rotate(153deg) brightness(89%) contrast(88%)}
+/* black to pm-color900 */
+.KGUV .bk_primary{filter: invert(27%) sepia(97%) saturate(1015%) hue-rotate(195deg) brightness(88%) contrast(97%) !important}
+
+/* main */
+.main-header .main-logo.KGUV {background-image: url(../images/logo_KGUV.svg)!important;width: 7.875rem!important;height: 2rem!important;}
+
+/* 전자출결 
+.attendance-bg.KGUV::before, .my-community-bg.KGUV::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;}*/
+.IDUV.facility-bg::before{background:#C1566B;}
+
+/* 회원가입 */
+.logo.KGUV {background-image: url(../images/logo_KGUV_log.svg); width: 11rem;}
+.TMDARK .logo.KGUV {background-image: url(../images/logo_KGUV_wh.svg);}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_KGUV {background:url(../images/logo_KGUV_symbol.svg) no-repeat,linear-gradient(81.72deg, #2056AE 46.11%, #1C9CBF 113.69%)}
+.layer.campus-pop.bg_KGUV .layer-contents {background:#F4F7F9}
+
+
+/* 20220919 추가학교 */
+
+
+/**** 인덕대 ****/
+/* main*/
+.IDUV .sel-certification li,
+.IDUV .sel-certification li:last-child {background:#CF6E83; color:var(--main-lg-txt)}
+.IDUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.IDUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.IDUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.IDUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.IDUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.IDUV .today-notification li em{color:#272D37}
+.IDUV .today-noti-recent .tit .right{color: var(--main-lg-txt);}
+.IDUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.IDUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+/* .IDUV .wallet-slide .total-balance p {color:#F3F6F9} */
+/* .IDUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain} */
+.IDUV .wallet-slide .action_btn a.attend{background: #CF6E83;}
+.IDUV .professor-slide .page-btns [class^="btn"][class*="-lg"]{background: #CF6E83;}
+/* .IDUV .professor-slide .infor-title, 
+.IDUV .attendance-slide .infor-title{color:#40020F;}
+.IDUV .state-wrap.main ul li span{color:#a94157;} */
+.IDUV .state-wrap.main ul li span.num{color: var(--main-box-sub);}
+.IDUV .attendance-slide .action_btn a.attend, .IDUV .wallet-slide .action_btn a.attend{background: #CF6E83;}
+.IDUV .facility-slide .btn-area > button{background: #CF6E83;}
+.IDUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.8}
+.IDUV .facility-list .reading-room dl dd:nth-child(3) {color: #FFFAFB;}
+.IDUV .facility-slide .btn-area > button.btn-sm-tertiary2{border: 1px solid #272d37;color: #272D37;}
+.IDUV .my-community .community-cate .interest .ico,
+.IDUV .new-board .board-top .search .ico,
+.IDUV .small-group .member .user-area .btn-oper .ico,
+.IDUV .timetable-list .form-control_icon .btn-select::after,
+.IDUV .registration .title-wrap .btn-select::after,
+.IDUV .btn-select.arrow-btn::after,
+.IDUV .arrow-purple,
+.IDUV .hpay .new_add .btn .ico_arrow_right,
+.IDUV .sm-chk > input[type="checkbox"]:checked {filter:invert(17%) sepia(47%) saturate(4151%) hue-rotate(303deg) brightness(61%) contrast(94%) !important}
+.IDUV .small-group .group-image .image-attach .ico,
+.IDUV .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(17%) sepia(11%) saturate(4200%) hue-rotate(299deg) brightness(59%) contrast(144%)}
+.IDUV .survey-list .right button.check:before {filter:invert(48%) sepia(18%) saturate(1215%) hue-rotate(186deg) brightness(91%) contrast(86%)}
+.IDUV .chat .top_right button > span{filter:invert(53%) sepia(17%) saturate(1108%) hue-rotate(186deg) brightness(98%) contrast(100%)}
+/* black to pm-color900 */
+.IDUV .bk_primary{filter: invert(38%) sepia(13%) saturate(2194%) hue-rotate(295deg) brightness(86%) contrast(93%) !important}
+
+/* 토글 */
+.IDUV .form-toggle_type2.form-toggle input:checked + label{background-color: var(--pm-color100);}
+
+/* 헤더 아이콘 색상 */
+.IDUV .main-header .main-logo {filter:contrast() brightness();}
+.IDUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.IDUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.IDUV .main-header [class^="btn-"][class*="setting"],
+.IDUV.bg-main [class^="btn-"][class*="id"],
+.IDUV .main-header [class^="btn-"][class*="menu"],
+.IDUV .main-header [class^=btn-][class*=talk],
+.IDUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.IDUV,
+.TMDARK .main-header .main-logo.IDUV {background-image: url(../images/logo_IDUV_wh.svg)!important;width: 7.875rem!important;height: 2rem!important;}
+
+.IDUV .main-header .main-logo.IDUV,
+.TMBLUE .main-header .main-logo.IDUV,
+.TMPINK .main-header .main-logo.IDUV,
+.TMGREEN .main-header .main-logo.IDUV {background-image: url(../images/logo_IDUV.svg)!important;width: 7.875rem!important;height: 2rem!important;}
+
+/* 전자출결 
+.attendance-bg.IDUV::before, .my-community-bg.IDUV::before {background: linear-gradient(63.44deg, #AB243E 30.63%, #C1566B 97.82%) !important;}*/
+
+/* 회원가입 */
+.logo.IDUV {background-image: url(../images/logo_IDUV.svg)!important; width: 10.75rem;}
+.TMDARK .logo.IDUV {background-image: url(../images/logo_IDUV_wh.svg)!important; width: 10.75rem;}
+
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_IDUV {background:url(../images/logo_IDUV_symbol.svg) no-repeat,linear-gradient(90deg, #D15870 0.16%, #DF8C9C 100%);}
+.layer.campus-pop.bg_IDUV .layer-contents {background:#FFFAFB;}
+
+
+
+
+
+
+/**** 청암대 ****/
+/* main*/
+.CAUV .today-notification li em {color:var(--main-box-sub2)}
+.CAUV .sel-certification li {background:var(--main-primary900)}
+.CAUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.CAUV .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.CAUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.CAUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.CAUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.CAUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.CAUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.CAUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.CAUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.CAUV .wallet-slide .status-sm {background:#5D9EF2}
+.CAUV .my-community .community-cate .interest .ico,
+.CAUV .new-board .board-top .search .ico,
+.CAUV .small-group .member .user-area .btn-oper .ico,
+.CAUV .small-group .group-image .image-attach .ico,
+.CAUV .timetable-list .form-control_icon .btn-select::after,
+.CAUV .registration .title-wrap .btn-select::after,
+.CAUV .btn-select.arrow-btn::after,
+.CAUV .arrow-purple,
+.CAUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.CAUV .hpay .new_add .btn .ico_arrow_right,
+.CAUV .sm-chk > input[type="checkbox"]:checked {filter:invert(77%) sepia(91%) saturate(1504%) hue-rotate(200deg) brightness(93%) contrast(89%) !important}
+.CAUV .survey-list .right button.check:before {filter:invert(65%) sepia(45%) saturate(696%) hue-rotate(147deg) brightness(106%) contrast(88%)}
+.CAUV .chat .top_right button > span {filter:invert(35%) sepia(86%) saturate(370%) hue-rotate(148deg) brightness(86%) contrast(95%)}
+/* black to pm-color900 */
+.CAUV .bk_primary{filter: invert(19%) sepia(37%) saturate(2998%) hue-rotate(198deg) brightness(94%) contrast(91%) !important}
+
+/* 헤더 아이콘 색상 */
+.CAUV .main-header .main-logo {filter:contrast() brightness();}
+.CAUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.CAUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.CAUV .main-header [class^="btn-"][class*="setting"],
+.CAUV.bg-main [class^="btn-"][class*="id"],
+.CAUV .main-header [class^="btn-"][class*="menu"],
+.CAUV .main-header [class^=btn-][class*=talk],
+.CAUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main */
+.main-header .main-logo.CAUV{background-image: url(../images/logo_CAUV_log.svg)!important;width: 6.125rem !important;height: 1.725rem !important;}
+.CAUV .main-header .main-logo.CAUV {background-image: url(../images/logo_CAUV.svg)!important;width: 7.125rem!important;height: 2rem!important;}
+.CAUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.CAUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 회원가입 */
+.logo.CAUV {background-image: url(../images/logo_CAUV.svg)!important; width: 9.75rem;}
+.TMDARK .logo.CAUV {background-image: url(../images/logo_CAUV_log.svg)!important; width: 8.75rem;}
+
+/* 전자출결 
+.attendance-bg.CAUV::before, .my-community-bg.CAUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_CAUV {background:url(../images/logo_CAUV_symbol.svg) no-repeat, linear-gradient(6111.91deg, #1E56A4 2.65%, #5896EF 110.23%);}
+.layer.campus-pop.bg_CAUV .layer-contents {background:#FAFDFF;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.CAUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.CAUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+/** 홍익대 **/
+/* 공통 */
+.HIUV .form-chk.all-check input:checked {background-color: transparent!important;background-image: none!important;}
+.HIUV .theme-area .thema-myschool .item-theme {background: linear-gradient(130.46deg, var(--pm-color900) 30.95%, var(--sc-color500) 92.47%);}
+.HIUV .today-notification li .ico {filter: invert(40%) sepia(36%) saturate(881%) hue-rotate(146deg) brightness(92%) contrast(94%);}
+.HIUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.HIUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.HIUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.HIUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.HIUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.HIUV .my-community .community-cate .interest .ico,
+.HIUV .new-board .board-top .search .ico,
+.HIUV .small-group .member .user-area .btn-oper .ico,
+.HIUV .small-group .group-image .image-attach .ico,
+.HIUV .timetable-list .form-control_icon .btn-select::after,
+.HIUV .registration .title-wrap .btn-select::after,
+.HIUV .btn-select.arrow-btn::after,
+.HIUV .arrow-purple,
+.HIUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.HIUV .hpay .new_add .btn .ico_arrow_right,
+.HIUV .sm-chk > input[type="checkbox"]:checked {filter:invert(64%) sepia(39%) saturate(5697%) hue-rotate(204deg) brightness(45%) contrast(93%) !important}
+.HIUV .survey-list .right button.check:before {filter:invert(65%) sepia(45%) saturate(696%) hue-rotate(147deg) brightness(106%) contrast(88%)}
+.HIUV .chat .top_right button > span{filter:invert(42%) sepia(80%) saturate(505%) hue-rotate(151deg) brightness(90%) contrast(85%)}
+/* black to pm-color900 */
+.HIUV .bk_primary{filter: invert(18%) sepia(94%) saturate(2355%) hue-rotate(204deg) brightness(84%) contrast(97%) !important}
+
+/* main */
+.main-header .main-logo.HIUV {background-image: url(../images/logo_HIUV.svg)!important;width: 7.875rem!important;height: 2rem!important;}
+
+/* 전자출결
+.attendance-bg.HIUV::before, .my-community-bg.HIUV::before {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.HIUV {background-image: url(../images/logo_HIUV.svg) !important; width: 11rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_HIUV {background:url(../images/logo_HIUV_symbol.svg) no-repeat,linear-gradient(81.72deg, #0956B3 46.11%, #5499ED 113.69%)}
+.layer.campus-pop.bg_HIUV .layer-contents {background:#F8F9FC}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.HIUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.HIUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+/**** 서원대 ****/
+/* main*/
+.SWUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.SWUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.SWUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.SWUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.SWUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.SWUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.SWUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.SWUV .wallet-slide .status-sm {background:#1067A2}
+.SWUV .attendance-slide .action_btn a.attend, 
+.SWUV .attendance-slide2 .action_btn a.attend,
+.SWUV .wallet-slide .action_btn a.attend,
+.SWUV .facility-slide .btn-area > button,
+.SWUV .pay-slide .card_info a.pay {color: #04438B;}/* var(--main-primary900) 화이트컬러 */
+.SWUV .my-community .community-cate .interest .ico,
+.SWUV .new-board .board-top .search .ico,
+.SWUV .small-group .member .user-area .btn-oper .ico,
+.SWUV .small-group .group-image .image-attach .ico,
+.SWUV .timetable-list .form-control_icon .btn-select::after,
+.SWUV .registration .title-wrap .btn-select::after,
+.SWUV .btn-select.arrow-btn::after,
+.SWUV .arrow-purple,
+.SWUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.SWUV .hpay .new_add .btn .ico_arrow_right,
+.SWUV .sm-chk > input[type="checkbox"]:checked {filter:invert(77%) sepia(91%) saturate(1504%) hue-rotate(200deg) brightness(75%) contrast(89%) !important}
+.SWUV .survey-list .right button.check:before {filter:invert(64%) sepia(49%) saturate(2586%) hue-rotate(160deg) brightness(124%) contrast(99%)}
+.SWUV .chat .top_right button > span{filter:invert(49%) sepia(28%) saturate(2497%) hue-rotate(160deg) brightness(108%) contrast(91%)}
+/* black to pm-color900 */
+.SWUV .bk_primary{filter: invert(17%) sepia(27%) saturate(6674%) hue-rotate(202deg) brightness(94%) contrast(97%) !important}
+
+/* 서원대 메인 버튼 화이트 설정 스타일 */
+.SWUV .today-notification li em {color:var(--main-box-sub2)}
+.SWUV .sel-certification li {background:var(--main-primary900)}
+.SWUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.SWUV .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.SWUV .facility-slide .btn-area > button.btn-sm-tertiary2{border-color: #ffffff;color: #ffffff;}
+.SWUV .professor-slide .page-btns [class^="btn"][class*="-lg"]{background: #04438B;}
+.SWUV .sel-certification li {background: #ffffff;}
+.SWUV .sel-certification li:last-child{background: #ffffff;}
+.SWUV .sel-certification li .ico{filter: invert(92%) sepia(69%) saturate(5858%) hue-rotate(200deg) brightness(94%) contrast(105%);}
+.SWUV .sel-certification li span{color:var(--pm-color900);}
+.SWUV .wallet-slide .account-info dd .acc_change {color:#04438B}
+
+/* 헤더 아이콘 색상 */
+.SWUV .main-header .main-logo {filter:contrast() brightness();height: 2.1rem;}
+.SWUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.SWUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.SWUV .main-header [class^="btn-"][class*="setting"],
+.SWUV.bg-main [class^="btn-"][class*="id"],
+.SWUV .main-header [class^="btn-"][class*="menu"],
+.SWUV .main-header [class^=btn-][class*=talk],
+.SWUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.SWUV{background-image: url(../images/logo_SWUV.svg)!important;width: 7.125rem!important;height:2rem!important;}
+.SWUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.SWUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.SWUV {background-image: url(../images/logo_SWUV.svg)!important; width: 9.75rem;}
+
+/* 전자출결 
+.attendance-bg.SWUV::before, .my-community-bg.SWUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SWUV {background:url(../images/logo_SWUV_symbol.svg) no-repeat, linear-gradient(107deg, #0556B0 6.26%, #029EE1 90%);}
+.layer.campus-pop.bg_SWUV .layer-contents {background:#F6FAFE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.SWUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.SWUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/**** 상지대 ****/
+/* main*/
+.SJUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.SJUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.SJUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.SJUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.SJUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.SJUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.SJUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.SJUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.SJUV .my-community .community-cate .interest .ico,
+.SJUV .new-board .board-top .search .ico,
+.SJUV .small-group .member .user-area .btn-oper .ico,
+.SJUV .small-group .group-image .image-attach .ico,
+.SJUV .timetable-list .form-control_icon .btn-select::after,
+.SJUV .registration .title-wrap .btn-select::after,
+.SJUV .btn-select.arrow-btn::after,
+.SJUV .arrow-purple,
+.SJUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.SJUV .hpay .new_add .btn .ico_arrow_right,
+.SJUV .sm-chk > input[type="checkbox"]:checked {filter:invert(77%) sepia(91%) saturate(1504%) hue-rotate(200deg) brightness(75%) contrast(89%) !important;}
+.SJUV .sel-certification li{background: var(--main-primary900);}
+.SJUV .today-notification li em{color: #E2FDE5;}
+
+.SJUV .survey-list .right button.check:before {filter:invert(57%) sepia(48%) saturate(622%) hue-rotate(51deg) brightness(97%) contrast(89%)}
+.SJUV .chat .top_right button > span{filter:invert(31%) sepia(23%) saturate(6005%) hue-rotate(57deg) brightness(110%) contrast(62%)}
+/* black to pm-color900 */
+.SJUV .bk_primary{filter: invert(25%) sepia(53%) saturate(2198%) hue-rotate(186deg) brightness(92%) contrast(105%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.SJUV .main-header .main-logo {filter:contrast() brightness();}
+.SJUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.SJUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.SJUV .main-header [class^="btn-"][class*="setting"],
+.SJUV.bg-main [class^="btn-"][class*="id"],
+.SJUV .main-header [class^="btn-"][class*="menu"],
+.SJUV .main-header [class^=btn-][class*=talk],
+.SJUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.SJUV{background-image: url(../images/logo_SJUV.svg)!important;width: 7.125rem!important;height: 2.25rem!important;}
+.SJUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.SJUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 회원가입 */
+.logo.SJUV {background-image: url(../images/logo_SJUV.svg)!important; width: 10rem;}
+
+/* 전자출결 
+.attendance-bg.SJUV::before, .my-community-bg.SJUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SJUV {background:url(../images/logo_SJUV_symbol.svg) no-repeat, linear-gradient(107deg, #0556B0 6.26%, #029EE1 90%);}
+.layer.campus-pop.bg_SJUV .layer-contents {background:#F6FAFE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.SJUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.SJUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/**** 원광보건대 ****/
+/* WHSU*/
+.WHSU .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.WHSU .sel-certification li,
+.WHSU .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.WHSU .sel-certification li span {color:#FFFFFF}
+.WHSU .sel-certification li.nfc .ico,
+.WHSU .sel-certification li.qr .ico,
+.WHSU .sel-certification li.barcode .ico,
+.WHSU .sel-certification li.bluetooth .ico{filter:invert(0)}
+.WHSU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.WHSU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.WHSU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.WHSU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.WHSU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.WHSU .today-notification li .ico {filter: invert(54%) sepia(76%) saturate(5913%) hue-rotate(343deg) brightness(92%) contrast(91%);}
+.WHSU .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.WHSU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.WHSU .wallet-slide .total-balance p {color:#66737F}
+.WHSU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.WHSU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.WHSU.facility-bg::before{background:#E8686C; }
+.WHSU .my-community .community-cate .interest .ico,
+.WHSU .new-board .board-top .search .ico,
+.WHSU .small-group .member .user-area .btn-oper .ico,
+.WHSU .small-group .group-image .image-attach .ico,
+.WHSU .timetable-list .form-control_icon .btn-select::after,
+.WHSU .registration .title-wrap .btn-select::after,
+.WHSU .btn-select.arrow-btn::after,
+.WHSU .arrow-purple,
+.WHSU .hpay_sign .sign_tit.fir .image-attach .ico,
+.WHSU .hpay .new_add .btn .ico_arrow_right,
+.WHSU .sm-chk > input[type="checkbox"]:checked {filter:invert(80%) sepia(63%) saturate(6993%) hue-rotate(342deg) brightness(80%) contrast(96%) !important}
+.WHSU .survey-list .right button.check:before {filter:invert(46%) sepia(9%) saturate(1588%) hue-rotate(163deg) brightness(86%) contrast(75%)}
+.WHSU .chat .top_right button > span{filter:invert(51%) sepia(9%) saturate(1662%) hue-rotate(323deg) brightness(94%) contrast(84%)}
+/* black to pm-color900 */
+.WHSU .bk_primary{filter: invert(15%) sepia(39%) saturate(6520%) hue-rotate(349deg) brightness(101%) contrast(113%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.WHSU .main-header .main-logo {background-image: url(../images/logo_WHSU.svg);width: 8rem;height: 1.819rem; filter: none !important}
+.WHSU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.WHSU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.WHSU .main-header [class^="btn-"][class*="setting"],
+.WHSU.bg-main [class^="btn-"][class*="id"],
+.WHSU .main-header [class^="btn-"][class*="menu"],
+.WHSU .main-header [class^=btn-][class*=talk],
+.WHSU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.WHSU {background-image: url(../images/logo_WHSU.svg)!important; width: 8rem; height: 1.819rem;}
+.WHSU .user-thumb_img{background-color: #FFFFFF}
+/* 전자출결
+.attendance-bg.WHSU::before, .my-community-bg.WHSU::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+.WHSU.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+/* 회원가입 */
+.logo.WHSU {background-image: url(../images/logo_WHSU.svg)!important; width: 10.5rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_WHSU {background:url(../images/logo_WHSU_symbol.svg) no-repeat,linear-gradient(111.91deg, #D60027 2.65%, #F68C93 110.23%);}
+.layer.campus-pop.bg_WHSU .layer-contents {background:#FAFAFA}
+.WHSU .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.WHSU .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.WHSU .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x */
+.WHSU .guide-text.valid{color:var(--sc-color500);}
+
+
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.WHSU,
+.TMDARK .main-header .main-logo.WHSU {background-image: url(../images/logo_WHSU_wh.svg)!important;width:8rem!important;height:1.8rem;}
+.WHSU .main-header .main-logo.WHSU,
+.TMBLUE .main-header .main-logo.WHSU,
+.TMPINK .main-header .main-logo.WHSU,
+.TMGREEN .main-header .main-logo.WHSU {background-image: url(../images/logo_WHSU.svg)!important;width:8rem!important;height:1.8rem;}
+
+/* 회원가입 */
+.logo.WHSU {background-image: url(../images/logo_WHSU.svg)!important; width: 11.5rem;}
+.TMDARK .logo.WHSU {background-image: url(../images/logo_WHSU_wh.svg)!important; width: 11.5rem;}
+
+
+
+
+/**** 경남정보대 ****/
+/* KITU*/
+.KITU .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.KITU .sel-certification li,
+.KITU .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.KITU .sel-certification li span {color:#FFFFFF}
+.KITU .sel-certification li.nfc .ico,
+.KITU .sel-certification li.qr .ico,
+.KITU .sel-certification li.barcode .ico,
+.KITU .sel-certification li.bluetooth .ico{filter:invert(0)}
+.KITU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.KITU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.KITU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.KITU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.KITU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.KITU .today-notification li .ico {filter: invert(54%) sepia(76%) saturate(5913%) hue-rotate(343deg) brightness(92%) contrast(91%);}
+.KITU .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.KITU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.KITU .wallet-slide .total-balance p {color:#66737F}
+.KITU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.KITU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.KITU.facility-bg::before{background:#E8686C; }
+.KITU .my-community .community-cate .interest .ico,
+.KITU .new-board .board-top .search .ico,
+.KITU .small-group .member .user-area .btn-oper .ico,
+.KITU .small-group .group-image .image-attach .ico,
+.KITU .timetable-list .form-control_icon .btn-select::after,
+.KITU .registration .title-wrap .btn-select::after,
+.KITU .btn-select.arrow-btn::after,
+.KITU .arrow-purple,
+.KITU .hpay_sign .sign_tit.fir .image-attach .ico,
+.KITU .hpay .new_add .btn .ico_arrow_right,
+.KITU .sm-chk > input[type="checkbox"]:checked {filter:invert(80%) sepia(63%) saturate(6993%) hue-rotate(342deg) brightness(80%) contrast(96%) !important}
+.KITU .survey-list .right button.check:before {filter:invert(46%) sepia(9%) saturate(1588%) hue-rotate(163deg) brightness(86%) contrast(75%)}
+.KITU .chat .top_right button > span{filter:invert(51%) sepia(9%) saturate(1662%) hue-rotate(323deg) brightness(94%) contrast(84%)}
+/* black to pm-color900 */
+.KITU .bk_primary{filter: invert(15%) sepia(39%) saturate(6520%) hue-rotate(349deg) brightness(101%) contrast(113%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.KITU .main-header .main-logo {background-image: url(../images/logo_KITU.svg);width: 8rem;height: 1.819rem; filter: none !important}
+.KITU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.KITU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.KITU .main-header [class^="btn-"][class*="setting"],
+.KITU.bg-main [class^="btn-"][class*="id"],
+.KITU .main-header [class^="btn-"][class*="menu"],
+.KITU .main-header [class^=btn-][class*=talk],
+.KITU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.KITU {background-image: url(../images/logo_KITU.svg)!important; width: 8rem; height: 1.819rem;}
+.KITU .user-thumb_img{background-color: #FFFFFF}
+/* 전자출결
+.attendance-bg.KITU::before, .my-community-bg.KITU::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+.KITU.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_KITU {background:url(../images/logo_KITU_symbol.svg) no-repeat,linear-gradient(111.91deg, #D60027 2.65%, #F68C93 110.23%);}
+.layer.campus-pop.bg_KITU .layer-contents {background:#FAFAFA}
+.KITU .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.KITU .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.KITU .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x */
+.KITU .guide-text.valid{color:var(--sc-color500);}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.KITU,
+.TMDARK .main-header .main-logo.KITU {background-image: url(../images/logo_KITU_wh.svg)!important;width:8rem!important;height:1.8rem;}
+.KITU .main-header .main-logo.KITU,
+.TMBLUE .main-header .main-logo.KITU,
+.TMPINK .main-header .main-logo.KITU,
+.TMGREEN .main-header .main-logo.KITU {background-image: url(../images/logo_KITU.svg)!important;width:8rem!important;height:1.8rem;}
+
+/* 회원가입 */
+.logo.KITU {background-image: url(../images/logo_KITU.svg)!important; width: 11.5rem;}
+.TMDARK .logo.KITU {background-image: url(../images/logo_KITU_wh.svg)!important; width: 11.5rem;}
+
+
+
+
+/**** 오산대 ****/
+/* main*/
+.OSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.OSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.OSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.OSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.OSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.OSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.OSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.OSUV .wallet-slide .status-sm {background:rgba(0, 0, 0, 0.2)}
+.OSUV .attendance-slide .action_btn a.attend,
+.OSUV .attendance-slide2 .action_btn a.attend, 
+.OSUV .wallet-slide .action_btn a.attend,
+.OSUV .facility-slide .btn-area > button,
+.OSUV .pay-slide .card_info a.pay {color: #04438B;}/* var(--main-primary900) 화이트컬러 */
+.OSUV .my-community .community-cate .interest .ico,
+.OSUV .new-board .board-top .search .ico,
+.OSUV .small-group .member .user-area .btn-oper .ico,
+.OSUV .small-group .group-image .image-attach .ico,
+.OSUV .timetable-list .form-control_icon .btn-select::after,
+.OSUV .registration .title-wrap .btn-select::after,
+.OSUV .btn-select.arrow-btn::after,
+.OSUV .arrow-purple,
+.OSUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.OSUV .hpay .new_add .btn .ico_arrow_right,
+.OSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(77%) sepia(91%) saturate(1504%) hue-rotate(200deg) brightness(75%) contrast(89%) !important;}
+.OSUV .chat .top_right button > span{filter:invert(45%) sepia(76%) saturate(2865%) hue-rotate(188deg) brightness(89%) contrast(88%)}
+/* black to pm-color900 */
+.OSUV .bk_primary{filter: invert(15%) sepia(63%) saturate(3262%) hue-rotate(202deg) brightness(90%) contrast(105%) !important}
+
+/* 오산대 메인 버튼 화이트 설정 스타일 */
+.OSUV .today-notification li em {color:var(--main-box-sub2)}
+.OSUV .sel-certification li {background:var(--main-primary900)}
+.OSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.OSUV .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.OSUV .facility-slide .btn-area > button.btn-sm-tertiary2{border-color: #ffffff;color: #ffffff;}
+.OSUV .professor-slide .page-btns [class^="btn"][class*="-lg"]{background: #3583D3;}
+.OSUV .sel-certification li {background: #ffffff;}
+.OSUV .sel-certification li:last-child{background: #ffffff;}
+.OSUV .sel-certification li .ico{filter: invert(92%) sepia(69%) saturate(5858%) hue-rotate(200deg) brightness(94%) contrast(105%);}
+.OSUV .sel-certification li span{color:var(--pm-color900);}
+.OSUV .wallet-slide .account-info dd .acc_change {color: #04438B;}
+
+/* 헤더 아이콘 색상 */
+.OSUV .main-header .main-logo {filter:contrast() brightness();height: 2.1rem;}
+.OSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.OSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.OSUV .main-header [class^="btn-"][class*="setting"],
+.OSUV.bg-main [class^="btn-"][class*="id"],
+.OSUV .main-header [class^="btn-"][class*="menu"],
+.OSUV .main-header [class^=btn-][class*=talk],
+.OSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.OSUV{background-image: url(../images/logo_OSUV.svg)!important;width: 7.125rem!important;height:2rem!important;}
+.OSUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.OSUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.OSUV {background-image: url(../images/logo_OSUV.svg)!important; width: 9.75rem;}
+
+/* 전자출결 
+.attendance-bg.OSUV::before, .my-community-bg.OSUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_OSUV {background:url(../images/logo_OSUV_symbol.svg) no-repeat, linear-gradient(107deg, #003B85 6.26%, #3988D7 90%);}
+.layer.campus-pop.bg_OSUV .layer-contents {background:#FAFCFE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.OSUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.OSUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+/**** 목포해양대 ****/
+/* main*/
+.MNMU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.MNMU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.MNMU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.MNMU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.MNMU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.MNMU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.MNMU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.MNMU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.MNMU .my-community .community-cate .interest .ico,
+.MNMU .new-board .board-top .search .ico,
+.MNMU .small-group .member .user-area .btn-oper .ico,
+.MNMU .small-group .group-image .image-attach .ico,
+.MNMU .timetable-list .form-control_icon .btn-select::after,
+.MNMU .registration .title-wrap .btn-select::after,
+.MNMU .btn-select.arrow-btn::after,
+.MNMU .arrow-purple,
+.MNMU .hpay_sign .sign_tit.fir .image-attach .ico,
+.MNMU .hpay .new_add .btn .ico_arrow_right,
+.MNMU .sm-chk > input[type="checkbox"]:checked {filter:invert(83%) sepia(85%) saturate(1399%) hue-rotate(177deg) brightness(99%) contrast(105%) !important}
+.MNMU .sel-certification li{background: var(--main-primary900);}
+.MNMU .today-notification li em{color: #E2FDE5;}
+
+.MNMU .survey-list .right button.check:before {filter:invert(74%) sepia(38%) saturate(622%) hue-rotate(105deg) brightness(100%) contrast(89%)}
+.MNMU .chat .top_right button > span{filter:invert(38%) sepia(77%) saturate(382%) hue-rotate(99deg) brightness(89%) contrast(84%)}
+/* black to pm-color900 */
+.MNMU .bk_primary{filter: invert(16%) sepia(28%) saturate(6849%) hue-rotate(186deg) brightness(104%) contrast(101%) !important}
+.MNMU.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.MNMU.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 헤더 아이콘 색상 */
+.MNMU .main-header .main-logo {filter:contrast() brightness();}
+.MNMU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.MNMU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.MNMU .main-header [class^="btn-"][class*="setting"],
+.MNMU.bg-main [class^="btn-"][class*="id"],
+.MNMU .main-header [class^="btn-"][class*="menu"],
+.MNMU .main-header [class^=btn-][class*=talk],
+.MNMU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.MNMU,
+.TMDARK .main-header .main-logo.MNMU {background-image: url(../images/logo_MNMU_wh.svg)!important;width: 9.5rem!important;height: 2.5rem;}
+.MNMU .main-header .main-logo.MNMU,
+.TMBLUE .main-header .main-logo.MNMU,
+.TMPINK .main-header .main-logo.MNMU,
+.TMGREEN .main-header .main-logo.MNMU {background-image: url(../images/logo_MNMU.svg)!important;width: 9.5rem!important;height: 2.5rem;}
+
+/* 회원가입 */
+.logo.MNMU {background-image: url(../images/logo_MNMU.svg)!important; width: 12.75rem;}
+
+/* 전자출결 
+.attendance-bg.MNMU::before, .my-community-bg.MNMU::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_MNMU {background:url(../images/logo_MNMU_symbol.svg) no-repeat, linear-gradient(107deg, #015E98 6.26%, #218CCF 90%);}
+.layer.campus-pop.bg_MNMU .layer-contents {background:#FAFDFE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.MNMU .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.MNMU .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+/**** 유한대 ****/
+/* main*/
+.YHUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.YHUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.YHUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.YHUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.YHUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.YHUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.YHUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.YHUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.YHUV .my-community .community-cate .interest .ico,
+.YHUV .new-board .board-top .search .ico,
+.YHUV .small-group .member .user-area .btn-oper .ico,
+.YHUV .small-group .group-image .image-attach .ico,
+.YHUV .timetable-list .form-control_icon .btn-select::after,
+.YHUV .registration .title-wrap .btn-select::after,
+.YHUV .btn-select.arrow-btn::after,
+.YHUV .arrow-purple,
+.YHUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.YHUV .hpay .new_add .btn .ico_arrow_right,
+.YHUV .sm-chk > input[type="checkbox"]:checked {filter:invert(69%) sepia(96%) saturate(951%) hue-rotate(141deg) brightness(94%) contrast(101%) !important}
+.YHUV .sel-certification li{background: var(--main-primary900);}
+.YHUV .chat .top_right button > span{filter:invert(57%) sepia(47%) saturate(735%) hue-rotate(177deg) brightness(132%) contrast(97%);}
+
+/* black to pm-color900 */
+.YHUV .bk_primary{filter: invert(56%) sepia(70%) saturate(6929%) hue-rotate(153deg) brightness(91%) contrast(101%) !important}
+
+/* 그린패널 한정 */
+.YHUV .wallet-slide .info-txt,
+.YHUV .facility-list .reading-room dl dd a,
+.YHUV .today-none-alarm p {color: var(--main-box-tit);}
+.YHUV .facility-slide .facility-list .facility-menu, 
+.YHUV .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.YHUV .survey-list .right button.check:before {filter:brightness(101%) hue-rotate(-8deg) contrast(95%)}
+
+
+/* 헤더 아이콘 색상 */
+.YHUV .main-header .main-logo {filter:contrast() brightness();}
+.YHUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.YHUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.YHUV .main-header [class^="btn-"][class*="setting"],
+.YHUV.bg-main [class^="btn-"][class*="id"],
+.YHUV .main-header [class^="btn-"][class*="menu"],
+.YHUV .main-header [class^=btn-][class*=talk],
+.YHUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.YHUV{background-image: url(../images/logo_YHUV.svg)!important;width: 9.1rem!important;height:1.9rem!important;}
+.YHUV.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.YHUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 회원가입 */
+.logo.YHUV {background-image: url(../images/logo_YHUV.svg)!important; width: 12.75rem;}
+
+/* 전자출결 
+.attendance-bg.YHUV::before, .my-community-bg.YHUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_YHUV {background:url(../images/logo_YHUV_symbol.svg) no-repeat, linear-gradient(107deg, #019484 6.26%, #64C8B9 90%);}
+.layer.campus-pop.bg_YHUV .layer-contents {background:#F8FBFA;}
+
+
+
+
+
+
+/**** 국립목포대 ****/
+/* main*/
+.MNUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.MNUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.MNUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.MNUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.MNUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.MNUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.MNUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.MNUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.MNUV .my-community .community-cate .interest .ico,
+.MNUV .new-board .board-top .search .ico,
+.MNUV .small-group .member .user-area .btn-oper .ico,
+.MNUV .small-group .group-image .image-attach .ico,
+.MNUV .timetable-list .form-control_icon .btn-select::after,
+.MNUV .registration .title-wrap .btn-select::after,
+.MNUV .btn-select.arrow-btn::after,
+.MNUV .arrow-purple,
+.MNUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.MNUV .hpay .new_add .btn .ico_arrow_right,
+.MNUV .sm-chk > input[type="checkbox"]:checked {filter:invert(69%) sepia(96%) saturate(951%) hue-rotate(141deg) brightness(68%) contrast(101%) !important}
+.MNUV .sel-certification li{background: var(--main-primary900);}
+.MNUV .chat .top_right button > span{filter:invert(57%) sepia(47%) saturate(735%) hue-rotate(177deg) brightness(102%) contrast(97%);}
+.MNUV.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.MNUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* black to pm-color900 */
+.MNUV .bk_primary{filter: invert(22%) sepia(51%) saturate(4719%) hue-rotate(164deg) brightness(97%) contrast(101%) !important}
+
+/* 그린패널 한정 */
+.MNUV .wallet-slide .info-txt,
+.MNUV .facility-list .reading-room dl dd a,
+.MNUV .today-none-alarm p {color: var(--main-box-tit);}
+.MNUV .facility-slide .facility-list .facility-menu, 
+.MNUV .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.MNUV .survey-list .right button.check:before {filter:brightness(101%) hue-rotate(-8deg) contrast(95%)}
+
+
+/* 헤더 아이콘 색상 */
+.MNUV .main-header .main-logo {filter:contrast() brightness();}
+.MNUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.MNUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.MNUV .main-header [class^="btn-"][class*="setting"],
+.MNUV.bg-main [class^="btn-"][class*="id"],
+.MNUV .main-header [class^="btn-"][class*="menu"],
+.MNUV .main-header [class^=btn-][class*=talk],
+.MNUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.MNUV{background-image: url(../images/logo_MNUV.svg)!important;width: 9rem!important;height:1.875rem!important;}
+
+/* 회원가입 */
+.logo.MNUV {background-image: url(../images/logo_MNUV.svg)!important; width: 13.25rem;}
+
+/* 전자출결 
+.attendance-bg.MNUV::before, .my-community-bg.MNUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_MNUV {background:url(../images/logo_MNUV_symbol.svg) no-repeat, linear-gradient(107deg, #019484 6.26%, #64C8B9 90%);}
+.layer.campus-pop.bg_MNUV .layer-contents {background:#FCFDFD;}
+
+
+
+
+/**** 중원대 ****/
+/* main*/
+.JWUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.JWUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.JWUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.JWUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.JWUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.JWUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.JWUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.JWUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.JWUV .my-community .community-cate .interest .ico,
+.JWUV .new-board .board-top .search .ico,
+.JWUV .small-group .member .user-area .btn-oper .ico,
+.JWUV .small-group .group-image .image-attach .ico,
+.JWUV .timetable-list .form-control_icon .btn-select::after,
+.JWUV .registration .title-wrap .btn-select::after,
+.JWUV .btn-select.arrow-btn::after,
+.JWUV .arrow-purple,
+.JWUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.JWUV .hpay .new_add .btn .ico_arrow_right,
+.JWUV .sm-chk > input[type="checkbox"]:checked {filter: invert(79%) sepia(38%) saturate(882%) hue-rotate(201deg) brightness(49%) contrast(84%) !important}
+.JWUV .sel-certification li{background: var(--pm-color500) !important;}
+.JWUV .today-notification li em{color:#ffffff}
+.JWUV .survey-list .right button.check:before {filter:invert(83%) sepia(136%) saturate(984%) hue-rotate(317deg) brightness(68%) contrast(80%)}
+.JWUV .chat .top_right button > span{filter:invert(53%) sepia(41%) saturate(984%) hue-rotate(302deg) brightness(69%) contrast(80%)}
+/* black to pm-color900 */
+.JWUV .bk_primary{filter: invert(19%) sepia(35%) saturate(1371%) hue-rotate(196deg) brightness(101%) contrast(84%) !important}
+
+/* 중원대 테마한정 */
+.JWUV .professor-slide .page-btns [class^="btn"][class*="-lg"],
+.JWUV .attendance-slide .action_btn a.attend,
+.JWUV .attendance-slide2 .action_btn a.attend,
+.JWUV .wallet-slide .action_btn a.attend,
+.JWUV .pay-slide .card_info a.pay {background: var(--pm-color500) !important;}
+.JWUV .admin-top a span:first-child{color: var(--sc-color300);}
+
+/* 헤더 아이콘 색상 */
+.JWUV .main-header .main-logo {filter:contrast() brightness();}
+.JWUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.JWUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.JWUV .main-header [class^="btn-"][class*="setting"],
+.JWUV.bg-main [class^="btn-"][class*="id"],
+.JWUV .main-header [class^="btn-"][class*="menu"],
+.JWUV .main-header [class^=btn-][class*=talk],
+.JWUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.JWUV{background-image: url(../images/logo_JWUV.svg)!important;width: 7.5rem!important;height: 2.5rem!important;}
+.JWUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.JWUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 회원가입 */
+.logo.JWUV {background-image: url(../images/logo_JWUV.svg)!important; width: 11rem;}
+
+/* 전자출결 
+.attendance-bg.JWUV::before, .my-community-bg.JWUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_JWUV {background:url(../images/logo_JWUV_symbol.svg) no-repeat, linear-gradient(101.09deg, #2D3C77 13.03%, #5162A4 88.06%);}
+.layer.campus-pop.bg_JWUV .layer-contents {background:#F6F7FE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.JWUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.JWUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+/**** 광주대 ****/
+/* main*/
+.GJUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.GJUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.GJUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.GJUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.GJUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.GJUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.GJUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.GJUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.GJUV .my-community .community-cate .interest .ico,
+.GJUV .new-board .board-top .search .ico,
+.GJUV .small-group .member .user-area .btn-oper .ico,
+.GJUV .small-group .group-image .image-attach .ico,
+.GJUV .timetable-list .form-control_icon .btn-select::after,
+.GJUV .registration .title-wrap .btn-select::after,
+.GJUV .btn-select.arrow-btn::after,
+.GJUV .arrow-purple,
+.GJUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.GJUV .hpay .new_add .btn .ico_arrow_right,
+.GJUV .sm-chk > input[type="checkbox"]:checked {filter:invert(69%) sepia(96%) saturate(951%) hue-rotate(121deg) brightness(77%) contrast(81%) !important}
+.GJUV .sel-certification li{background: var(--main-primary900);}
+.GJUV .chat .top_right button > span{filter:invert(57%) sepia(47%) saturate(735%) hue-rotate(175deg) brightness(143%) contrast(95%)}
+
+/* black to pm-color900 */
+.GJUV .bk_primary{filter: invert(42%) sepia(98%) saturate(349%) hue-rotate(107deg) brightness(90%) contrast(92%) !important}
+
+/* 그린패널 한정 */
+.GJUV .wallet-slide .info-txt,
+.GJUV .facility-list .reading-room dl dd a,
+.GJUV .today-none-alarm p {color: var(--main-box-tit);}
+.GJUV .facility-slide .facility-list .facility-menu, 
+.GJUV .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.GJUV .survey-list .right button.check:before {filter:brightness(104%) hue-rotate(-18deg) contrast(108%)}
+
+
+/* 헤더 아이콘 색상 */
+.GJUV .main-header .main-logo {filter:contrast() brightness();}
+.GJUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.GJUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.GJUV .main-header [class^="btn-"][class*="setting"],
+.GJUV.bg-main [class^="btn-"][class*="id"],
+.GJUV .main-header [class^="btn-"][class*="menu"],
+.GJUV .main-header [class^=btn-][class*=talk],
+.GJUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.GJUV{background-image: url(../images/logo_GJUV_log.svg)!important;width: 6.625rem!important;height:1.325rem!important;}
+.GJUV.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.GJUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.GJUV {background-image: url(../images/logo_GJUV.svg) !important; width: 11.375rem;}
+.TMDARK .logo.GJUV {background-image: url(../images/logo_GJUV_wh.svg);}
+/* 전자출결 
+.attendance-bg.GJUV::before, .my-community-bg.GJUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_GJUV {background:url(../images/logo_GJUV_symbol.svg) no-repeat, linear-gradient(111.63deg, #0C9765 21.23%, #3AC8A9 90.17%);}
+.layer.campus-pop.bg_GJUV .layer-contents {background:#F8FCFB;}
+.layer.campus-pop.bg_GJUV .infor-title, .layer.campus-pop.bg_GJUV .infor-title dd{color: #111 !important}
+
+
+
+/**** 남서울대 ****/
+/* main*/
+.NSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.NSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.NSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.NSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.NSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.NSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.NSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* --pm-color900 */
+.NSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.NSUV .my-community .community-cate .interest .ico,
+.NSUV .new-board .board-top .search .ico,
+.NSUV .small-group .member .user-area .btn-oper .ico,
+.NSUV .small-group .group-image .image-attach .ico,
+.NSUV .timetable-list .form-control_icon .btn-select::after,
+.NSUV .registration .title-wrap .btn-select::after,
+.NSUV .btn-select.arrow-btn::after,
+.NSUV .arrow-purple,
+.NSUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.NSUV .hpay .new_add .btn .ico_arrow_right,
+.NSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(82%) sepia(97%) saturate(2426%) hue-rotate(205deg) brightness(93%) contrast(94%) !important}
+.NSUV .sel-certification li{background: var(--main-primary900);}
+.NSUV .today-notification li em{color: #E2FDE5;}
+
+/* --sc-color500 */
+.NSUV .survey-list .right button.check:before {filter:invert(60%) sepia(73%) saturate(352%) hue-rotate(123deg) brightness(112%) contrast(85%);}
+.NSUV .chat .top_right button > span{filter:invert(60%) sepia(73%) saturate(352%) hue-rotate(123deg) brightness(150%) contrast(85%);}
+/* black to pm-color900 */
+.NSUV .bk_primary{filter: invert(20%) sepia(56%) saturate(4051%) hue-rotate(202deg) brightness(89%) contrast(94%) !important}
+
+
+ /* 헤더 아이콘 색상 */
+.NSUV .main-header .main-logo {filter:contrast() brightness();}
+.NSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.NSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.NSUV .main-header [class^="btn-"][class*="setting"],
+.NSUV.bg-main [class^="btn-"][class*="id"],
+.NSUV .main-header [class^="btn-"][class*="menu"],
+.NSUV .main-header [class^=btn-][class*=talk],
+.NSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.NSUV{background-image: url(../images/logo_NSUV.svg)!important;width: 7.125rem!important;height: 2.25rem!important;}
+.NSUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.NSUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.NSUV {background-image: url(../images/logo_NSUV.svg)!important; width: 10.75rem;}
+
+/* 전자출결 
+.attendance-bg.NSUV::before, .my-community-bg.NSUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_NSUV {background:url(../images/logo_NSUV_symbol.svg) no-repeat, linear-gradient(113.66deg, #004796 2.15%, #4B9FFF 83%);}
+.layer.campus-pop.bg_NSUV .layer-contents {background:#F6FAFE;}
+/* 퀵메뉴 */
+.floating-btn.type1 [class^="btn-"][class*="search"] {background: var(--sc-color500);box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);border-radius: 0.75rem;}
+
+
+
+
+
+/**** 유원대 ****/
+/* main*/
+.UOUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.UOUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.UOUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.UOUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.UOUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.UOUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.UOUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* --pm-color900 */
+.UOUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.UOUV .my-community .community-cate .interest .ico,
+.UOUV .new-board .board-top .search .ico,
+.UOUV .small-group .member .user-area .btn-oper .ico,
+.UOUV .small-group .group-image .image-attach .ico,
+.UOUV .timetable-list .form-control_icon .btn-select::after,
+.UOUV .registration .title-wrap .btn-select::after,
+.UOUV .btn-select.arrow-btn::after,
+.UOUV .arrow-purple,
+.UOUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.UOUV .hpay .new_add .btn .ico_arrow_right,
+.UOUV .sm-chk > input[type="checkbox"]:checked {filter:invert(78%) sepia(91%) saturate(1504%) hue-rotate(193deg) brightness(98%) contrast(92%) !important}
+.UOUV .sel-certification li{background: var(--main-primary900);}
+.UOUV .today-notification li em{color: var(--main-box-sub2);}
+
+/* --sc-color500 */
+.UOUV .survey-list .right button.check:before {filter:invert(47%) sepia(46%) saturate(853%) hue-rotate(143deg) brightness(103%) contrast(86%)}
+.UOUV .chat .top_right button > span{filter:invert(31%) sepia(23%) saturate(6005%) hue-rotate(161deg) brightness(103%) contrast(62%)}
+/* black to pm-color900 */
+.UOUV .bk_primary{filter: invert(28%) sepia(28%) saturate(5737%) hue-rotate(189deg) brightness(98%) contrast(98%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.UOUV .main-header .main-logo {filter:contrast() brightness();}
+.UOUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.UOUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.UOUV .main-header [class^="btn-"][class*="setting"],
+.UOUV.bg-main [class^="btn-"][class*="id"],
+.UOUV .main-header [class^="btn-"][class*="menu"],
+.UOUV .main-header [class^=btn-][class*=talk],
+.UOUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.UOUV{background-image: url(../images/logo_UOUV.svg)!important;width: 7.5rem!important;height: 2rem!important;}
+.UOUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.UOUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.UOUV {background-image: url(../images/logo_UOUV.svg)!important; width: 11rem;}
+
+/* 전자출결 
+.attendance-bg.UOUV::before, .my-community-bg.UOUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_UOUV {background:url(../images/logo_UOUV_symbol.svg) no-repeat, linear-gradient(107deg, #0556B0 6.26%, #029EE1 90%);}
+.layer.campus-pop.bg_UOUV .layer-contents {background:#F7FCFF;}
+
+
+
+
+
+
+
+/**** 전주기전대 ****/
+/* main*/
+.JKCU .today-notification li em {color:var(--main-box-sub2)}
+.JKCU .sel-certification li {background:var(--main-primary900)}
+.JKCU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.JKCU .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.JKCU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.JKCU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.JKCU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.JKCU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.JKCU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+/* --pm-color900 */
+.JKCU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.JKCU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+.JKCU .wallet-slide .status-sm {background:#48A2F3}
+.JKCU .my-community .community-cate .interest .ico,
+.JKCU .new-board .board-top .search .ico,
+.JKCU .small-group .member .user-area .btn-oper .ico,
+.JKCU .small-group .group-image .image-attach .ico,
+.JKCU .timetable-list .form-control_icon .btn-select::after,
+.JKCU .registration .title-wrap .btn-select::after,
+.JKCU .btn-select.arrow-btn::after,
+.JKCU .arrow-purple,
+.JKCU .hpay_sign .sign_tit.fir .image-attach .ico,
+.JKCU .hpay .new_add .btn .ico_arrow_right,
+.JKCU .sm-chk > input[type="checkbox"]:checked {filter:brightness(0) invert(41%) sepia(16%) saturate(1930%) hue-rotate(171deg) brightness(96%) contrast(98%) !important}
+/* --sc-color500 */
+.JKCU .survey-list .right button.check:before {filter:invert(59%) sepia(43%) saturate(540%) hue-rotate(82deg) brightness(104%) contrast(93%);}
+.JKCU .chat .top_right button > span {filter:brightness(0) invert(59%) sepia(43%) saturate(540%) hue-rotate(82deg) brightness(96%) contrast(93%)}
+/* black to pm-color900 */
+.JKCU .bk_primary{filter: invert(44%) sepia(17%) saturate(2246%) hue-rotate(171deg) brightness(87%) contrast(87%) !important}
+
+/* 헤더 아이콘 색상 */
+.JKCU .main-header .main-logo {filter:contrast() brightness();}
+.JKCU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.JKCU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.JKCU .main-header [class^="btn-"][class*="setting"],
+.JKCU.bg-main [class^="btn-"][class*="id"],
+.JKCU .main-header [class^="btn-"][class*="menu"],
+.JKCU .main-header [class^=btn-][class*=talk],
+.JKCU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main */
+.main-header .main-logo.JKCU{background-image: url(../images/logo_JKCU.svg)!important;width: 8.5rem!important;height: 2rem!important;}
+.JKCU.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.JKCU.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.JKCU {background-image: url(../images/logo_JKCU.svg)!important; width: 12rem;}
+
+/* 전자출결 
+.attendance-bg.JKCU::before, .my-community-bg.JKCU::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_JKCU {background:url(../images/logo_JKCU_symbol.svg) no-repeat, linear-gradient(112deg, #1E56A4 2.65%, #5896EF 110.23%);}
+.layer.campus-pop.bg_JKCU .layer-contents {background:#FAFDFF;}
+
+
+
+
+
+
+
+/**** 목원대 ****/
+/* MWUV*/
+.MWUV .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.MWUV .sel-certification li,
+.MWUV .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.MWUV .sel-certification li span {color:#FFFFFF}
+.MWUV .sel-certification li.nfc .ico,
+.MWUV .sel-certification li.qr .ico,
+.MWUV .sel-certification li.barcode .ico,
+.MWUV .sel-certification li.bluetooth .ico{filter:invert(0)}
+.MWUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.MWUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.MWUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.MWUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.MWUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.MWUV .today-notification li .ico {filter:brightness(0) invert(21%) sepia(56%) saturate(2165%) hue-rotate(322deg) brightness(95%) contrast(87%)}
+.MWUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.MWUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.MWUV .wallet-slide .total-balance p {color:#66737F}
+.MWUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.MWUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+
+/* --pm-color-900 */
+.MWUV .my-community .community-cate .interest .ico,
+.MWUV .new-board .board-top .search .ico,
+.MWUV .small-group .member .user-area .btn-oper .ico,
+.MWUV .small-group .group-image .image-attach .ico,
+.MWUV .timetable-list .form-control_icon .btn-select::after,
+.MWUV .registration .title-wrap .btn-select::after,
+.MWUV .btn-select.arrow-btn::after,
+.MWUV .arrow-purple,
+.MWUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.MWUV .hpay .new_add .btn .ico_arrow_right,
+.MWUV .sm-chk > input[type="checkbox"]:checked {filter:invert(42%) sepia(46%) saturate(2823%) hue-rotate(319deg) brightness(71%) contrast(90%) !important}
+/* --sc-color-500 */
+.MWUV .survey-list .right button.check:before {filter:invert(49%) sepia(50%) saturate(466%) hue-rotate(182deg) brightness(86%) contrast(89%)}
+.MWUV .chat .top_right button > span{filter:invert(49%) sepia(50%) saturate(466%) hue-rotate(182deg) brightness(86%) contrast(89%)}
+/* black to pm-color900 */
+.MWUV .evaluation .paging .swiper-button-prev:after,
+.MWUV .evaluation .paging .swiper-button-next:after{filter: invert(24%) sepia(59%) saturate(1582%) hue-rotate(316deg) brightness(92%) contrast(92%);}
+.MWUV .bk_primary{filter: invert(24%) sepia(59%) saturate(1582%) hue-rotate(316deg) brightness(92%) contrast(92%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.MWUV .main-header .main-logo {filter:contrast() brightness();}
+.MWUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.MWUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.MWUV .main-header [class^="btn-"][class*="setting"],
+.MWUV.bg-main [class^="btn-"][class*="id"],
+.MWUV .main-header [class^="btn-"][class*="menu"],
+.MWUV .main-header [class^=btn-][class*=talk],
+.MWUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.MWUV {background-image: url(../images/logo_MWUV.svg)!important; width: 8rem; height: 1.819rem;}
+.MWUV .user-thumb_img{background-color: #FFFFFF}
+.MWUV.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+
+/* 전자출결
+.attendance-bg.MWUV::before, .my-community-bg.MWUV::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.MWUV {background-image: url(../images/logo_MWUV.svg)!important; width: 10.5rem;}
+
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_MWUV {background:url(../images/logo_MWUV_symbol.svg) no-repeat,linear-gradient(111.91deg, #962C41 2.65%, #C3576C 110.23%);}
+.layer.campus-pop.bg_MWUV .layer-contents {background:#FFF9FB}
+.MWUV.layer.campus-pop .logo_wrap > img {max-width: 10rem;max-height: 2.5rem;}
+.MWUV .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.MWUV .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.MWUV .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+/* 목원대 */
+.MWUV .admin-top a span:first-child{color: var(--sc-color400);}
+
+
+
+
+
+
+
+/**** 신성대 ****/
+/* main*/
+.SSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.SSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.SSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.SSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.SSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.SSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+/* .SSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain} */
+.SSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 */
+.SSUV .my-community .community-cate .interest .ico,
+.SSUV .new-board .board-top .search .ico,
+.SSUV .small-group .member .user-area .btn-oper .ico,
+.SSUV .small-group .group-image .image-attach .ico,
+.SSUV .timetable-list .form-control_icon .btn-select::after,
+.SSUV .registration .title-wrap .btn-select::after,
+.SSUV .btn-select.arrow-btn::after,
+.SSUV .arrow-purple,
+.SSUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.SSUV .hpay .new_add .btn .ico_arrow_right,
+.SSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(69%) sepia(96%) saturate(951%) hue-rotate(121deg) brightness(77%) contrast(81%) !important}
+.SSUV .sel-certification li{background: var(--main-primary900);}
+/* --sc-color500 */
+.SSUV .chat .top_right button > span{filter:invert(57%) sepia(47%) saturate(735%) hue-rotate(175deg) brightness(143%) contrast(95%)}
+
+/* black to pm-color900 */
+.SSUV .bk_primary{filter: invert(45%) sepia(14%) saturate(3615%) hue-rotate(80deg) brightness(92%) contrast(73%) !important}
+
+/* 그린패널 한정 */
+.SSUV .wallet-slide .info-txt,
+.SSUV .facility-list .reading-room dl dd a,
+.SSUV .today-none-alarm p {color: var(--main-box-tit);}
+.SSUV .facility-slide .facility-list .facility-menu, 
+.SSUV .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.SSUV .survey-list .right button.check:before {filter:brightness(104%) hue-rotate(-18deg) contrast(108%)}
+
+
+/* 헤더 아이콘 색상 */
+.SSUV .main-header .main-logo {filter:contrast() brightness();}
+.SSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.SSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.SSUV .main-header [class^="btn-"][class*="setting"],
+.SSUV.bg-main [class^="btn-"][class*="id"],
+.SSUV .main-header [class^="btn-"][class*="menu"],
+.SSUV .main-header [class^=btn-][class*=talk],
+.SSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.SSUV {background-image: url(../images/logo_SSUV.svg)!important; width: 8.6rem; height: 2.1rem;}
+.SSUV .user-thumb_img{background-color: #FFFFFF}
+.SSUV.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.SSUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 회원가입 */
+.logo.SSUV {background-image: url(../images/logo_SSUV.svg)!important; width: 10.5rem;}
+
+/* 전자출결 
+.attendance-bg.SSUV::before, .my-community-bg.SSUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SSUV {background:url(../images/logo_SSUV_symbol.svg) no-repeat, linear-gradient(111.63deg, #499836 21.23%, #8DC95E 90.17%);}
+.layer.campus-pop.bg_SSUV .layer-contents {background:#FAFCF8;}
+
+
+
+
+
+/**** 수원여대 ****/
+/* SWWU*/
+.SWWU .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.SWWU .sel-certification li,
+.SWWU .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.SWWU .sel-certification li span {color:#FFFFFF}
+.SWWU .sel-certification li.nfc .ico,
+.SWWU .sel-certification li.qr .ico,
+.SWWU .sel-certification li.barcode .ico,
+.SWWU .sel-certification li.bluetooth .ico{filter:invert(0)}
+.SWWU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.SWWU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.SWWU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.SWWU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.SWWU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.SWWU .today-notification li .ico {filter:invert(58%) sepia(99%) saturate(4940%) hue-rotate(331deg) brightness(80%) contrast(94%)}
+.SWWU .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.SWWU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.SWWU .wallet-slide .total-balance p {color:#66737F}
+.SWWU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.SWWU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.SWWU.facility-bg::before{background:#E8686C; }
+.SWWU .my-community .community-cate .interest .ico,
+.SWWU .new-board .board-top .search .ico,
+.SWWU .small-group .member .user-area .btn-oper .ico,
+.SWWU .small-group .group-image .image-attach .ico,
+.SWWU .timetable-list .form-control_icon .btn-select::after,
+.SWWU .registration .title-wrap .btn-select::after,
+.SWWU .btn-select.arrow-btn::after,
+.SWWU .arrow-purple,
+.SWWU .hpay_sign .sign_tit.fir .image-attach .ico,
+.SWWU .hpay .new_add .btn .ico_arrow_right,
+.SWWU .sm-chk > input[type="checkbox"]:checked {filter:invert(80%) sepia(63%) saturate(6993%) hue-rotate(342deg) brightness(75%) contrast(96%) !important}
+.SWWU .survey-list .right button.check:before,
+.SWWU .attendance-check.check-on button i.ico {filter:invert(52%) sepia(8%) saturate(6121%) hue-rotate(350deg) brightness(149%) contrast(95%)}
+.SWWU .chat .top_right button > span{filter:invert(62%) sepia(23%) saturate(6171%) hue-rotate(350deg) brightness(241%) contrast(98%)}
+/* black to pm-color900 */
+.SWWU .bk_primary{filter: invert(17%) sepia(41%) saturate(6309%) hue-rotate(335deg) brightness(96%) contrast(102%) !important}
+
+/* 헤더 아이콘 색상 */
+.SWWU .main-header .main-logo{filter:contrast() brightness();}
+.SWWU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.SWWU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.SWWU .main-header [class^="btn-"][class*="setting"],
+.SWWU.bg-main [class^="btn-"][class*="id"],
+.SWWU .main-header [class^="btn-"][class*="menu"],
+.SWWU .main-header [class^=btn-][class*=talk],
+.SWWU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.SWWU .user-thumb_img{background-color: #FFFFFF}
+.SWWU.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SWWU {background:url(../images/logo_SWWU_symbol.svg) no-repeat,linear-gradient(111.91deg, #CD133A 2.65%, #F17E96 110.23%);}
+.layer.campus-pop.bg_SWWU .layer-contents {background:#FAFAFA}
+.SWWU .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.SWWU .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.SWWU .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x (레드 색상 겹침) */
+.SWWU .guide-text.valid{color:var(--sc-color500);}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.SWWU,
+.TMDARK .main-header .main-logo.SWWU {background-image: url(../images/logo_SWWU_wh.svg)!important;width: 9em; height: 2.25rem;}
+.SWWU .main-header .main-logo.SWWU,
+.TMBLUE .main-header .main-logo.SWWU,
+.TMPINK .main-header .main-logo.SWWU,
+.TMGREEN .main-header .main-logo.SWWU {background-image: url(../images/logo_SWWU.svg)!important;width: 9em; height: 2.25rem;}
+
+/* 회원가입 */
+.logo.SWWU {background-image: url(../images/logo_SWWU.svg)!important; width: 12rem;}
+.TMDARK .logo.SWWU {background-image: url(../images/logo_SWWU_wh.svg)!important; width: 12rem;}
+
+
+
+
+
+/**** 한남대 ****/
+/* HNUV*/
+.HNUV .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.HNUV .sel-certification li,
+.HNUV .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.HNUV .sel-certification li span {color:#FFFFFF}
+.HNUV .sel-certification li.nfc .ico,
+.HNUV .sel-certification li.qr .ico,
+.HNUV .sel-certification li.barcode .ico,
+.HNUV .sel-certification li.bluetooth .ico{filter:invert(0)}
+.HNUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.HNUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.HNUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.HNUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.HNUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.HNUV .today-notification li .ico {filter:brightness(0) invert(21%) sepia(56%) saturate(2165%) hue-rotate(322deg) brightness(85%) contrast(87%)}
+.HNUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.HNUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.HNUV .wallet-slide .total-balance p {color:#66737F}
+.HNUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.HNUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+
+/* --pm-color-900 */
+.HNUV .my-community .community-cate .interest .ico,
+.HNUV .new-board .board-top .search .ico,
+.HNUV .small-group .member .user-area .btn-oper .ico,
+.HNUV .small-group .group-image .image-attach .ico,
+.HNUV .timetable-list .form-control_icon .btn-select::after,
+.HNUV .registration .title-wrap .btn-select::after,
+.HNUV .btn-select.arrow-btn::after,
+.HNUV .arrow-purple,
+.HNUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.HNUV .hpay .new_add .btn .ico_arrow_right,
+.HNUV .sm-chk > input[type="checkbox"]:checked {filter:invert(42%) sepia(46%) saturate(2823%) hue-rotate(319deg) brightness(71%) contrast(90%) !important}
+/* --sc-color-500 */
+.HNUV .survey-list .right button.check:before {filter:invert(40%) sepia(50%) saturate(900%) hue-rotate(192deg) brightness(75%) contrast(89%)}
+.HNUV .chat .top_right button > span{filter:invert(49%) sepia(50%) saturate(466%) hue-rotate(189deg) brightness(84%) contrast(89%)}
+/* black to pm-color900 */
+.HNUV .evaluation .paging .swiper-button-prev:after,
+.HNUV .evaluation .paging .swiper-button-next:after{filter: invert(24%) sepia(59%) saturate(1582%) hue-rotate(316deg) brightness(92%) contrast(92%);}
+/* black to pm-color900 */
+.HNUV .bk_primary{filter: invert(24%) sepia(59%) saturate(1582%) hue-rotate(316deg) brightness(92%) contrast(92%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.HNUV .main-header .main-logo{filter:contrast() brightness();}
+.HNUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.HNUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.HNUV .main-header [class^="btn-"][class*="setting"],
+.HNUV.bg-main [class^="btn-"][class*="id"],
+.HNUV .main-header [class^="btn-"][class*="menu"],
+.HNUV .main-header [class^=btn-][class*=talk],
+.HNUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.HNUV {background-image: url(../images/logo_HNUV.svg)!important; width: 7.5rem;height: 2.375rem;}
+.HNUV .user-thumb_img{background-color: #FFFFFF}
+.HNUV.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+/* 전자출결
+.attendance-bg.HNUV::before, .my-community-bg.HNUV::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.HNUV {background-image: url(../images/logo_HNUV.svg)!important; width: 10.5rem;}
+
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_HNUV {background:url(../images/logo_HNUV_symbol.svg) no-repeat,linear-gradient(111.91deg, #AF2F53 2.65%, #DB7390 110.23%);}
+.layer.campus-pop.bg_HNUV .layer-contents {background:#FAF9F9}
+.HNUV.layer.campus-pop .logo_wrap > img {max-width: 11rem;max-height: 3.25rem;}
+.HNUV .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.HNUV .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.HNUV .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x : 에러 컬러와 색상 겹침 */
+.HNUV .guide-text.valid{color:var(--sc-color500);}
+
+/* 한남대 */
+.HNUV .admin-top a span:first-child{color: var(--sc-color400);}
+
+
+
+
+
+/**** 인제대 ****/
+/* main*/
+.IJUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.IJUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.IJUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.IJUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.IJUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.IJUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+/* .IJUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain} */
+.IJUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 */
+.IJUV .my-community .community-cate .interest .ico,
+.IJUV .new-board .board-top .search .ico,
+.IJUV .small-group .member .user-area .btn-oper .ico,
+.IJUV .small-group .group-image .image-attach .ico,
+.IJUV .timetable-list .form-control_icon .btn-select::after,
+.IJUV .registration .title-wrap .btn-select::after,
+.IJUV .btn-select.arrow-btn::after,
+.IJUV .arrow-purple,
+.IJUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.IJUV .hpay .new_add .btn .ico_arrow_right,
+.IJUV .sm-chk > input[type="checkbox"]:checked {filter:invert(69%) sepia(966%) saturate(690%) hue-rotate(146deg) brightness(100%) contrast(81%) !important}
+.IJUV .sel-certification li{background: var(--main-primary900);}
+/* --sc-color500 */
+.IJUV .chat .top_right button > span{filter:invert(57%) sepia(40%) saturate(435%) hue-rotate(169deg) brightness(153%) contrast(95%)}
+
+/* black to pm-color900 */
+.IJUV .bk_primary{filter: invert(44%) sepia(50%) saturate(4392%) hue-rotate(156deg) brightness(94%) contrast(101%) !important}
+
+/* 그린패널 한정 */
+.IJUV .wallet-slide .info-txt,
+.IJUV .facility-list .reading-room dl dd a,
+.IJUV .today-none-alarm p {color: var(--main-box-tit);}
+.IJUV .facility-slide .facility-list .facility-menu, 
+.IJUV .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.IJUV .survey-list .right button.check:before {filter:sepia(8%) brightness(113%) hue-rotate(318deg) contrast(100%)}
+
+
+/* 헤더 아이콘 색상 */
+.IJUV .main-header .main-logo {filter:contrast() brightness();}
+.IJUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.IJUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.IJUV .main-header [class^="btn-"][class*="setting"],
+.IJUV.bg-main [class^="btn-"][class*="id"],
+.IJUV .main-header [class^="btn-"][class*="menu"],
+.IJUV .main-header [class^=btn-][class*=talk],
+.IJUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.IJUV {background-image: url(../images/logo_IJUV.svg)!important; width: 8.6rem; height: 2.1rem;}
+.IJUV .user-thumb_img{background-color: #FFFFFF}
+.IJUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.IJUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.IJUV {background-image: url(../images/logo_IJUV.svg)!important; width: 10.5rem;}
+
+/* 전자출결 
+.attendance-bg.IJUV::before, .my-community-bg.IJUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_IJUV {background:url(../images/logo_IJUV_symbol.svg) no-repeat, linear-gradient(112deg, #009EA8 2.65%, #0ACED6 110.23%);}
+.layer.campus-pop.bg_IJUV .layer-contents {background:#F4FBFB;}
+
+
+
+
+
+/**** 안산대 ****/
+/* main*/
+.ASUV .today-notification li em {color:var(--main-box-sub2)}
+.ASUV .sel-certification li {background:var(--main-primary900)}
+.ASUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.ASUV .today-notification li .ico {filter:invert(0%) sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(98%) contrast(108%);}
+.ASUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.ASUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.ASUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.ASUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.ASUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.ASUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.ASUV .wallet-slide .status-sm {background:#57A9DB}
+.ASUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 */
+.ASUV .my-community .community-cate .interest .ico,
+.ASUV .new-board .board-top .search .ico,
+.ASUV .small-group .member .user-area .btn-oper .ico,
+.ASUV .small-group .group-image .image-attach .ico,
+.ASUV .timetable-list .form-control_icon .btn-select::after,
+.ASUV .registration .title-wrap .btn-select::after,
+.ASUV .btn-select.arrow-btn::after,
+.ASUV .arrow-purple,
+.ASUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.ASUV .hpay .new_add .btn .ico_arrow_right,
+.ASUV .sm-chk > input[type="checkbox"]:checked {filter:brightness(0) invert(41%) sepia(16%) saturate(1930%) hue-rotate(171deg) brightness(92%) contrast(98%) !important}
+/* --sc-color500 */
+.ASUV .survey-list .right button.check:before {filter:invert(56%) sepia(92%) saturate(211%) hue-rotate(171deg) brightness(100%) contrast(93%)}
+.ASUV .chat .top_right button > span {filter:invert(56%) sepia(92%) saturate(211%) hue-rotate(171deg) brightness(112%) contrast(93%)}
+/* black to pm-color900 */
+.ASUV .bk_primary{filter: invert(28%) sepia(72%) saturate(1952%) hue-rotate(188deg) brightness(92%) contrast(80%) !important}
+
+/* 헤더 아이콘 색상 */
+.ASUV .main-header .main-logo {filter:contrast() brightness();}
+.ASUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.ASUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.ASUV .main-header [class^="btn-"][class*="setting"],
+.ASUV.bg-main [class^="btn-"][class*="id"],
+.ASUV .main-header [class^="btn-"][class*="menu"],
+.ASUV .main-header [class^=btn-][class*=talk],
+.ASUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main */
+.main-header .main-logo.ASUV{background-image: url(../images/logo_ASUV.svg)!important;width: 8.25rem !important;height: 1.714rem !important;}
+.ASUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.ASUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.ASUV {background-image: url(../images/logo_ASUV.svg)!important;width: 11.5rem;height: 2.4rem;}
+
+/* 전자출결 
+.attendance-bg.ASUV::before, .my-community-bg.ASUV::before {background:linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_ASUV {background:url(../images/logo_ASUV_symbol.svg) no-repeat, linear-gradient(112deg, #196FB3 2.65%, #3496E3 110.23%);}
+.layer.campus-pop.bg_ASUV .layer-contents {background:#FAFDFF;}
+
+
+
+
+
+/**** 안양대 ****/
+/* main*/
+.AYUV .today-notification li em {color:var(--main-box-sub2)}
+.AYUV .sel-certification li {background:var(--main-primary900)}
+.AYUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.AYUV .today-notification li .ico {filter:sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(120%)}
+.AYUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.AYUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.AYUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.AYUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.AYUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.AYUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* .AYUV .wallet-slide .status-sm {background:#57A9DB} */
+.AYUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 image */
+.AYUV .my-community .community-cate .interest .ico,
+.AYUV .small-group .group-image .image-attach .ico,
+.AYUV .small-group .member .user-area .btn-oper .ico,
+.AYUV .new-board .board-top .search .ico,
+.AYUV .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(83%) sepia(30%) saturate(3167%) hue-rotate(209deg) brightness(127%) contrast(92%)}
+/* --pm-color900 arrow */
+.AYUV .timetable-list .form-control_icon .btn-select::after,
+.AYUV .registration .title-wrap .btn-select::after,
+.AYUV .btn-select.arrow-btn::after,
+.AYUV .arrow-purple,
+.AYUV .hpay .new_add .btn .ico_arrow_right,
+.AYUV .sm-chk > input[type="checkbox"]:checked {filter:invert(118%) sepia(30%) saturate(6295%) hue-rotate(238deg) brightness(72%) contrast(72%) !important}
+/* --sc-color500 */
+.AYUV .survey-list .right button.check:before {filter:invert(56%) sepia(92%) saturate(211%) hue-rotate(171deg) brightness(10%) contrast(93%)}
+.AYUV .chat .top_right button > span {filter:invert(56%) sepia(92%) saturate(211%) hue-rotate(171deg) brightness(112%) contrast(93%)}
+/* black to pm-color900 */
+.AYUV .bk_primary{filter: invert(17%) sepia(78%) saturate(2042%) hue-rotate(217deg) brightness(99%) contrast(92%) !important}
+
+/* 헤더 아이콘 색상 */
+.AYUV .main-header .main-logo {filter:contrast() brightness();}
+.AYUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.AYUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.AYUV .main-header [class^="btn-"][class*="setting"],
+.AYUV.bg-main [class^="btn-"][class*="id"],
+.AYUV .main-header [class^="btn-"][class*="menu"],
+.AYUV .main-header [class^=btn-][class*=talk],
+.AYUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+
+/* main */
+.main-header .main-logo.AYUV{background-image: url(../images/logo_AYUV.svg)!important;width: 7rem !important;height: 2.625rem !important}
+.AYUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.AYUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.AYUV {background-image: url(../images/logo_AYUV.svg)!important;width: 11rem;height: 4.10844rem;}
+
+/* 전자출결 
+.attendance-bg.AYUV::before, .my-community-bg.AYUV::before {background:linear-gradient(137.66deg, #264099 27.69%, #5B78D7 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_AYUV {background:url(../images/logo_AYUV_symbol.svg) no-repeat, linear-gradient(112deg, #264099 2.65%, #5B78D7 110.23%);}
+.layer.campus-pop.bg_AYUV .layer-contents {background:#FAFBFF;}
+
+
+
+
+
+/**** 강서대 ****/
+/* main*/
+.GSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.GSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.GSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.GSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.GSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.GSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.GSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+.GSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 image */
+.GSUV .my-community .community-cate .interest .ico,
+.GSUV .small-group .group-image .image-attach .ico,
+.GSUV .small-group .member .user-area .btn-oper .ico,
+.GSUV .new-board .board-top .search .ico,
+.GSUV .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(78%) sepia(30%) saturate(3167%) hue-rotate(245deg) brightness(86%) contrast(92%)}
+/* --pm-color900 arrow */
+.GSUV .timetable-list .form-control_icon .btn-select::after,
+.GSUV .registration .title-wrap .btn-select::after,
+.GSUV .btn-select.arrow-btn::after,
+.GSUV .arrow-purple,
+.GSUV .hpay .new_add .btn .ico_arrow_right,
+.GSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(100%) sepia(45%) saturate(3053%) hue-rotate(268deg) brightness(69%) contrast(93%) !important}
+.GSUV .sel-certification li{background: var(--main-primary900);}
+/* .GSUV .today-notification li em{color: #FFEABD;} */
+
+/* --sc-color500 강서대 기본 sc-color사용 */
+/* black to pm-color900 */
+.GSUV .bk_primary{filter: invert(19%) sepia(24%) saturate(6070%) hue-rotate(259deg) brightness(95%) contrast(91%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.GSUV .main-header .main-logo {filter:contrast() brightness();}
+.GSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.GSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.GSUV .main-header [class^="btn-"][class*="setting"],
+.GSUV.bg-main [class^="btn-"][class*="id"],
+.GSUV .main-header [class^="btn-"][class*="menu"],
+.GSUV .main-header [class^=btn-][class*=talk],
+.GSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.GSUV{background-image: url(../images/logo_GSUV.svg)!important;width: 8.5rem!important;height: 2.1rem!important;}
+.GSUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.GSUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 회원가입 */
+.logo.GSUV {background-image: url(../images/logo_GSUV.svg)!important; width: 11rem;}
+
+/* 전자출결 
+.attendance-bg.GSUV::before, .my-community-bg.GSUV::before {background:linear-gradient(137.66deg, #662C91 27.69%, #9756C8 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_GSUV {background:url(../images/logo_GSUV_symbol.svg) no-repeat, linear-gradient(107deg, #662C91 6.26%, #9756C8 90.13%);}
+.layer.campus-pop.bg_GSUV .layer-contents {background:#FCFBFE;}
+
+/* 쿠폰함 상세 마신포 말풍선 */
+.GSUV .my_shpoint [class^="mp_pop"] {background:var(--cm-gray700)}
+.GSUV .my_shpoint [class^="mp_pop"]:after {filter: invert(46%) sepia(15%) saturate(426%) hue-rotate(167deg) brightness(92%) contrast(85%);}
+
+
+
+
+
+/**** 백석대 ****/
+/* main*/
+.BSUV .today-notification li em {color:var(--main-box-sub2)}
+.BSUV .sel-certification li {background:var(--main-primary900)}
+.BSUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.BSUV .today-notification li .ico {filter:sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(120%)}
+.BSUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.BSUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.BSUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.BSUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.BSUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.BSUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* .BSUV .wallet-slide .status-sm {background:#57A9DB} */
+.BSUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 image */
+.BSUV .my-community .community-cate .interest .ico,
+.BSUV .small-group .group-image .image-attach .ico,
+.BSUV .small-group .member .user-area .btn-oper .ico,
+.BSUV .new-board .board-top .search .ico,
+.BSUV .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(83%) sepia(30%) saturate(3167%) hue-rotate(209deg) brightness(127%) contrast(92%)}
+/* --pm-color900 arrow */
+.BSUV .timetable-list .form-control_icon .btn-select::after,
+.BSUV .registration .title-wrap .btn-select::after,
+.BSUV .btn-select.arrow-btn::after,
+.BSUV .arrow-purple,
+.BSUV .hpay .new_add .btn .ico_arrow_right,
+.BSUV .sm-chk > input[type="checkbox"]:checked {filter:invert(118%) sepia(20%) saturate(6295%) hue-rotate(228deg) brightness(52%) contrast(72%) !important}
+/* --sc-color500 */
+.BSUV .survey-list .right button.check:before {filter:invert(63%) sepia(41%) saturate(260%) hue-rotate(159deg) brightness(128%) contrast(93%)}
+.BSUV .chat .top_right button > span {filter:invert(21%) sepia(31%) saturate(774%) hue-rotate(173deg) brightness(85%) contrast(93%)}
+/* black to pm-color900 */
+.BSUV .bk_primary{filter: invert(15%) sepia(69%) saturate(4223%) hue-rotate(216deg) brightness(78%) contrast(106%) !important}
+
+/* 헤더 아이콘 색상 */
+.BSUV .main-header .main-logo {filter:contrast() brightness();}
+.BSUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.BSUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.BSUV .main-header [class^="btn-"][class*="setting"],
+.BSUV.bg-main [class^="btn-"][class*="id"],
+.BSUV .main-header [class^="btn-"][class*="menu"],
+.BSUV .main-header [class^=btn-][class*=talk],
+.BSUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+.BSUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.BSUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.BSUV,
+.TMDARK .main-header .main-logo.BSUV {background-image: url(../images/logo_BSUV_wh.svg)!important;width:8rem!important;height:2.125rem;}
+.BSUV .main-header .main-logo.BSUV,
+.TMBLUE .main-header .main-logo.BSUV,
+.TMPINK .main-header .main-logo.BSUV,
+.TMGREEN .main-header .main-logo.BSUV {background-image: url(../images/logo_BSUV.svg)!important;width:8rem!important;height:2.125rem;}
+
+/* 회원가입 */
+.logo.BSUV {background-image: url(../images/logo_BSUV.svg)!important; width: 11.5rem;}
+.TMDARK .logo.BSUV {background-image: url(../images/logo_BSUV_wh.svg)!important; width: 11.5rem;}
+
+/* 전자출결 
+.attendance-bg.BSUV::before, .my-community-bg.BSUV::before {background:linear-gradient(137.66deg, #264099 27.69%, #5B78D7 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_BSUV {background:url(../images/logo_BSUV_symbol.svg) no-repeat, linear-gradient(112deg, #264099 2.65%, #5B78D7 110.23%);}
+.layer.campus-pop.bg_BSUV .layer-contents {background:#FAFCFF;}
+
+
+
+
+
+/**** 백석문화대 ****/
+/* main*/
+.BSCU .today-notification li em {color:var(--main-box-sub2)}
+.BSCU .sel-certification li {background:var(--main-primary900)}
+.BSCU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.BSCU .today-notification li .ico {filter:sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(120%)}
+.BSCU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.BSCU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.BSCU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.BSCU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.BSCU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.BSCU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* .BSCU .wallet-slide .status-sm {background:#57A9DB} */
+.BSCU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 image */
+.BSCU .my-community .community-cate .interest .ico,
+.BSCU .small-group .group-image .image-attach .ico,
+.BSCU .small-group .member .user-area .btn-oper .ico,
+.BSCU .new-board .board-top .search .ico,
+.BSCU .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(87%) sepia(95%) saturate(3150%) hue-rotate(206deg) brightness(92%) contrast(94%)}
+/* --pm-color900 arrow */
+.BSCU .timetable-list .form-control_icon .btn-select::after,
+.BSCU .registration .title-wrap .btn-select::after,
+.BSCU .btn-select.arrow-btn::after,
+.BSCU .arrow-purple,
+.BSCU .hpay .new_add .btn .ico_arrow_right,
+.BSCU .sm-chk > input[type="checkbox"]:checked {filter:invert(12%) sepia(95%) saturate(5250%) hue-rotate(199deg) brightness(62%) contrast(94%) !important}
+/* --sc-color500 */
+.BSCU .survey-list .right button.check:before {filter:invert(56%) sepia(47%) saturate(386%) hue-rotate(163deg) brightness(103%) contrast(91%)}
+.BSCU .chat .top_right button > span {filter:invert(47%) sepia(47%) saturate(576%) hue-rotate(165deg) brightness(88%) contrast(91%)}
+/* black to pm-color900 */
+.BSCU .bk_primary{filter: invert(12%) sepia(95%) saturate(3494%) hue-rotate(206deg) brightness(97%) contrast(94%) !important}
+.BSCU.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.BSCU.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+/* 헤더 아이콘 색상 */
+.BSCU .main-header .main-logo {filter:contrast() brightness();}
+.BSCU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.BSCU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.BSCU .main-header [class^="btn-"][class*="setting"],
+.BSCU.bg-main [class^="btn-"][class*="id"],
+.BSCU .main-header [class^="btn-"][class*="menu"],
+.BSCU .main-header [class^=btn-][class*=talk],
+.BSCU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.BSCU,
+.TMDARK .main-header .main-logo.BSCU {background-image: url(../images/logo_BSCU_wh.svg)!important;width:8rem!important;height:1.8rem;}
+.BSCU .main-header .main-logo.BSCU,
+.TMBLUE .main-header .main-logo.BSCU,
+.TMPINK .main-header .main-logo.BSCU,
+.TMGREEN .main-header .main-logo.BSCU {background-image: url(../images/logo_BSCU.svg)!important;width:8rem!important;height:1.8rem;}
+
+/* 회원가입 */
+.logo.BSCU {background-image: url(../images/logo_BSCU.svg)!important; width: 11.5rem;}
+.TMDARK .logo.BSCU {background-image: url(../images/logo_BSCU_wh.svg)!important; width: 11.5rem;}
+
+/* 전자출결 
+.attendance-bg.BSCU::before, .my-community-bg.BSCU::before {background:linear-gradient(137.66deg, #074797 27.69%, #3C8FCD 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_BSCU {background:url(../images/logo_BSCU_symbol.svg) no-repeat, linear-gradient(112deg, #074797 2.65%, #3C8FCD 110.23%);}
+.layer.campus-pop.bg_BSCU .layer-contents {background:#FAFCFF;}
+
+
+
+
+
+
+/**** 대구보건대 ****/
+/* DHCU*/
+.DHCU .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.DHCU .sel-certification li,
+.DHCU .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.DHCU .sel-certification li span {color:#FFFFFF}
+.DHCU .sel-certification li.nfc .ico,
+.DHCU .sel-certification li.qr .ico,
+.DHCU .sel-certification li.barcode .ico,
+.DHCU .sel-certification li.bluetooth .ico{filter:invert(0)}
+.DHCU .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.DHCU .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.DHCU .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.DHCU .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.DHCU .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.DHCU .today-notification li .ico {filter:brightness(0) invert(21%) sepia(56%) saturate(3169%) hue-rotate(312deg) brightness(76%) contrast(87%)}
+.DHCU .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.DHCU .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.DHCU .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.DHCU .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.DHCU .survey_top .period{background:var(--cm-gray900)}
+/* --pm-color-900 */
+.DHCU .my-community .community-cate .interest .ico,
+.DHCU .new-board .board-top .search .ico,
+.DHCU .small-group .member .user-area .btn-oper .ico,
+.DHCU .small-group .group-image .image-attach .ico,
+.DHCU .timetable-list .form-control_icon .btn-select::after,
+.DHCU .registration .title-wrap .btn-select::after,
+.DHCU .btn-select.arrow-btn::after,
+.DHCU .arrow-purple,
+.DHCU .hpay_sign .sign_tit.fir .image-attach .ico,
+.DHCU .hpay .new_add .btn .ico_arrow_right,
+.DHCU .sm-chk > input[type="checkbox"]:checked {filter:invert(75%) sepia(46%) saturate(2963%) hue-rotate(309deg) brightness(71%) contrast(90%) !important}
+/* --sc-color-500 */
+.DHCU .survey-list .right button.check:before {filter:invert(49%) sepia(50%) saturate(366%) hue-rotate(177deg) brightness(107%) contrast(89%)}
+.DHCU .chat .top_right button > span{filter:invert(51%) sepia(50%) saturate(396%) hue-rotate(179deg) brightness(105%) contrast(89%)}
+/* black to pm-color900 */
+.DHCU .bk_primary{filter: invert(16%) sepia(75%) saturate(4160%) hue-rotate(316deg) brightness(74%) contrast(118%) !important}
+
+
+/* 헤더 아이콘 색상 */
+.DHCU .main-header .main-logo {filter:contrast() brightness();}
+.DHCU .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.DHCU .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg)}
+.DHCU .main-header [class^="btn-"][class*="setting"],
+.DHCU.bg-main [class^="btn-"][class*="id"],
+.DHCU .main-header [class^="btn-"][class*="menu"],
+.DHCU .main-header [class^=btn-][class*=talk],
+.DHCU .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.DHCU {background-image: url(../images/logo_DHCU.svg)!important; width: 9rem; height: 1.66rem;}
+.DHCU .user-thumb_img{background-color: #FFFFFF}
+.DHCU.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+
+/* 전자출결
+.attendance-bg.DHCU::before, .my-community-bg.DHCU::before  {background: linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;} */
+
+/* 회원가입 */
+.logo.DHCU {background-image: url(../images/logo_DHCU.svg)!important; width: 11.88rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_DHCU {background:url(../images/logo_DHCU_symbol.svg) no-repeat,linear-gradient(111.91deg, #AF0055 2.65%, #E26096 110.23%)}
+.layer.campus-pop.bg_DHCU .layer-contents {background:#FBF8F9}
+.DHCU.layer.campus-pop .logo_wrap > img {max-width: 10rem;max-height: 2.5rem;}
+.DHCU .profile-name p{color: var(--cm-gray900);}
+
+
+
+
+
+/**** 위덕대 ****/
+/* main*/
+.UDUV .today-notification li em {color:var(--main-box-sub2)}
+.UDUV .sel-certification li {background:var(--main-primary900)}
+.UDUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.UDUV .today-notification li .ico {filter:sepia(58%) saturate(4532%) hue-rotate(177deg) brightness(120%)}
+.UDUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.UDUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.UDUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.UDUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.UDUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.UDUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain}
+/* .UDUV .wallet-slide .status-sm {background:#57A9DB} */
+.UDUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 image */
+.UDUV .my-community .community-cate .interest .ico,
+.UDUV .small-group .group-image .image-attach .ico,
+.UDUV .small-group .member .user-area .btn-oper .ico,
+.UDUV .new-board .board-top .search .ico,
+.UDUV .hpay_sign .sign_tit.fir .image-attach .ico {filter:invert(83%) sepia(30%) saturate(3167%) hue-rotate(192deg) brightness(127%) contrast(92%)}
+/* --pm-color900 arrow */
+.UDUV .timetable-list .form-control_icon .btn-select::after,
+.UDUV .registration .title-wrap .btn-select::after,
+.UDUV .btn-select.arrow-btn::after,
+.UDUV .arrow-purple,
+.UDUV .hpay .new_add .btn .ico_arrow_right,
+.UDUV .sm-chk > input[type="checkbox"]:checked {filter:invert(118%) sepia(30%) saturate(6295%) hue-rotate(238deg) brightness(72%) contrast(72%) !important}
+/* --sc-color500 */
+.UDUV .survey-list .right button.check:before {filter:invert(61%) sepia(25%) saturate(1331%) hue-rotate(192deg) brightness(120%) contrast(93%)}
+.UDUV .chat .top_right button > span {filter:invert(61%) sepia(25%) saturate(1331%) hue-rotate(180deg) brightness(160%) contrast(93%)}
+/* black to pm-color900 */
+.UDUV .bk_primary{filter: invert(20%) sepia(97%) saturate(1702%) hue-rotate(205deg) brightness(96%) contrast(92%) !important}
+
+/* 헤더 아이콘 색상 */
+.UDUV .main-header .main-logo {filter:contrast() brightness();}
+.UDUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.UDUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.UDUV .main-header [class^="btn-"][class*="setting"],
+.UDUV.bg-main [class^="btn-"][class*="id"],
+.UDUV .main-header [class^="btn-"][class*="menu"],
+.UDUV .main-header [class^=btn-][class*=talk],
+.UDUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.UDUV{background-image: url(../images/logo_UDUV.svg)!important;width: 7.68rem !important;height: 2.8rem !important;transform: translateY(-0.125rem);}
+.UDUV.bg-main .hpay .new_add .btn {color:var(--main-status-left)}
+.UDUV.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+/* 회원가입 */
+.logo.UDUV {background-image: url(../images/logo_UDUV.svg)!important;width: 12rem;}
+
+/* 전자출결 
+.attendance-bg.UDUV::before, .my-community-bg.UDUV::before {background:linear-gradient(137.66deg, #264099 27.69%, #5B78D7 89.86%)!important;}*/
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_UDUV {background:url(../images/logo_UDUV_symbol.svg) no-repeat, linear-gradient(112deg, #1651AA 2.65%, #1C65D4 110.23%);}
+.layer.campus-pop.bg_UDUV .layer-contents {background:#F5F9FE;}
+
+
+
+
+
+/**** 경기과기대 ****/
+/* main*/
+.GTEC .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.GTEC .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.GTEC .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.GTEC .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.GTEC .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.GTEC .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+/* .GTEC .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush_wh.svg) no-repeat center center/ contain} */
+.GTEC .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1_wh.svg);opacity:0.6}
+/* --pm-color900 */
+.GTEC .my-community .community-cate .interest .ico,
+.GTEC .new-board .board-top .search .ico,
+.GTEC .small-group .member .user-area .btn-oper .ico,
+.GTEC .small-group .group-image .image-attach .ico,
+.GTEC .timetable-list .form-control_icon .btn-select::after,
+.GTEC .registration .title-wrap .btn-select::after,
+.GTEC .btn-select.arrow-btn::after,
+.GTEC .arrow-purple,
+.GTEC .hpay_sign .sign_tit.fir .image-attach .ico,
+.GTEC .hpay .new_add .btn .ico_arrow_right,
+.GTEC .sm-chk > input[type="checkbox"]:checked {filter:invert(59%) sepia(222%) saturate(650%) hue-rotate(55deg) brightness(119%) contrast(59%) !important}
+.GTEC .sel-certification li{background: var(--main-primary900);}
+/* --sc-color500 */
+.GTEC .chat .top_right button > span{filter:invert(63%) sepia(47%) saturate(735%) hue-rotate(187deg) brightness(188%) contrast(87%)}
+
+/* black to pm-color900 */
+.GTEC .bk_primary{filter: invert(74%) sepia(53%) saturate(5744%) hue-rotate(60deg) brightness(101%) contrast(69%) !important}
+.GTEC.bg-main .hpay .new_add .btn {color:var(--main-box-tit)}
+.GTEC.bg-main .hpay .new_add .btn .ico_arrow_right {background-image: url(../images/icon_arr_circle1_wh.svg);opacity: 0.6;filter: none!important;}
+
+
+/* 그린패널 한정 */
+.GTEC .wallet-slide .info-txt,
+.GTEC .facility-list .reading-room dl dd a,
+.GTEC .today-none-alarm p {color: var(--main-box-tit);}
+.GTEC .facility-slide .facility-list .facility-menu, 
+.GTEC .facility-slide .facility-list .facility-menu dl dt {color: var(--main-status-right);}
+.GTEC .survey-list .right button.check:before {filter:brightness(104%) hue-rotate(-18deg) contrast(108%)}
+
+
+/* 헤더 아이콘 색상 */
+.GTEC .main-header .main-logo {filter:contrast() brightness();}
+.GTEC .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.GTEC .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.GTEC .main-header [class^="btn-"][class*="setting"],
+.GTEC.bg-main [class^="btn-"][class*="id"],
+.GTEC .main-header [class^="btn-"][class*="menu"],
+.GTEC .main-header [class^=btn-][class*=talk],
+.GTEC .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.main-header .main-logo.GTEC,
+.TMDARK .main-header .main-logo.GTEC {background-image: url(../images/logo_GTEC_wh.svg)!important; width: 8.75rem; height: 2.1rem;}
+.GTEC .main-header .main-logo.GTEC,
+.TMBLUE .main-header .main-logo.GTEC,
+.TMPINK .main-header .main-logo.GTEC,
+.TMGREEN .main-header .main-logo.GTEC {background-image: url(../images/logo_GTEC.svg)!important; width: 8.75rem; height: 2.1rem;}
+
+/* 회원가입 */
+.logo.GTEC {background-image: url(../images/logo_GTEC.svg)!important; width: 13.25rem;}
+.TMDARK .logo.GTEC {background-image: url(../images/logo_GTEC_wh.svg)!important; width: 13.25rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_GTEC {background:url(../images/logo_GTEC_symbol.svg) no-repeat, linear-gradient(111.63deg, #65B139 21.23%, #8DD761 90.17%);}
+.layer.campus-pop.bg_GTEC .layer-contents {background:#FCFEFB;}
+
+
+
+
+
+/**** 이화여대 ****/
+/* --pm-color900 */
+[class*="EWHA"] .my-community .community-cate .interest .ico,
+[class*="EWHA"] .new-board .board-top .search .ico,
+[class*="EWHA"] .small-group .member .user-area .btn-oper .ico,
+[class*="EWHA"] .small-group .group-image .image-attach .ico,
+[class*="EWHA"] .timetable-list .form-control_icon .btn-select::after,
+[class*="EWHA"] .registration .title-wrap .btn-select::after,
+[class*="EWHA"] .btn-select.arrow-btn::after,
+[class*="EWHA"] .arrow-purple,
+[class*="EWHA"] .hpay_sign .sign_tit.fir .image-attach .ico,
+[class*="EWHA"] .hpay .new_add .btn .ico_arrow_right,
+[class*="EWHA"] .sm-chk > input[type="checkbox"]:checked {filter:invert(52%) sepia(13%) saturate(2346%) hue-rotate(113deg) brightness(60%) contrast(102%) !important}
+[class*="EWHA"] .sel-certification li{background: var(--main-primary900);}
+
+/* black to pm-color900 */
+[class*="EWHA"] .bk_primary{filter: invert(28%) sepia(14%) saturate(3466%) hue-rotate(113deg) brightness(98%) contrast(102%) !important}
+
+/* --sc-color500 */
+[class*="EWHA"] .chat .top_right button > span,
+[class*="EWHA"] .survey-list .right button.check:before {filter:invert(49%) sepia(83%) saturate(264%) hue-rotate(116deg) brightness(99%) contrast(91%)}
+
+
+/* 헤더 아이콘 색상 
+[class*="EWHA"] .main-header .main-logo {filter:contrast() brightness();}
+[class*="EWHA"] .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+[class*="EWHA"] .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+[class*="EWHA"] .main-header [class^="btn-"][class*="setting"],
+[class*="EWHA"].bg-main [class^="btn-"][class*="id"],
+[class*="EWHA"] .main-header [class^="btn-"][class*="menu"],
+[class*="EWHA"] .main-header [class^=btn-][class*=talk],
+[class*="EWHA"] .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+*/
+/* main */
+.main-header .main-logo[class*="EWHA"] {background-image: url(../images/logo_EWHA.svg)!important; width: 8.6rem; height: 2.1rem;}
+[class*="EWHA"] .user-thumb_img{background-color: #FFFFFF}
+
+/* 회원가입 */
+.logo[class*="EWHA"] {background-image: url(../images/logo_EWHA.svg)!important; width: 12rem;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_EWHA {background:url(../images/logo_EWHA_symbol.svg) no-repeat, linear-gradient(112deg, #00643E 2.65%, #177B54 110.23%);}
+.layer.campus-pop.bg_EWHA .layer-contents {background:#F4FBFB;}
+
+
+
+
+
+
+/**** 초당대 ****/
+/* CDUV*/
+.CDUV .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.CDUV .sel-certification li,
+.CDUV .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.CDUV .sel-certification li span {color:#FFFFFF}
+.CDUV .sel-certification li.nfc .ico,
+.CDUV .sel-certification li.qr .ico,
+.CDUV .sel-certification li.barcode .ico,
+.CDUV .sel-certification li.bluetooth .ico{filter:invert(0)}
+.CDUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.CDUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.CDUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.CDUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.CDUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.CDUV .today-notification li .ico {filter:invert(58%) sepia(99%) saturate(4940%) hue-rotate(331deg) brightness(80%) contrast(94%)}
+.CDUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.CDUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.CDUV .wallet-slide .total-balance p {color:#66737F}
+.CDUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.CDUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.CDUV.facility-bg::before{background:#E8686C; }
+/* --pm-color900 */
+.CDUV .my-community .community-cate .interest .ico,
+.CDUV .new-board .board-top .search .ico,
+.CDUV .small-group .member .user-area .btn-oper .ico,
+.CDUV .small-group .group-image .image-attach .ico,
+.CDUV .timetable-list .form-control_icon .btn-select::after,
+.CDUV .registration .title-wrap .btn-select::after,
+.CDUV .btn-select.arrow-btn::after,
+.CDUV .arrow-purple,
+.CDUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.CDUV .hpay .new_add .btn .ico_arrow_right,
+.CDUV .sm-chk > input[type="checkbox"]:checked {filter:invert(80%) sepia(63%) saturate(6993%) hue-rotate(342deg) brightness(75%) contrast(96%) !important}
+/* --sc-color500 */
+.CDUV .survey-list .right button.check:before{filter:invert(25%) saturate(151%) hue-rotate(-13deg) brightness(121%) contrast(93%)}
+.CDUV .chat .top_right button > span{filter:invert(56%) sepia(92%) saturate(211%) hue-rotate(171deg) brightness(122%) contrast(93%)}
+/* black to pm-color900 */
+.CDUV .bk_primary{filter: invert(17%) sepia(41%) saturate(6309%) hue-rotate(335deg) brightness(96%) contrast(102%) !important}
+
+/* 헤더 아이콘 색상 */
+.CDUV .main-header .main-logo{filter:contrast() brightness();}
+.CDUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.CDUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.CDUV .main-header [class^="btn-"][class*="setting"],
+.CDUV.bg-main [class^="btn-"][class*="id"],
+.CDUV .main-header [class^="btn-"][class*="menu"],
+.CDUV .main-header [class^=btn-][class*=talk],
+.CDUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.main-header .main-logo.CDUV {background-image: url(../images/logo_CDUV.svg)!important;width: 7.875em;height: 2.3125rem;}
+.CDUV .user-thumb_img{background-color: #FFFFFF}
+.CDUV.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_CDUV {background:url(../images/logo_CDUV_symbol.svg) no-repeat,linear-gradient(111.91deg, #CD2229 2.65%, #D4484F 110.23%);}
+.layer.campus-pop.bg_CDUV .layer-contents {background:#FFFAFA}
+.CDUV .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.CDUV .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.CDUV .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x (레드 색상 겹침) */
+.CDUV .guide-text.valid{color:var(--sc-color500);}
+.CDUV .form-control.active,
+.CDUV .form-control.valid{border-color:var(--sc-color500);}
+/* main */
+
+/* 회원가입 */
+.logo.CDUV {background-image: url(../images/logo_CDUV.svg)!important; width: 12rem;}
+
+
+
+
+
+
+/**** 수성대 ****/
+/* SCUV*/
+.SCUV .main-slider .swiper .swiper-slide .panel{box-shadow: none;}
+.SCUV .sel-certification li,
+.SCUV .sel-certification li:last-child {background:var(--main-primary900); color:#FFFFFF;}
+.SCUV .sel-certification li span {color:#FFFFFF}
+.SCUV .sel-certification li.nfc .ico,
+.SCUV .sel-certification li.qr .ico,
+.SCUV .sel-certification li.barcode .ico,
+.SCUV .sel-certification li.bluetooth .ico{filter:invert(0)}
+.SCUV .main-btns .btn-edit .ico {filter:invert(61%) sepia(25%) saturate(179%) hue-rotate(169deg) brightness(97%) contrast(89%)}
+.SCUV .today-notification .arlim01 .ico {background-image:url(../images/icon_m_arlimi01_wh.svg)}
+.SCUV .today-notification .arlim02 .ico {background-image:url(../images/icon_m_arlimi02_wh.svg)}
+.SCUV .today-notification .arlim03 .ico {background-image:url(../images/icon_m_arlimi03_wh.svg)}
+.SCUV .today-notification .arlim04 .ico {background-image:url(../images/icon_m_arlimi04_wh.svg)}
+.SCUV .today-notification li .ico {filter:invert(58%) sepia(99%) saturate(4940%) hue-rotate(331deg) brightness(80%) contrast(94%)}
+.SCUV .wallet-slide .infor-title.number {color:var(--main-box-tit)}
+.SCUV .grid-menu .user-wallet {background-color: var(--cm-gray100);}
+.SCUV .wallet-slide .total-balance p {color:#66737F}
+.SCUV .wallet-slide .total-balance [class^="btn"][class*="-refresh"] {background:url(../images/icon_irefrush.svg) no-repeat center center/ contain}
+.SCUV .facility-list .reading-room dl dd .ico_arrow_right {background-image:url(../images/icon_arr_circle1.svg);opacity:0.6}
+.SCUV.facility-bg::before{background:#E2606B; }
+/* --pm-color900 */
+.SCUV .my-community .community-cate .interest .ico,
+.SCUV .new-board .board-top .search .ico,
+.SCUV .small-group .member .user-area .btn-oper .ico,
+.SCUV .small-group .group-image .image-attach .ico,
+.SCUV .timetable-list .form-control_icon .btn-select::after,
+.SCUV .registration .title-wrap .btn-select::after,
+.SCUV .btn-select.arrow-btn::after,
+.SCUV .arrow-purple,
+.SCUV .hpay_sign .sign_tit.fir .image-attach .ico,
+.SCUV .hpay .new_add .btn .ico_arrow_right,
+.SCUV .sm-chk > input[type="checkbox"]:checked {filter:invert(80%) sepia(40%) saturate(6873%) hue-rotate(342deg) brightness(83%) contrast(96%) !important}
+/* --sc-color500 */
+.SCUV .survey-list .right button.check:before{filter:invert(15%) sepia(76%) saturate(714%) hue-rotate(354deg) brightness(100%) contrast(99%)}
+.SCUV .chat .top_right button > span{filter:invert(31%) sepia(66%) saturate(714%) hue-rotate(331deg) brightness(101%) contrast(101%)}
+/* black to pm-color900 */
+.SCUV .bk_primary{filter: invert(27%) sepia(93%) saturate(5887%) hue-rotate(346deg) brightness(93%) contrast(91%) !important}
+
+/* 헤더 아이콘 색상 */
+.SCUV .main-header .main-logo{filter:contrast() brightness();}
+.SCUV .main-header [class^="btn-"][class*="alarm"].recent {background-image:url(../images/btn_header_alarm_on.svg)}
+.SCUV .main-header [class^="btn-"][class*="alarm"] {background-image: url(../images/btn_header_alarm.svg);}
+.SCUV .main-header [class^="btn-"][class*="setting"],
+.SCUV.bg-main [class^="btn-"][class*="id"],
+.SCUV .main-header [class^="btn-"][class*="menu"],
+.SCUV .main-header [class^=btn-][class*=talk],
+.SCUV .main-header [class^="btn-"][class*="pay"] {filter:invert(45%) sepia(15%) saturate(402%) hue-rotate(167deg) brightness(93%) contrast(86%);}
+
+/* main */
+.SCUV.bg-main .hpay.no_card .plus {border: 1px solid var(--main-bg-quick);border-radius: 50%;}
+
+
+
+/* mobile 신분증 배경 */
+.layer.campus-pop.bg_SCUV {background:url(../images/logo_SCUV_symbol.svg) no-repeat,linear-gradient(111.91deg, #E53C48 2.65%, #EA6E56  110.23%);}
+.layer.campus-pop.bg_SCUV .layer-contents {background:#FDF7F8}
+.SCUV .profile-name p{color: var(--cm-gray900);}
+
+/* 탭 */
+.SCUV .ui-tab .tab-menu ul{background: var(--cm-gray300);}
+.SCUV .ui-tab_type4.ui-tab .tab-menu:after{background: var(--cm-gray500);}
+
+/* primary컬러 x (레드 색상 겹침) */
+.SCUV .guide-text.valid{color:var(--sc-color500);}
+.SCUV .form-control.active,
+.SCUV .form-control.valid{border-color:var(--sc-color500);}
+
+/* main 기본 로고와 화이트로고 파일 다름*/
+.SCUV .user-thumb_img{background-color: #FFFFFF}
+.main-header .main-logo.SCUV,
+.TMDARK .main-header .main-logo.SCUV {background-image: url(../images/logo_SCUV_wh.svg)!important;width: 8rem;height: 2.125rem;filter: brightness();}
+.SCUV .main-header .main-logo.SCUV,
+.TMBLUE .main-header .main-logo.SCUV,
+.TMPINK .main-header .main-logo.SCUV,
+.TMGREEN .main-header .main-logo.SCUV {background-image: url(../images/logo_SCUV.svg)!important;width: 8rem;height: 2.125rem;}
+
+/* 회원가입 */
+.logo.SCUV {background-image: url(../images/logo_SCUV.svg)!important; width: 11.875rem;}
+.TMDARK .logo.SCUV {background-image: url(../images/logo_SCUV_wh.svg)!important;filter: brightness() !important;}
+
+
+
+
+
+/* 개발요청 학교추가시 dummy 이미지 추가 */
+.dummy.img_profile_01 {background-image: url(../images/img_profile_01.svg);width: 3.75rem;}
+.dummy.img_profile_02 {background-image: url(../images/img_profile_02.svg);width: 3.75rem;}
+.dummy.img_profile_03 {background-image: url(../images/img_profile_03.svg);width: 3.75rem;}
+.dummy.img_profile_04 {background-image: url(../images/img_profile_04.svg);width: 3.75rem;}
+.dummy.img_profile_05 {background-image: url(../images/img_profile_05.svg);width: 3.75rem;}
+.dummy.img_profile_06 {background-image: url(../images/img_profile_06.svg);width: 3.75rem;}
+.dummy.img_profile_07 {background-image: url(../images/img_profile_07.svg);width: 3.75rem;}
+.dummy.img_profile_08 {background-image: url(../images/img_profile_08.svg);width: 3.75rem;}
+.dummy.img_profile_SMUV {background-image: url(../images/img_profile_SMUV.svg);width: 3.75rem;}
+.dummy.img_profile_HYUV {background-image: url(../images/img_profile_HYUV.svg);width: 3.75rem;}
+.dummy.img_profile_YIUV {background-image: url(../images/img_profile_YIUV.svg);width: 3.75rem;}
+.dummy.img_profile_USWU {background-image: url(../images/img_profile_USWU.svg);width: 3.75rem;}
+.dummy.img_profile_SSCU {background-image: url(../images/img_profile_SSCU.svg);width: 3.75rem;}
+.dummy.img_profile_DSUV {background-image: url(../images/img_profile_DSUV.svg);width: 3.75rem;}
+.dummy.img_profile_JEIU {background-image: url(../images/img_profile_JEIU.svg);width: 3.75rem;}
+.dummy.img_profile_KGUV {background-image: url(../images/img_profile_KGUV.svg);width: 3.75rem;}
+.dummy.img_profile_IDUV {background-image: url(../images/img_profile_IDUV.svg);width: 3.75rem;}
+.dummy.img_profile_CAUV {background-image: url(../images/img_profile_CAUV.svg);width: 3.75rem;}
+.dummy.img_profile_HIUV {background-image: url(../images/img_profile_HIUV.svg);width: 3.75rem;}
+.dummy.img_profile_SWUV {background-image: url(../images/img_profile_SWUV.svg);width: 3.75rem;}
+.dummy.img_profile_SJUV {background-image: url(../images/img_profile_SJUV.svg);width: 3.75rem;}
+.dummy.img_profile_WHSU {background-image: url(../images/img_profile_WHSU.svg);width: 3.75rem;}
+.dummy.img_profile_KITU {background-image: url(../images/img_profile_KITU.svg);width: 3.75rem;}
+.dummy.img_profile_OSUV {background-image: url(../images/img_profile_OSUV.svg);width: 3.75rem;}
+.dummy.img_profile_MNMU {background-image: url(../images/img_profile_MNMU.svg);width: 3.75rem;}
+.dummy.img_profile_YHUV {background-image: url(../images/img_profile_YHUV.svg);width: 3.75rem;}
+.dummy.img_profile_MNUV {background-image: url(../images/img_profile_MNUV.svg);width: 3.75rem;}
+.dummy.img_profile_JWUV {background-image: url(../images/img_profile_JWUV.svg);width: 3.75rem;}
+.dummy.img_profile_GJUV {background-image: url(../images/img_profile_GJUV.svg);width: 3.75rem;}
+.dummy.img_profile_NSUV {background-image: url(../images/img_profile_NSUV.svg);width: 3.75rem;}
+.dummy.img_profile_UOUV {background-image: url(../images/img_profile_UOUV.svg);width: 3.75rem;}
+.dummy.img_profile_JKCU {background-image: url(../images/img_profile_JKCU.svg);width: 3.75rem;}
+.dummy.img_profile_MWUV {background-image: url(../images/img_profile_MWUV.svg);width: 3.75rem;}
+.dummy.img_profile_SSUV {background-image: url(../images/img_profile_SSUV.svg);width: 3.75rem;}
+.dummy.img_profile_SWWU {background-image: url(../images/img_profile_SWWU.svg);width: 3.75rem;}
+.dummy.img_profile_HNUV {background-image: url(../images/img_profile_HNUV.svg);width: 3.75rem;}
+.dummy.img_profile_IJUV {background-image: url(../images/img_profile_IJUV.svg);width: 3.75rem;}
+.dummy.img_profile_ASUV {background-image: url(../images/img_profile_ASUV.svg);width: 3.75rem;}
+.dummy.img_profile_AYUV {background-image: url(../images/img_profile_AYUV.svg);width: 3.75rem;}
+.dummy.img_profile_GSUV {background-image: url(../images/img_profile_GSUV.svg);width: 3.75rem;}
+.dummy.img_profile_BSUV {background-image: url(../images/img_profile_BSUV.svg);width: 3.75rem;}
+.dummy.img_profile_BSCU {background-image: url(../images/img_profile_BSCU.svg);width: 3.75rem;}
+.dummy.img_profile_DHCU {background-image: url(../images/img_profile_DHCU.svg);width: 3.75rem;}
+.dummy.img_profile_UDUV {background-image: url(../images/img_profile_UDUV.svg);width: 3.75rem;}
+.dummy.img_profile_GTEC {background-image: url(../images/img_profile_GTEC.svg);width: 3.75rem;}
+.dummy.img_profile_HYWU {background-image: url(../images/img_profile_HYWU.svg);width: 3.75rem;}
+.dummy.img_profile_EWHA {background-image: url(../images/img_profile_EWHA.svg);width: 3.75rem;}
+.dummy.img_profile_CDUV {background-image: url(../images/img_profile_CDUV.svg);width: 3.75rem;}
+.dummy.img_profile_SCUV {background-image: url(../images/img_profile_SCUV.svg);width: 3.75rem;}
+
+
+
+
+
+.dummy.img_profile_thumb {background-image: url(../images/img_profile_thumb.svg);width: 3.75rem;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2154 @@
+/* 다크테마 */
+.TMDARK {
+    --cm-gray000:#191919;
+    --cm-gray100:#272D37;
+    --cm-gray300:#4B5661;
+    --cm-gray400:#8F9CA9;
+    --cm-gray500:#ADB9C7;
+    --cm-gray600:#D5DDE5;
+    --cm-gray700:#E4EAF0;
+    --cm-gray900:#F3F6F9;
+    --cm-gray999:#FFFFFF;
+
+    --pm-color900:#787FEF;
+    --pm-color700:#8E9498;
+    --pm-color500:#73787C;
+    --pm-color300:#444A4E;
+    --pm-color100:#2B2D31;
+
+    --bg-color000:#191919;
+ 
+    --sc-color500:#688CE5;
+    --sc-color400:#6881D3;
+    --sc-color300:#5263C7;
+    --sc-color200:#4D52AE;
+    --sc-color100:#2F316D;
+    
+    --pt1-color500:#F157B4;
+    --pt1-color400:#E63DA2;
+    --pt1-color300:#D42F97;
+    --pt1-color200:#B21F83;
+    --pt1-color100:#4C152C;
+
+    --pt2-color500:#F9CF4C;
+    --pt2-color400:#FEBB00;
+    --pt2-color300:#FFAD00;
+    --pt2-color200:#F39608;
+    --pt2-color100:#E38B25;
+
+    --pt-success:#2EAB64;
+    --pt-links:#459AD9;
+    --pt-warning:#E59336;
+    --pt-error:#D14F4F;    
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#191919;
+    --main-bg-header:#191919;   
+    --main-bg-panel:#2B2D31;
+    --main-status-left :#ADB9C7;
+    --main-status-right:#8F9CA9;
+    --main-lg-txt:#F3F6F9;
+    --main-bg-info :rgba(243, 246, 249, 0.05);
+    --main-info-txt: #8F9CA9;
+    --main-bg-box:rgba(255, 255, 255, 0.1);
+    --main-bg-box2:rgba(255, 255, 255, 0.1);
+    --main-box-tit:#6C94FA;
+    --main-box-sub:#E4EAF0; 
+    --main-box-sub2:#E4EAF0;/* 부분적사용 */
+    --main-btn-line:#787FEF;
+    --main-primary900:#787FEF;
+    --main-secondary500:#74A4FD;
+    --main-border:rgba(120, 127, 239, 0.2);
+    
+    --main-menu:#FFFFFF;
+    --main-bg-quick:rgba(243, 246, 249, 0.15)
+}
+
+
+/* 그린테마 */
+.TMGREEN {
+    --pm-color999:#2B7A5E;
+    --pm-color900:#19A874;
+    --pm-color700:#72D5B2;
+    --pm-color500:#ABE0CB;
+    --pm-color300:#DDEFE8;
+    --pm-color100:#EBF5F1;
+
+    --bg-color000:#FDFFFD;
+
+    /* 전자출결 BG */
+    --attendance-bg :var(--pm-color900);
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(37.9deg, #19A874 35.57%, #A3DAA6 104.76%);
+    --main-status-left :#2B7A5E;
+    --main-status-right:#272D37;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :#19A874;
+    --main-info-txt: #EBF5F1;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#EBF5F1;
+    --main-box-tit:#F6F6F6;
+    --main-box-tit2:#19A874;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFFFFF;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#2B7A5E;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+}
+
+
+/* 블루테마*/
+.TMBLUE {
+    --pm-color999:#364F8F;
+    --pm-color900:#4B72D7;
+    --pm-color700:#5D9EF2;
+    --pm-color500:#98C6F9;
+    --pm-color300:#BFDBFB;
+    --pm-color100:#E4F1FD;
+    --bg-color000:#F2F9FF;
+    
+    /* 전자출결 BG */
+    --attendance-bg :var(--pm-color900);
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(63.44deg, #4B72D7 30.63%, #5D9EF2 97.82%);
+    --main-status-left :#BFDBFB;
+    --main-status-right:#E4F1FD;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :#4B72D7;
+    --main-info-txt: #E4F1FD;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F2F9FF;
+    --main-box-tit:#D4E3FE;
+    --main-box-tit2:#74A4FD;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFF1C7;/* 부분적사용 */
+    --main-btn-line:#BFDBFB;
+    --main-primary900:#364F8F;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(228, 241, 253, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+}
+
+
+/* 핑크테마*/
+.TMPINK {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --pm-color999:#FF4D98;
+    --pm-color900:#FA74A0;
+    --pm-color700:#FF9BC5;
+    --pm-color500:#FFB7CE;
+    --pm-color300:#FBD5DD;
+    --pm-color100:#FFE4EA;
+    --bg-color000:#FFFCFD;
+
+    /* 전자출결 BG */
+    --attendance-bg :var(--pm-color900);
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-panel:linear-gradient(223.23deg, #FFB7CE 3.08%, #FA74A0 81.52%);
+    --main-status-left :#FFE4EA;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(236, 102, 144, 0.5);;
+    --main-info-txt: #FFF6F8;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FFF6F8;
+    --main-box-tit:#FFF6F8;
+    --main-box-tit2:#66737F;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#EF5C7F;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(255, 255, 255, 0.3);
+    --main-pink-btn:#FFB4D3;
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+}
+
+
+/* 헤이영테마 개발용 */
+.HEYU {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+
+    --pm-color900:#00457E;
+    --pm-color700:#1B72AE;
+    --pm-color500:#3190CC;
+    --pm-color300:#91C6E4;
+    --pm-color100:#BADBEE;
+    --sc-color500:#0B69C9;
+    --bg-color000:#FAFAFF;
+        
+    /* 전자출결 BG */
+    --attendance-bg :var(--pm-color900);
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, var(--pm-color900) 2.65%, #034f94 110.23%);
+   
+    --main-primary900:#00457E;
+    --main-secondary500:#0B69C9;
+    --main-btn-line:#00457E;
+
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+ 
+}
+
+
+/* 숙명여대 */
+.SMUV {
+    --pm-color900:#334D93;
+    --pm-color700:#467BC6;
+    --pm-color500:#64A9EA;
+    --pm-color300:#9DCCF4;
+    --pm-color100:#E6F2FC;
+
+    --sc-color500:#447CE2;
+    --bg-color000:#F9FAFC; 
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, var(--pm-color900) 2.65%, #3c66bd 110.23%);
+
+    --main-primary900:#334D93;
+    --main-secondary500:#447CE2;
+    --main-btn-line:#334D93;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 한양대, 한양여대 */
+.HYUV, .HYWU {
+    --pm-color900:#00457E;
+    --pm-color700:#467BC6;
+    --pm-color500:#64A9EA;
+    --pm-color300:#9DCCF4;
+    --pm-color100:#E6F2FC;
+
+    --sc-color500:#0B69C9;
+    --bg-color000:#F9FAFC;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, #00457e 2.65%, #04529a 110.23%);
+    --main-primary900:#00457E;
+    --main-secondary500:#0B69C9;
+    --main-btn-line:#00457E;
+    
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+}
+
+
+/* 용인대 */
+.YIUV {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#005971;
+    --pm-color700:#328BAB;
+    --pm-color500:#8AC0D7;
+    --pm-color300:#A5D8EF;
+    --pm-color100:#D9EEF5;
+    --sc-color500:#72BDD6;
+    --sc-color400:#91D0E2;
+    --sc-color300:#B9E3ED;
+    --sc-color200:#E3F4F8;
+    --sc-color100:#F2FCFE;
+    --bg-color000:#F9FDFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, #005871 2.65%, #22768f 110.23%);
+    --main-primary900:#005971;
+    --main-secondary500:#72BDD6;
+    --main-btn-line:#005971;
+    --main-bg-box2:#F9FDFF;
+    --main-box-tit:#005971;
+    --main-box-tit2:#72BDD6;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+}
+
+
+/* 수원대 수원과학대 */
+.USWU,
+.SSCU {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#053A7E;
+    --pm-color700:#2A5CA5;
+    --pm-color500:#718DBE;
+    --pm-color300:#B2C3E3;
+    --pm-color100:#E7EBF4;
+    --sc-color500:#6295E2;
+    --sc-color400:#82B4EC;
+    --sc-color300:#A1C9F3;
+    --sc-color200:#C3DDF8;
+    --sc-color100:#E6F2FC;
+    --bg-color000:#f7f9fd;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);    
+
+    /* 메인 */
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, #053A7E 2.65%, #21559a 110.23%);
+    --main-primary900:#053A7E;
+    --main-secondary500:#6295E2;
+    --main-btn-line:#053A7E;
+    --main-bg-box2:#F2F6FD;
+    --main-box-tit:#053A7E;
+    --main-box-tit2:#6295E2;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+}
+
+
+/* 인천재능대*/
+.JEIU {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#F26721;
+    --pm-color700:#FF8623;
+    --pm-color500:#FFA237;
+    --pm-color300:#FFC28A;
+    --pm-color100:#FFEECE;
+    --sc-color500:#FFA237;
+    --sc-color400:#FFB662;
+    --sc-color300:#FFCC90;
+    --sc-color200:#FFDAAF;
+    --sc-color100:#fdf1ec;
+    --bg-color000:#fffbfb;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #FF922B;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #FFA237  3.08%, #F26521 81.52%);
+    --main-status-left :#fffbfb;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgb(159 72 35 / 30%);
+    --main-info-txt: #fffbfb;
+    --main-bg-box:rgba(255, 255, 255, 0.3);
+    --main-bg-box2:#fffbfb;
+    --main-box-tit:#fffbfb;
+    --main-box-tit2:#66737F;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#F26721;
+    --main-secondary500:#FFA237;
+    --main-border:rgba(255, 255, 255, 0.3);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, #F26521 9.34%, #FFA237 105.72%);
+
+}
+
+
+/* 동서대 */
+.DSUV{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#C82846;
+    --pm-color700:#EB5C6E;
+    --pm-color500:#FA858A;
+    --pm-color300:#FFBDC0;
+    --pm-color100:#FFEBEF;
+    --sc-color500:#FB7980;
+    --sc-color400:#FF969B;
+    --sc-color300:#FFBEC1;
+    --sc-color200:#FFD5D7;
+    --sc-color100:#fff4f6;
+    --bg-color000:#fdfbfc;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #e26066;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F5F5F5  3.08%, #F5F5F5 81.52%);
+    --main-status-left :#66737F;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #66737F;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#66737F;
+    --main-box-tit2:#870119;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#DF1439;
+    --main-primary900:#DF1439;
+    --main-secondary500:#FB7980;
+    --main-border:#FB7980;
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, #DF1439 9.34%, #FB7980 105.72%);
+
+}
+
+
+/* 경기대 */
+.KGUV{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#2057AF;
+    --pm-color700:#3091E7;
+    --pm-color500:#6BAFEC;
+    --pm-color300:#9DCDF8;
+    --pm-color100:#D3EAFF;
+    --sc-color500:#72BDD6;
+    --sc-color400:#2FB9DB;
+    --sc-color300:#80D5ED;
+    --sc-color200:#B2E6F5;
+    --sc-color100:#E0F5FB;
+    --bg-color000:#F9FDFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+
+    /* 메인 */
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, #2057AF 2.65%, #3875b9 110.23%);
+    --main-primary900:#2057AF;
+    --main-secondary500:#72BDD6;
+    --main-btn-line:#2057AF;
+    --main-bg-box2:#EFEFEF;
+    --main-box-tit:#2057AF;
+    --main-box-tit2:#118DB6;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+
+}
+
+
+/* 인덕대*/
+.IDUV {
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#A0445A;
+    --pm-color700:#C95971;
+    --pm-color500:#E78D9F;
+    --pm-color300:#F6C5D4;
+    --pm-color100:#FCE9EC;
+    --sc-color500:#5F76B4;
+    --sc-color400:#7D92CA;
+    --sc-color300:#A1B0D9;
+    --sc-color200:#D0D7EC;
+    --sc-color100:#E6EAF5;
+    --bg-color000:#fffafb;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(90deg, #D15870 10%, #DF8C9C 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color500);
+
+    /* 메인 */
+    --main-bg-panel: linear-gradient(70deg, #E58FA2 24.49%, #FCC0CD 97%);
+    --main-status-left :#40020F;
+    --main-status-right:#40020F;
+    --main-lg-txt:#272D37;
+    --main-bg-info :#F5C5D0;
+    --main-info-txt: #272D37;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FFF6F8;
+    --main-box-tit:#272D37;
+    --main-box-tit2:#66737F;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#272D37;
+    --main-primary900:#AC344C;
+    --main-secondary500:#FCE9EC;
+    --main-border:rgba(0, 0, 0, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(90deg, #D15870 10%, #DF8C9C 100%);
+
+}
+
+
+/* 청암대  */
+.CAUV {
+    --pm-color999:#194481;
+    --pm-color900:#1E56A4;
+    --pm-color700:#2D7AE6;
+    --pm-color500:#5896EF;
+    --pm-color300:#92BBF7;
+    --pm-color100:#DDEAFE;
+    --sc-color500:#33B6D7;
+    --sc-color400:#6DC8DF;
+    --sc-color300:#72CDE4;
+    --sc-color200:#c2eaf5 ;
+    --sc-color100:#EEF9FC;
+    --bg-color000:#fafdff;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, #1E56A4 27.69%, #5896EF 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(63.44deg, #2D7AE6 30.63%, #5896EF 97.82%);
+    --main-status-left :#C9DEFD;
+    --main-status-right:#EEF9FC;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :#3274D2;
+    --main-info-txt: #FAFDFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#fbfcfd;
+    --main-box-tit:#F1F7FF;
+    --main-box-tit2:#74A4FD;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#F1F6FF;/* 부분적사용 */
+    --main-btn-line:#F1F6FF;
+    --main-primary900:#1E56A4;
+    --main-secondary500:#DDEAFE;
+    --main-border:rgba(228, 241, 253, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(63.44deg, #2D7AE6 30.63%, #5896EF 97.82%);
+}
+
+
+/* 홍익대  */
+.HIUV {
+    --pm-color900:#044A9F;
+    --pm-color700:#0956B3;
+    --pm-color500:#5499ED;
+    --pm-color300:#A0C9FD;
+    --pm-color100:#DCEBFE;
+
+    --sc-color500:#23ACD7;
+    --sc-color400:#69C9E8;
+    --sc-color300:#9CE1F6;
+    --sc-color200:#B9E9F8 ;
+    --sc-color100:#E9F7FB;
+    --bg-color000:#F6F9FE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--sc-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-wrap:linear-gradient(111.91deg, var(--pm-color900) 2.65%, var(--sc-color500) 110.23%);
+    --main-bg-header:linear-gradient(111.91deg, var(--pm-color900) 2.65%, #0e6ab1 110.23%);
+    --main-box-tit:#21a2c9;
+    --main-box-tit2:#23ACD7;
+    --main-bg-box2:#F8F9FC;
+    --main-primary900:#044A9F;
+    --main-secondary500:#447CE2;
+    --main-btn-line:#044A9F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 서원대  */
+.SWUV {
+    --pm-color900:#04438B;
+    --pm-color700:#025BC0;
+    --pm-color500:#408EE7;
+    --pm-color300:#9EC9FA;
+    --pm-color100:#E6F0FE;
+
+    --sc-color500:#0BBDF4;
+    --sc-color400:#6FD6F6;
+    --sc-color300:#ADE9FA;
+    --sc-color200:#CEF2FD ;
+    --sc-color100:#eef8fb;
+    --bg-color000:#F6FAFE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, #0556B0 6%, #029EE1 90%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+     /* 메인 */    
+     --main-bg-wrap:#FFFFFF;
+     --main-bg-header:#FFFFFF; 
+     --main-bg-panel:linear-gradient(63.44deg, #14609F 30.63%, #17A5EA 97.82%);
+     --main-status-left :#F6FAFE;
+     --main-status-right:#F6FAFE;
+     --main-lg-txt:#FFFFFF;
+     --main-bg-info :rgba(255, 255, 255, 0.2);
+     --main-info-txt: #FAFDFF;
+     --main-bg-box:rgba(255, 255, 255, 0.2);
+     --main-bg-box2:#FAFAFF;
+     --main-box-tit:#FAFAFF;
+     --main-box-tit2:#408EE7;
+     --main-box-sub:#272D37; 
+     --main-box-sub2:#F1F6FF;/* 부분적사용 */
+     --main-btn-line:#F1F6FF;
+     --main-primary900:#ffffff;
+     --main-secondary500:#408EE7;
+     --main-border:rgba(228, 241, 253, 0.2);
+ 
+     --main-menu:#272D37;
+     --main-bg-quick:rgba(173, 185, 199, 0.15);
+     --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 상지대  */
+.SJUV {
+    --pm-color900:#0057A0;
+    --pm-color700:#077AD8;
+    --pm-color500:#4EA9F3;
+    --pm-color300:#ACD5F6;
+    --pm-color100:#DCEFFE;
+
+    --sc-color500:#67B130;
+    --sc-color400:#95CD6B;
+    --sc-color300:#CBEBB2;
+    --sc-color200:#E6F9D7 ;
+    --sc-color100:#F1F9EC;
+    --bg-color000:#F6FAFE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg,#0057A0 3%, #4EA9F3 105%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+     /* 메인 */    
+     --main-bg-wrap:#FFFFFF;
+     --main-bg-header:#FFFFFF; 
+     --main-bg-panel:linear-gradient(60deg, #117BDD 30%, #6DB8F4 98%);
+     --main-status-left :#F6FAFE;
+     --main-status-right:#F6FAFE;
+     --main-lg-txt:#FFFFFF;
+     --main-bg-info :rgba(3, 16, 82, 0.2);
+     --main-info-txt: #FAFDFF;
+     --main-bg-box:rgba(255, 255, 255, 0.2);
+     --main-bg-box2:#FAFAFF;
+     --main-box-tit:#FFFFFF;
+     --main-box-tit2:#408EE7;
+     --main-box-sub:#272D37; 
+     --main-box-sub2:#E2FDE5;/* 부분적사용 */
+     --main-btn-line:#F1F6FF;
+     --main-primary900:#0057A0;
+     --main-secondary500:#DCEFFE;
+     --main-border:rgba(228, 241, 253, 0.2);
+ 
+     --main-menu:#272D37;
+     --main-bg-quick:rgba(173, 185, 199, 0.15);
+     --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 원광보건대 */
+.WHSU{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#C00C0C;
+    --pm-color700:#DA5E5E;
+    --pm-color500:#EC8484;
+    --pm-color300:#F1B6B6;
+    --pm-color100:#FBEEEE;
+
+    --sc-color500:#875D54;
+    --sc-color400:#BE8D84;
+    --sc-color300:#E5C4BD;
+    --sc-color200:#F4E4E1;
+    --sc-color100:#F9F1F3;
+    --bg-color000:#FAFAFA;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--pm-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #D97575;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F5F5F5  3.08%, #F5F5F5 81.52%);
+    --main-status-left :#66737F;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #66737F;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#875554;
+    --main-box-tit2:#875554;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#C00C0C;
+    --main-primary900:#C00C0C;
+    --main-secondary500:#EC8484;
+    --main-border:#C00C0C;
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+
+}
+
+
+/* 경남정보대 */
+.KITU{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#C00C0C;
+    --pm-color700:#E11737;
+    --pm-color500:#EC8484;
+    --pm-color300:#FED2DA;
+    --pm-color100:#FEEBEE;
+    
+    --sc-color500:#875D54;
+    --sc-color400:#D79789;
+    --sc-color300:#EDBAB1;
+    --sc-color200:#FADDD6;
+    --sc-color100:#FEF0EC;
+    --bg-color000:#FEFBFB;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--pm-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #D97575;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F5F5F5  3.08%, #F5F5F5 81.52%);
+    --main-status-left :#66737F;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #66737F;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#875554;
+    --main-box-tit2:#875554;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#C00C0C;
+    --main-primary900:#C00C0C;
+    --main-secondary500:#EC8484;
+    --main-border:#C00C0C;
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+
+}
+
+
+/* 오산대  */
+.OSUV {
+    --pm-color900:#003B85;
+    --pm-color700:#01479E;
+    --pm-color500:#0F77F5;
+    --pm-color300:#7EB6FC;
+    --pm-color100:#CDE3FE;
+
+    --sc-color500:#3988D7;
+    --sc-color400:#75B5F5;
+    --sc-color300:#A8D1FA;
+    --sc-color200:#CAE3FC ;
+    --sc-color100:#EDF5FC;
+    --bg-color000:#FAFCFE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 6%, var(--sc-color500) 90%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+        
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(63.44deg, #01479E 30.63%, #2A77C8 97.82%);
+    --main-status-left :#FAFCFE;
+    --main-status-right:#FAFCFE;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(0, 0, 0, 0.2);;
+    --main-info-txt: #FAFDFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FAFAFF;
+    --main-box-tit:#FAFAFF;
+    --main-box-tit2:#0F77F5;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#F1F6FF;/* 부분적사용 */
+    --main-btn-line:#F1F6FF;
+    --main-primary900:#ffffff;
+    --main-secondary500:#0F77F5;
+    --main-border:rgba(228, 241, 253, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+}
+
+
+/* 목포해양대  */
+.MNMU {
+    --pm-color900:#004F80;
+    --pm-color700:#208CCF;
+    --pm-color500:#79C0EC;
+    --pm-color300:#B3DEFA;
+    --pm-color100:#E1F3FE;
+
+    --sc-color500:#37BE7D;
+    --sc-color400:#71DAA8;
+    --sc-color300:#A3EBC9;
+    --sc-color200:#D5F6E6;
+    --sc-color100:#EAFBF3;
+    --bg-color000:#FAFDFE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg,#0E7ABE 3%, #4DABE6 105%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+     /* 메인 */    
+     --main-bg-wrap:#FFFFFF;
+     --main-bg-header:#FFFFFF; 
+     --main-bg-panel:linear-gradient(60deg, #117BDD 30%, #6DB8F4 98%);
+     --main-status-left :#F6FAFE;
+     --main-status-right:#F6FAFE;
+     --main-lg-txt:#FFFFFF;
+     --main-bg-info :rgba(5, 59, 95, 0.18);;
+     --main-info-txt: #FAFDFF;
+     --main-bg-box:rgba(255, 255, 255, 0.2);
+     --main-bg-box2:#FAFAFF;
+     --main-box-tit:#FFFFFF;
+     --main-box-tit2:#408EE7;
+     --main-box-sub:#272D37; 
+     --main-box-sub2:#E2FDE5;/* 부분적사용 */
+     --main-btn-line:#F1F6FF;
+     --main-primary900:#0057A0;
+     --main-secondary500:#DCEFFE;
+     --main-border:rgba(228, 241, 253, 0.2);
+ 
+     --main-menu:#272D37;
+     --main-bg-quick:rgba(173, 185, 199, 0.15);
+     --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color700) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 유한대  */
+.YHUV {
+    --pm-color900:#009383;
+    --pm-color700:#34ADA0;
+    --pm-color500:#66BEB5;
+    --pm-color300:#34ADA0;
+    --pm-color100:#DDF3F2;
+
+    --sc-color500:#53A3F3;
+    --sc-color400:#81BCF7;
+    --sc-color300:#B0D7FF;
+    --sc-color200:#CCE4FC;
+    --sc-color100:#EDF5FC;
+    --bg-color000:#FCFDFD;
+
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(111.91deg, #018F80 2.65%, #42BFAD 106.76%)!important;
+
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(37.9deg, #018E7F 35.57%, #4AC5B2 104.76%);
+    --main-status-left :#00312c;
+    --main-status-right:#272D37;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :#019080;
+    --main-info-txt: #EBF5F1;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6FAFE;
+    --main-box-tit:#F6F6F6;
+    --main-box-tit2:#019080;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFFFFF;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#005850;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, #018F80 9.34%, #42BFAD 105.72%);
+}
+
+
+/* 국립목포대  */
+.MNUV {
+    --pm-color900:#008075;
+    --pm-color700:#00988A;
+    --pm-color500:#67C6BC;
+    --pm-color300:#B5E3DF;
+    --pm-color100:#DDF4F2;
+
+    --sc-color500:#4287E1; 
+    --sc-color400:#78B1F2;
+    --sc-color300:#A8D1FA;
+    --sc-color200:#CAE3FC;
+    --sc-color100:#EDF5FC;
+    --bg-color000:#FCFDFD;
+
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(63.44deg, #02998B 30.63%, #67C6BC 97.82%)!important;
+
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(37.9deg, #02998B 35.57%, #67C6BC 104.76%);
+    --main-status-left :#00312c;
+    --main-status-right:#272D37;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :#019587;
+    --main-info-txt: #EBF5F1;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6FAFE;
+    --main-box-tit:#F6F6F6;
+    --main-box-tit2:#009181;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFFFFF;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#01615C;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color400) 105.72%);
+}
+
+
+/* 중원대  */
+.JWUV {
+    --pm-color900:#354074;
+    --pm-color700:#485899;
+    --pm-color500:#7584BE;
+    --pm-color300:#A4B0DA;
+    --pm-color100:#CFD7F3;
+
+    --sc-color500:#AE5566;
+    --sc-color400:#C87484;
+    --sc-color300:#DAA0AA;
+    --sc-color200:#E9C4CB ;
+    --sc-color100:#F8EEEF;
+    --bg-color000:#F6F7FE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(63.44deg, #354074 30.63%, #5B6DB2 97.82%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(37.9deg, #354074 35.57%, #7584BE 104.76%);
+    --main-status-left :#F8EEEF;
+    --main-status-right:#F8EEEF;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(0,0,0,0.2);
+    --main-info-txt: #EBF5F1;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6F7FE;
+    --main-box-tit:#F8EEEF;
+    --main-box-tit2:#354074;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFFFFF;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#354074;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+}
+
+
+/* 광주대  */
+.GJUV {
+    --pm-color900:#199367;
+    --pm-color700:#42C376;
+    --pm-color500:#AAE6C3;
+    --pm-color300:#DBF5E8;
+    --pm-color100:#EBFAF1;
+
+    --sc-color500:#5BB8F1; 
+    --sc-color400:#81CAF7;
+    --sc-color300:#B0E1FF;
+    --sc-color200:#CCEAFC;
+    --sc-color100:#EDF6FC;
+    --bg-color000:#F8FCF9;
+
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(98.24deg, #129D6D 15.02%, #20B57B 95.41%) !important;
+
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(55.11deg, #12A171 42.78%, #15B8BD 101.54%);
+    --main-status-left :#044333;
+    --main-status-right:#272D37;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(1, 39, 26, 0.2);
+    --main-info-txt: #EBF5F1;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6FAFE;
+    --main-box-tit:#F6F6F6;
+    --main-box-tit2:#2B7A5E;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFFFFF;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#1D654D;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+
+}
+
+
+/* 남서울대  */
+.NSUV {
+    --pm-color900:#0857AF;
+    --pm-color700:#2F84E4;
+    --pm-color500:#7BB6F9;
+    --pm-color300:#ACD1FC;
+    --pm-color100:#DAEBFF;
+
+    --sc-color500:#42C2B2;
+    --sc-color400:#8ED5CD;
+    --sc-color300:#AAE0DA;
+    --sc-color200:#CAECE8 ;
+    --sc-color100:#EDF9F7;
+    --bg-color000:#F6FAFE;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg,var(--pm-color700) 3%, var(--sc-color500) 105%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+     /* 메인 */    
+     --main-bg-wrap:#FFFFFF;
+     --main-bg-header:#FFFFFF; 
+     --main-bg-panel:linear-gradient(60deg, #2A80E2 30%, #47B2C9 98%);
+     --main-status-left :#DAEBFF;
+     --main-status-right:#DAEBFF;
+     --main-lg-txt:#FFFFFF;
+     --main-bg-info :rgba(20, 80, 146, 0.18);
+     --main-info-txt: #FAFDFF;
+     --main-bg-box:rgba(255, 255, 255, 0.2);
+     --main-bg-box2:#FAFAFF;
+     --main-box-tit:#E2FDE5;
+     --main-box-tit2:#0857AF;
+     --main-box-sub:#272D37; 
+     --main-box-sub2:#E2FDE5;/* 부분적사용 */
+     --main-btn-line:#F1F6FF;
+     --main-primary900:#145092;
+     --main-secondary500:#DCEFFE;
+     --main-border:rgba(228, 241, 253, 0.2);
+ 
+     --main-menu:#272D37;
+     --main-bg-quick:rgba(173, 185, 199, 0.15);
+     --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color700) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 유원대  */
+.UOUV {
+    --pm-color900:#0273C7;
+    --pm-color700:#0584E5;
+    --pm-color500:#90D0FF;
+    --pm-color300:#B0DEFF;
+    --pm-color100:#D2ECFF;
+
+    --sc-color500:#50AEC4;
+    --sc-color400:#72BED0;
+    --sc-color300:#A3D4E0;
+    --sc-color200:#C6E4EC ;
+    --sc-color100:#E8F4F7;
+    --bg-color000:#F7FCFF;
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(99.95deg, #0477CF 4.17%, #0D9DDD 97.4%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(63.44deg, #0068B7 30.63%, #3398ED 97.82%);
+    --main-status-left :#BFDBFB;
+    --main-status-right:#E4F1FD;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(0, 94, 167, 0.5);
+    --main-info-txt: #E4F1FD;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F2F9FF;
+    --main-box-tit:#F6FAFE;
+    --main-box-tit2:#0584E5;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#E2FDE5;/* 부분적사용 */
+    --main-btn-line:#F6FAFE;
+    --main-primary900:#364F8F;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(228, 241, 253, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color500) 105.72%);
+}
+
+
+/* 전주기전대  */
+.JKCU {
+    --pm-color900:#3071B9;
+    --pm-color700:#418ADC;
+    --pm-color500:#69B0F2;
+    --pm-color300:#ADD8FB;
+    --pm-color100:#DDEFFD;
+
+    --sc-color500:#4BB665;
+    --sc-color400:#7FD194;
+    --sc-color300:#B7E6C2;
+    --sc-color200:#D2EED9;
+    --sc-color100:#E5F6E9;
+    --bg-color000:#F8FAFB;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, #1074C7 0%, #278CE5 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+     /* 메인 */    
+     --main-bg-wrap:#FFFFFF;
+     --main-bg-header:#FFFFFF; 
+     --main-bg-panel:linear-gradient(48deg, #2776CE 0%, #42A5F5 100%);
+     --main-status-left :#DAEBFF;
+     --main-status-right:#DAEBFF;
+     --main-lg-txt:#FFFFFF;
+     --main-bg-info :rgba(8, 77, 151, 0.25);
+     --main-info-txt:#FAFDFF;
+     --main-bg-box:rgba(255, 255, 255, 0.2);
+     --main-bg-box2:#FAFAFF;
+     --main-box-tit:#fafafa;
+     --main-box-tit2:#127BD2;
+     --main-box-sub:#272D37; 
+     --main-box-sub2:#FFD6FB;/* 부분적사용 */
+     --main-btn-line:#F1F6FF;
+     --main-primary900:#084D97;
+     --main-secondary500:#F8FAFB;
+     --main-border:rgba(228, 241, 253, 0.2);
+ 
+     --main-menu:#272D37;
+     --main-bg-quick:rgba(173, 185, 199, 0.15);
+     --main-txt-quick:#66737F;
+ 
+     /* 테마설정 학교칼라 */
+     --thema-school:linear-gradient(93.07deg, var(--pm-color900) 13.02, var(--sc-color400) 100%);
+}
+
+
+/* 목원대 */
+.MWUV{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#A13046;
+    --pm-color700:#AD2C45;
+    --pm-color500:#DB7387;
+    --pm-color300:#F0C3CB;
+    --pm-color100:#F8E2E6;
+    --sc-color500:#5D7BB9;
+    --sc-color400:#7993CA;
+    --sc-color300:#ACBDDF;
+    --sc-color200:#CDD8EF;
+    --sc-color100:#E0E7F5;
+    --bg-color000:#FAF9F9;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, #D05068 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #90233B;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F5F5F5  3.08%, #F5F5F5 81.52%);
+    --main-status-left :#66737F;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#A13046;
+    --main-box-tit2:#870119;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#A13046;
+    --main-primary900:#A13046;
+    --main-secondary500:#A13046;
+    --main-border:rgba(39, 45, 55, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color400) 105.72%);
+
+}
+
+
+/* 신성대 */
+.SSUV{
+    --pm-color900:#2D9134;
+    --pm-color700:#56AA35;
+    --pm-color500:#AAE6C3;
+    --pm-color300:#C6EAAE;
+    --pm-color100:#E6F6DB;
+
+    --sc-color500:#59B6EE; 
+    --sc-color400:#84CAF6;
+    --sc-color300:#B0E1FF;
+    --sc-color200:#CCEAFC;
+    --sc-color100:#EDF6FC;
+    --bg-color000:#F9FCF8;
+
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, #329435 27.69%, #91D64D 89.86%);
+    
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(70deg, #69AF41 0%, #97CA63 100%);
+    --main-status-left :#0e532d;
+    --main-status-right:#000000;
+    --main-lg-txt:#0B2F03;
+    --main-bg-info :#62A931;
+    --main-info-txt: #FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6FAFE;
+    --main-box-tit:#FFFFFF;
+    --main-box-tit2:#41912D;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#000000;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#41912D;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9.34%, var(--sc-color400) 97.08%);
+}
+
+
+/* 수원여대 */
+.SWWU{
+    --pm-color900:#CD133A;
+    --pm-color700:#D94967;
+    --pm-color500:#F17E96;
+    --pm-color300:#FCB6C4;
+    --pm-color100:#FDDDE3;
+    
+    --sc-color500:#FDAB12;
+    --sc-color400:#FFC261;
+    --sc-color300:#FFD294;
+    --sc-color200:#FFE5C2;
+    --sc-color100:#FFF4E5;
+    --bg-color000:#FDF7F8;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--pm-color500) 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #D94967;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F2F2F2  3.08%, #F2F2F2 81.52%);
+    --main-status-left :#272D37;
+    --main-status-right:#66737F;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#FFFFFF ;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#AF1237;
+    --main-box-tit2:#AF1237; /*칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#AF1237;
+    --main-primary900:#DA133D;
+    --main-secondary500:#DA133D;
+    --main-border:rgba(39, 45, 55, 0.20);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+}
+
+
+/* 한남대 */
+.HNUV{
+    --pm-color900:#AF2F53;
+    --pm-color700:#CC4D6B;
+    --pm-color500:#DB7390;
+    --pm-color300:#F0C3D0;
+    --pm-color100:#F8E2E9;
+    --sc-color500:#5974C0;
+    --sc-color400:#7C98E5;
+    --sc-color300:#9AB2F4;
+    --sc-color200:#D3DDFA;
+    --sc-color100:#ECF1FD;
+    --bg-color000:#FAF9F9;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27.69%, var(--pm-color500)  89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #90233B;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F5F5F5  3.08%, #F5F5F5 81.52%);
+    --main-status-left :#66737F;
+    --main-status-right:#66737F;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#862742;
+    --main-box-tit2:#862742;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#862742;
+    --main-primary900:#862742;
+    --main-secondary500:#862742;
+    --main-border:rgba(39, 45, 55, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--sc-color400) 105.72%);
+}
+
+
+/* 인제대 */
+.IJUV {
+    --pm-color900:#009EA8;
+    --pm-color700:#3FCDD6;
+    --pm-color500:#76E7EF;
+    --pm-color300:#B3F5FA;
+    --pm-color100:#CFF9FC;
+    --sc-color500:#6DBEF8;
+    --sc-color400:#9AD4FE;
+    --sc-color300:#B7E0FE;
+    --sc-color200:#C8E7FE;
+    --sc-color100:#E6F4FE;
+    --bg-color000:#F4FAFA;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(63deg, var(--pm-color900) 30.63%, var(--pm-color500) 97.82%);
+    border-radius: 0.75rem;
+    
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(63deg, #04A9B4 30.63%, #50CFD4 97.82%);
+    --main-status-left :#FFFFFF;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(8, 117, 127, 0.30);
+    --main-info-txt: #FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F6FAFE;
+    --main-box-tit:#FFFFFF;
+    --main-box-tit2:#08757F;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#08757F;
+    --main-secondary500:#F1F6FF;
+    --main-border:rgba(246, 246, 246, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9.34%, var(--sc-color400) 97.08%);
+}
+
+
+/* 안산대 */
+.ASUV {    
+    --pm-color900:#196FB3;
+    --pm-color700:#1D82D1;
+    --pm-color500:#3496E3;
+    --pm-color300:#A3D1F5;
+    --pm-color100:#D8ECFD;
+    --sc-color500:#6B98CB;
+    --sc-color400:#87ABD5;
+    --sc-color300:#A6C1E0;
+    --sc-color200:#C7D9EE;
+    --sc-color100:#E9F0FB;
+    --bg-color000:#FAFDFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, var(--pm-color900) 0%, var(--pm-color500) 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(48deg, #0F7BBE 0%, #4CABE6 100%);
+    --main-status-left :#F5FBFF; 
+    --main-status-right:#F5FBFF;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(14, 73, 120, 0.20);
+    --main-info-txt:#F5FBFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FAFAFF;
+    --main-box-tit:#fafafa;
+    --main-box-tit2:#196FB3;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFF1C7;/* 부분적사용 */
+    --main-btn-line:#F1F6FF;
+    --main-primary900:#0E4978;
+    --main-secondary500:#F8FAFB;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--sc-color400) 97%);
+
+}
+
+
+/* 안양대 */
+.AYUV {
+    --pm-color900:#26409A;
+    --pm-color700:#4865C7;
+    --pm-color500:#7890E3;
+    --pm-color300:#AEBEF4;
+    --pm-color100:#E0E7FF;
+    --sc-color500:#66AAEA;
+    --sc-color400:#8DC4F6;
+    --sc-color300:#AFD8FD;
+    --sc-color200:#C8E5FE;
+    --sc-color100:#E1F0FF;
+    --bg-color000:#FAFBFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, var(--pm-color900) 0%, var(--pm-color500) 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : #2E49A8;
+    
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(48deg, #4967C4 0%, #7B91DC 100%);
+    --main-status-left :#E0E7FF; 
+    --main-status-right:#E0E7FF;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(38, 64, 153, 0.35);
+    --main-info-txt:#FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F5F7FF;
+    --main-box-tit:#E0E7FF;
+    --main-box-tit2:#16318F;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFEABD;/* 부분적사용 */
+    --main-btn-line:#E0E7FF;
+    --main-primary900:#16318F;
+    --main-secondary500:#E0E7FF;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--sc-color400) 97%);
+
+}
+
+
+/* 강서대 */
+.GSUV {
+    --pm-color900:#662C91;
+    --pm-color700:#9756C8;
+    --pm-color500:#BA88D7;
+    --pm-color300:#DFC3EF;
+    --pm-color100:#F2E7F8;
+    /* 강서대 기본 sc-color 사용 */
+    --bg-color000:#FCFBFE;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, var(--pm-color900) 0%, var(--pm-color500) 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : #662C91;
+    
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(63deg, #8857AD 30.63%, #A372C6 97.82%);
+    --main-status-left:#FDFAFE; 
+    --main-status-right:#FDFAFE;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info:rgba(92, 39, 131, 0.24);
+    --main-info-txt:#FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FDFAFE;
+    --main-box-tit:#FDFAFE;
+    --main-box-tit2:#5C2783;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFEABD;/* 부분적사용 */
+    --main-btn-line:#FDFAFE;
+    --main-primary900:#5C2783;
+    --main-secondary500:#FFFFFF;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--pm-color500) 97%);
+
+}
+
+
+/* 백석대  */
+.BSUV{
+    --pm-color900:#003399;
+    --pm-color700:#2664DF;
+    --pm-color500:#769FF1;
+    --pm-color300:#B9D1FF;
+    --pm-color100:#E0EAFF;
+    --sc-color500:#50A7D3;
+    --sc-color400:#8ED0F1;
+    --sc-color300:#BCE6FB;
+    --sc-color200:#D3EFFD;
+    --sc-color100:#F0FAFF;
+    --bg-color000:#FAFCFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27%, var(--sc-color500) 90%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(63deg, #2A5FCB 30.63%, #6291EE 97.82%);
+    --main-status-left:#E0EAFF; 
+    --main-status-right:#E0EAFF;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info:rgba(0, 51, 153, 0.4);
+    --main-info-txt:#FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#E0EAFF;
+    --main-box-tit:#E0EAFF;
+    --main-box-tit2:#003399;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFEABD;/* 부분적사용 */
+    --main-btn-line:#E0EAFF;
+    --main-primary900:#003399;
+    --main-secondary500:#FFFFFF;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--sc-color500) 97%);
+
+}
+
+
+/* 백석문화대 */
+.BSCU{
+    --pm-color900:#074797;
+    --pm-color700:#2679DF;
+    --pm-color500:#7FB4F5;
+    --pm-color300:#B8D8FF;
+    --pm-color100:#E0EEFF;
+    --sc-color500:#3C8FCD;
+    --sc-color400:#86BFE9;
+    --sc-color300:#B6DBF6;
+    --sc-color200:#D9EDFD;
+    --sc-color100:#EBF6FF;
+    --bg-color000:#FAFCFF;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27%, var(--sc-color500) 90%)!important;
+
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(63deg, #145FBD 30%, #5E9AE4 97%);
+    --main-status-left:#E0EEFF; 
+    --main-status-right:#E0EEFF;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info:rgba(7, 71, 151, 0.4);
+    --main-info-txt:#FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#E0EEFF;
+    --main-box-tit:#E0EEFF;
+    --main-box-tit2:#074797;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFEABD;/* 부분적사용 */
+    --main-btn-line:#E0EEFF;
+    --main-primary900:#074797;
+    --main-secondary500:#FFFFFF;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--sc-color500) 97%);
+
+}
+
+
+/* 대구보건대 */
+.DHCU{
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+
+    --pm-color900:#AF0055;
+    --pm-color700:#E26096;
+    --pm-color500:#E69EBD;
+    --pm-color300:#F4D2E1;
+    --pm-color100:#FAEBF1;
+    --sc-color500:#6796CB;
+    --sc-color400:#86ADDA;
+    --sc-color300:#AAC3E1;
+    --sc-color200:#d7e4f4;
+    --sc-color100:#EEF3FC;
+    --bg-color000:#FBF8F9;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, var(--pm-color900) 27%, #C02973 90%)!important;
+
+    /* 공통 bg */
+    --full-bg : #8A0747;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F3F3F3  3%, #F3F3F3 80%);
+    --main-status-left :#66737F;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#ffffff;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#272D37;
+    --main-box-tit2:#910047;/* 칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#AF0055;
+    --main-primary900:#AF0055;
+    --main-secondary500:#AF0055;
+    --main-border:rgba(39, 45, 55, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9%, #C02973 105%);
+
+}
+
+
+/* 위덕대 */
+.UDUV {
+    --pm-color900:#1651AA;
+    --pm-color700:#1C65D4;
+    --pm-color500:#4C8AE7;
+    --pm-color300:#B0CBF4;
+    --pm-color100:#E0EAFB;
+    --sc-color500:#67A3F4;
+    --sc-color400:#96C0F8;
+    --sc-color300:#B7D4FA;
+    --sc-color200:#D9E8FC;
+    --sc-color100:#F1F6FE;
+    --bg-color000:#F5F9FE;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, var(--pm-color900) 0%, var(--pm-color500) 100%) !important;
+
+    /* 공통 bg */
+    --full-bg : #1651AA;
+    
+    /* 메인 */    
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF; 
+    --main-bg-panel:linear-gradient(48deg, #1651AA 0%, #487DDC 100%);
+    border-radius: 0.75rem;
+    --main-status-left :#E0EAFB; 
+    --main-status-right:#E0EAFB;
+    --main-lg-txt:#FFFFFF;
+    --main-bg-info :rgba(6, 52, 121, 0.40); 
+    --main-info-txt:#FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#F5F7FF;
+    --main-box-tit:#E0EAFB;
+    --main-box-tit2:#1651AA;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#FFEABD;/* 부분적사용 */
+    --main-btn-line:#E0EAFB;
+    --main-primary900:#063479;
+    --main-secondary500:#E0EAFB;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9%, var(--sc-color500) 97%);
+
+}
+
+
+ /* 경기과기대 */
+.GTEC{
+    --pm-color900:#59B027;
+    --pm-color700:#8BCE64;
+    --pm-color500:#AEE28D;
+    --pm-color300:#DFF5D1;
+    --pm-color100:#F0FBE9;
+
+    --sc-color500:#6EBCEC; 
+    --sc-color400:#84CAF6;
+    --sc-color300:#B0E1FF;
+    --sc-color200:#CCEAFC;
+    --sc-color100:#EDF6FC;
+    --bg-color000:#FCFEFB;
+
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, #59B027 27%, #96D671 90%);
+    
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+    
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;   
+    --main-bg-panel:linear-gradient(70deg, #64B02E 0%, #8ECA5B 100%);
+    --main-status-left :#21600A;
+    --main-status-right:#272D37;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(60, 145, 25, 0.35);
+    --main-info-txt: #FFFFFF;
+    --main-bg-box:rgba(255, 255, 255, 0.2);
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#FFFFFF;
+    --main-box-tit2:#3C9119;
+    --main-box-sub:#272D37; 
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#FFFFFF;
+    --main-primary900:#3C9119;
+    --main-secondary500:#FFFFFF;
+    --main-border:rgba(255, 255, 255, 0.2);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(66.56deg, var(--pm-color900) 9.34%, var(--sc-color500) 97.08%);
+}
+
+
+ /* 이화여대 : 기본 칼라 portlet.css에 있음 */
+ [class*="EWHA"]{
+    
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(118deg, #00643E 27%, #177B54 90%);
+    
+    /* 공통 bg */
+    --full-bg : var(--pm-color900);
+  
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9%, var(--sc-color500) 105%);
+  }
+
+
+/* 초당대 */
+.CDUV{
+    --pm-color900:#C1070F;
+    --pm-color700:#DB5259;
+    --pm-color500:#F39196;
+    --pm-color300:#FCC9CC;
+    --pm-color100:#FEECEC;
+    
+    --sc-color500:#63B3E9;
+    --sc-color400:#90CCF4;
+    --sc-color300:#B8DFF9;
+    --sc-color200:#CFEAFC;
+    --sc-color100:#E8F4FF;
+    --bg-color000:#FFFAFA;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, #CE272F 27.69%, #E26066 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #E2606B;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F2F2F2  3.08%, #F2F2F2 81.52%);
+    --main-status-left :#272D37;
+    --main-status-right:#66737F;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#FFFFFF ;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#8E001B;
+    --main-box-tit2:#8E001B; /*칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#C1070F;
+    --main-primary900:#C1070F;
+    --main-secondary500:#C1070F ;
+    --main-border:rgba(39, 45, 55, 0.20);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+}
+
+
+/* 수성대 */
+.SCUV{
+    --pm-color900:#ce2c39;
+    --pm-color700:#DE545F;
+    --pm-color500:#F58E97;
+    --pm-color300:#FDBAC0;
+    --pm-color100:#FDDDE0;
+    
+    --sc-color500:#F69F29;
+    --sc-color400:#FABE6B;
+    --sc-color300:#FFD294;
+    --sc-color200:#FFE5C2;
+    --sc-color100:#FFF0DB;
+    --bg-color000:#FDF7F8;
+
+    /* 전자출결 BG */
+    --attendance-bg :linear-gradient(137.66deg, #EC4B53 27.69%, #EA6654 89.86%)!important;
+
+    /* 공통 bg */
+    --full-bg : #E2606B;
+
+    /* 메인 */
+    --main-bg-wrap:#FFFFFF;
+    --main-bg-header:#FFFFFF;
+    --main-bg-panel:linear-gradient(223.23deg, #F2F2F2  3.08%, #F2F2F2 81.52%);
+    --main-status-left :#272D37;
+    --main-status-right:#66737F;
+    --main-lg-txt:#272D37;
+    --main-bg-info :rgba(143, 156, 169, 0.2);
+    --main-info-txt: #272D37;
+    --main-bg-box:#FFFFFF ;
+    --main-bg-box2:#FFFFFF;
+    --main-box-tit:#AF1237;
+    --main-box-tit2:#AF1237; /*칼라테마에서만 색상다름*/
+    --main-box-sub:#272D37;
+    --main-box-sub2:#272D37;/* 부분적사용 */
+    --main-btn-line:#AF1237;
+    --main-primary900:#AF1237;
+    --main-secondary500:#AF1237 ;
+    --main-border:rgba(39, 45, 55, 0.20);
+
+    --main-menu:#272D37;
+    --main-bg-quick:rgba(173, 185, 199, 0.15);
+    --main-txt-quick:#66737F;
+
+    /* 테마설정 학교칼라 */
+    --thema-school:linear-gradient(93.07deg, var(--pm-color900) 9.34%, var(--pm-color500) 105.72%);
+}
+
+
+
+/* 신규 : 헤이톡 : 테마1(판다) TMTALK01 */
+.TMTALK01 {
+    --cm-gray000:#FFFFFF;
+    --cm-gray100:#F3F6F9;
+    --cm-gray300:#E4EAF0;
+    --cm-gray400:#D5DDE5;
+    --cm-gray500:#ADB9C7;
+    --cm-gray600:#8F9CA9;
+    --cm-gray700:#66737F;
+    --cm-gray900:#272D37;
+    --cm-gray999:#191919;
+
+    --pm-color999:#8A61FF;
+    --pm-color900:#787FEF;
+    --pm-color700:#9298EB;
+    --pm-color500:#B1B5F1;
+    --pm-color300:#D0D3F7;
+    --pm-color100:#EFF0FC;
+    --bg-color000:#FCFDFF;
+
+    --sc-color500:#74A4FD;
+    --sc-color400:#9ABEFE;
+    --sc-color300:#B7D0FE;
+    --sc-color200:#D4E3FE;
+    --sc-color100:#F1F6FF;
+
+}
+
+/* 신규 : 헤이톡 : 테마1(판다) TMTALK01
+.TMTALK01 {
+    --pm-color900:#3554B1;
+    --pm-color700:#7588C8;
+    --pm-color500:#C3CBE8;
+    --pm-color300:#E7EAF5;
+    --pm-color100:#F2F4F9;
+    --bg-color000:#FCFDFF;
+} */
+
+/* 신규 : 헤이톡 : 테마2(돼토끼) TMTALK02 
+.TMTALK02 {
+    --pm-color999:#E65871;
+    --pm-color900:#EF8798;
+    --pm-color700:#F6B6C1;
+    --pm-color500:#FFDDE2;
+    --pm-color300:#FFECEF;
+    --pm-color100:#FFF6F8;
+    --bg-color000:#FFFAFB; 
+}
+*/
+/* 신규 : 헤이톡 : 테마3(미어캣수달) TMTALK03 
+.TMTALK03 {
+    --pm-color999:#F09837;
+    --pm-color900:#FFCE1F;
+    --pm-color700:#FFD94C;
+    --pm-color500:#FFE381;
+    --pm-color300:#FFEEB3;
+    --pm-color100:#FFFCF2;
+    --bg-color000:#FFFEF9; 
+}*/

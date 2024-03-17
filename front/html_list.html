@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>리스트 페이지</title>
+<style>
+	html,body{font:12px/1 '맑은 고딕'; color: #000;}
+	*{margin: 0; padding: 0; border: 0; font: inherit; line-height: 1; vertical-align: baseline; box-sizing:border-box;}
+	ul,li{list-style: none;}
+	button,a{cursor: pointer;}
+	.header{position: relative;}
+	h1 {padding: 10px 30px;font-size: 16px;color: #fff; background: #153e99;}
+	.header .count {position: absolute;bottom: 10px; right: 30px; color: #fff;}
+	.menu-wrap{position:relative;padding:40px 10px 40px;}
+	.menu,
+	.menu table{width:100%;}
+	.menu>dt{position:absolute;top:10px;}
+	.menu>dt a{display:block;margin-top:2px;padding:8px 10px 7px;border:1px solid #153e99;border-left-width:0;border-bottom:0;color:#153e99;text-align:center;cursor:pointer;}
+	.menu>dt.viewAll+dt a{border-left-width:1px;}
+	.menu>dt.selected a{margin-top:0;padding:9px 10px;background:#153e99;color:#fff;border-color:#153e99;}
+	.menu>dt.viewAll{right:10px;}
+	.menu>dt.viewAll.selected{border-color:#000;}
+	.menu>dt.viewAll a{border-left:1px solid #153e99;}
+	.menu>dd{display:block; padding:20px 0;border-top:1px solid #153e99;}
+	.menu>dd>p:first-child{padding-bottom:5px;}
+	table{border-bottom:1px solid #ccc;border-collapse:collapse;border-spacing:0;}
+	th{padding:5px 0;color:#fff;background:#bbb;border-top:1px solid #fff;border-left:1px solid #fff;vertical-align:middle;line-height:1.4}
+	td{padding:5px;border-top:1px solid #ccc;border-left:1px solid #ccc;vertical-align:middle;line-height:1.4}
+	th:first-child,
+	td:first-child{border-left:0;}
+	.del td{background: #ccc;}
+	.del td *{text-decoration: line-through;}
+	.btn {position: relative;display: inline-block;min-width: 25px;height: 15px;padding: 0 5px;margin-left: 3px;font-size: 10px;line-height: 13px;border-radius: 3px;letter-spacing: -0.5px;color: #fff;background: #4374D9;vertical-align: middle;text-transform: uppercase;text-align: center;text-shadow: 1px 1px 1px #333;}
+	.btn:after {content: " ";position: absolute;right: 100%;top: 3px;height: 0;width: 0;border: 4px solid transparent;border-right-color: #4374D9;}
+	.tip {position: relative;display: inline-block;cursor: pointer;}
+	td a span,
+	.tip span {display: none;position: absolute;z-index: 1;top: 20px;left: 50%;min-width: 120px;margin-left: -60px;padding: 3px;font-weight: normal;font-size: 11px;background: #FF0;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #F90;color: #000;line-height: 17px;}
+	td a span:before,
+	.tip span:before {content: " ";position: absolute;left: 50%;top: -8px;height: 0;width: 0;border: 4px solid transparent;border-bottom-color: #F90;}
+	tbody .tip span {width: 200px;margin-left: -80px;}
+	tr.div td{border-top-width: 2px; border-top-color: #000;}
+	progress {width: 80px;height: 15px;vertical-align: middle;background: #fff;}
+	progress::-webkit-progress-bar {background: rgba(21, 62, 153, 0.1);}
+	progress::-webkit-progress-value {background: #153e99;}
+	.progress>div {position: relative;line-height: 15px;}
+	.progress>div>span {float: left;}
+	.progress ul{float: right; width: 240px;}
+	.progress li{display:flex;}
+	.progress li:first-child{padding-right: 55px;}
+	.progress li:not(:first-child) {display: none;}
+	.progress li+li {margin-top: 5px;padding-top: 5px;border-top: 1px solid #eee;}
+	.progress .date,
+	.progress .date2 {width:80px; line-height: 1.2; white-space: nowrap;}
+	.progress .date3 {width:80px; line-height: 1.2; white-space: nowrap;}
+	.progress .date2:before {display:inline-block;content:'2023-';line-height: 1.2;}
+	.progress .date3:before {display:inline-block;content:'*2024-';line-height: 1.2;}
+	.progress .history {overflow: hidden; width:calc(100% - 80px); white-space: nowrap;text-overflow: ellipsis; line-height: 1.2; word-break: keep-all;}
+	.progress .open .history {overflow: visible;white-space: normal;}
+	.progress .open li{display: flex;}
+	.progress .btn-history {position: absolute;top: 0;right: 0;height: 15px; padding:0 3px; font-size: 10px;border-radius: 3px;text-align: center; line-height: 15px;}
+	.progress .btn-history.up {background: red;color: #fff;}
+	.progress .btn-history.new {background: #2196f3;color: #fff;}
+	#toTop {display: none; position: fixed;left: 0;bottom: 0; right: 0;}
+	#toTop a {display: block;padding: 9px 10px;background: #000;color: #FFF;text-align: center;}
+	.layer {display: none;position: fixed;top: 50%;left: 50%;width:414px;height:736px;background: #fff;box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);transform: translate(-100%, -50%);transition: .2s}
+	.layer button,
+	.layer .btns a {position: relative;float: left;padding: 0 9px;height: 30px;background: #fff;border: 1px solid #ddd;box-sizing: border-box;}
+	.layer .btns a:before {content: '';display: inline-block;width: 0;height: 100%;vertical-align: middle;}
+	.layer button.on {z-index: 1;color: red;border-color: red;outline: 0;}
+	.layer .btns {position: absolute;top: -30px;left: 0;width: 100%;background: #fff;}
+	.layer .btns>*+* {margin-left: -1px;}
+	.layer .btns+button {position: absolute;top: -30px;right: 0;background: #ccc;color: #fff;border-color: #ccc;}
+	.layer iframe {width: 100%;height: 100%;border: 0;}
+	td.type,td.id{text-align: center;}
+	@media screen and (max-width:1200px) {
+		colgroup col:nth-of-type(6){width: 90px !important;}
+		colgroup col:nth-of-type(8){width: 90px !important;}
+		colgroup col:nth-of-type(9){width: 50px !important;}
+
+	}
+	@media screen and (max-width:768px) {
+		.viewAll,.type,.id,.progress,.memo,.mo-hide,.count{display:none;}
+	}
+</style>
+</head>
+<body>
+<div>
+	<div class="header">
+		<h1>
+			<span>html list</span>
+		</h1>
+		<div class="count">전체페이지
+			<span class="btn off"></span> 작업완료
+			<span class="btn up"></span> 진행율
+			<span class="btn"></span>
+		</div>
+	</div>
+	<br>
+	<p style="padding-left: 10px;">
+		<span>테마설정</span>
+		<select id="themeList">
+			<option value="">기본</option>
+		</select>
+	</p>
+	<p style="padding-left: 10px; color: red;">※ 수정사항이 반영되지 않았다면 캐시삭제 및 새로고침~ 미리보기창에서는 새로고침이 잘 안되는 경우가 있습니다. 그럴경우 새창으로 열고 새로고침~</p>
+	<div class="menu-wrap">
+		<dl class="menu">
+			<dt class="viewAll selected"><a>전체보기</a></dt>
+			<dt><a>공통</a></dt>
+			<dd>
+				<table>
+					<colgroup>
+						<col style="width:130px">
+						<col style="width:200px">
+						<col style="width:130px">
+						<col>
+						<col style="width:90px">
+						<col style="width:130px">
+						<col style="width:180px">
+						<col style="width:400px">
+						<col style="width:50px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="4">논리경로</th>
+							<th scope="col" rowspan="2" class="type">TYPE</th>
+							<th scope="col" rowspan="2" class="id">화면아이디</th>
+							<th scope="col" rowspan="2" class="link">링크</th>
+							<th scope="col" rowspan="2" class="progress">진행률/담당자/완료(수정)일/수정이력</th>
+							<th scope="col" rowspan="2" class="memo">메모</th>
+						</tr>
+						<tr>
+							<th scope="col">D1</th>
+							<th scope="col">D2</th>
+							<th scope="col">D3</th>
+							<th scope="col">D4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="guide">
+							<td class="d1">guide</td>
+							<td class="d2">layout</td>
+							<td class="d3">헤더 + 메뉴</td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/layout_header.html">layout header</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="100" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"> </span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2"></td>
+							<td class="d3">sub page</td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/sub.html">sub</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="100" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"> </span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2">layer</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/guide_layer.html">layer</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="0" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"> </span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2">contents style</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/guide.html">guide</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="0" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"> </span></li>										
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2">form</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/guide_form.html">form</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="0" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"></span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2">nav item</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/guide_nav_item.html">guide_nav_item</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="0" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"></span>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>						
+						<tr class="guide">
+							<td class="d1"></td>
+							<td class="d2">guide_color</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/guide_color.html">guide_color</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="0" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"></span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr>
+							<td class="d1"></td>
+							<td class="d2">loading</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type">page</td>
+							<td class="id">loading</td>
+							<td class="link"><a href="html/loading.html">loading.html</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="100" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"></span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+			<dt><a>메인/회원가입/로그인</a></dt>
+			<dd>
+				<table>
+					<colgroup>
+						<col style="width:130px">
+						<col>
+						<col>
+						<col>
+						<col style="width:90px">
+						<col style="width:130px">
+						<col style="width:180px">
+						<col style="width:350px">
+						<col style="width:100px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="4">논리경로</th>
+							<th scope="col" rowspan="2" class="type">TYPE</th>
+							<th scope="col" rowspan="2" class="id">화면아이디</th>
+							<th scope="col" rowspan="2" class="link">링크</th>
+							<th scope="col" rowspan="2" class="progress">진행률/담당자/완료(수정)일/수정이력</th>
+							<th scope="col" rowspan="2" class="memo">메모</th>
+						</tr>
+						<tr>
+							<th scope="col">D1</th>
+							<th scope="col">D2</th>
+							<th scope="col">D3</th>
+							<th scope="col">D4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="d1"></td>
+							<td class="d2">sns 로그인</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="type">page</td>
+							<td class="id">PR0101P01</td>
+							<td class="link"><a href="html/PR0101P01.html">PR0101P01.html</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="40" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">03-17</span><span class="history"></span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+
+			<dt><a>커뮤니티</a></dt>
+			<dd>
+				<table>
+					<colgroup>
+						<col style="width:130px">
+						<col style="width:200px">
+						<col style="width:130px">
+						<col>
+						<col style="width:90px">
+						<col style="width:130px">
+						<col style="width:180px">
+						<col style="width:400px">
+						<col style="width:50px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="4">논리경로</th>
+							<th scope="col" rowspan="2" class="type">TYPE</th>
+							<th scope="col" rowspan="2" class="id">화면아이디</th>
+							<th scope="col" rowspan="2" class="link">링크</th>
+							<th scope="col" rowspan="2" class="progress">진행률/담당자/완료(수정)일/수정이력</th>
+							<th scope="col" rowspan="2" class="memo">메모</th>
+						</tr>
+						<tr>
+							<th scope="col">D1</th>
+							<th scope="col">D2</th>
+							<th scope="col">D3</th>
+							<th scope="col">D4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="guide">
+							<td class="d1">TEST</td>
+							<td class="d2">TEST</td>
+							<td class="d3">TEST</td>
+							<td class="d4"></td>
+							<td class="type"></td>
+							<td class="id"></td>
+							<td class="link"><a href="guide/TEST.html">TEST</a></td>
+							<td class="progress">
+								<div>
+									<span><progress value="100" max="100"></progress> </span>
+									<!-- 최신수정이력을 맨위로 가게 작성 -->
+									<ul class="history-list">
+										<li><span class="date">00-00</span><span class="history"></span></li>
+									</ul>
+								</div>
+							</td>
+							<td class="memo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+		</dl>
+	</div>
+</div>
+<div class="layer">
+	<div class="btns">
+		<button type="button">280</button>
+		<button type="button">320</button>
+		<button type="button">360</button>
+		<button type="button">375</button>
+		<button type="button" class="on">414</button>
+		<button type="button">586</button>
+		<a href="#none" target="_blank" class="new-window">새창</a>
+	</div>
+	<button type="button" class="btn-close">닫기</button>
+</div>
+<script src="resources/js/jquery-1.11.1.min.js"></script>
+<script>
+	$(function() {
+		$('a').click(function(e) {
+			if ($(this).attr('href') === '#none') {
+				e.preventDefault();
+			}
+		});
+
+		// --total
+		var $ele = $('tr:not(.del, .guide) progress');
+		var $comp = $('tr:not(.del, .guide) progress[value=100]');
+		var total = $ele.length;
+		var complete = $comp.length;
+		var per = (complete / total * 100).toFixed(1);
+
+		console.log(total);
+
+		$('.count span').eq(0).text(total + 'p');
+		$('.count span').eq(1).text(complete + 'p');
+		$('.count span').eq(2).text(per + '%');
+		// --total end
+
+		// tab menu
+		var tm = $('.menu>dt');
+		var tc = $('.menu>dd');
+		var btnAll = $('.viewAll');
+		var menu = tm.not(btnAll);
+
+		$('.menu>dt.selected').next('dd').show();
+		btnAll.click(function() {
+			tm.not($(this).addClass('selected')).removeClass('selected');
+			tc.show();
+		});
+		menu.click(function() {
+			tm.not($(this).addClass('selected')).removeClass('selected');
+			$(this).next('dd').show().siblings('dd').hide();
+		});
+		menu.not(menu.eq(0)).each(function() {
+			var tmw = $(this).prevAll('dt').width();
+			var tml = $(this).prevAll('dt').position().left;
+			var tmp = tml + tmw;
+			$(this).css('left', tmp);
+		});
+
+		// history
+		var $hislist = $('.history-list');
+		var now = new Date();
+		var month = (now.getMonth() + 1) > 9 ? '' + (now.getMonth() + 1) : '0' + (now.getMonth() + 1);
+		var day = now.getDate() > 9 ? '' + now.getDate() : '0' + now.getDate();
+		var today = month + '-' + day;
+
+		$hislist.each(function() {
+			var nodes = $(this).children();
+			var upday = $(this).find('li:first-child').find('.date').text().slice(0, 5);
+
+			if (nodes.length > 1) {
+				$('<button type="button" class="btn-history" />').appendTo($(this).parent('div')).text('수정이력');
+
+				if (upday == today) {
+					$(this).siblings('.btn-history').addClass('up').text('UPDATE');
+				}
+			}else if(nodes.length == 1 && upday == today){
+				$('<span class="btn-history new" />').appendTo($(this).parent('div')).text('NEW');
+			}
+		});
+
+		var $btnHis = $('.btn-history');
+		$btnHis.on('click', function() {
+			$(this).siblings('ul').toggleClass('open');
+		});
+
+		$('.link a').on('click', function(e) {
+			if (screen.width > 700) {
+				e.preventDefault();
+
+				var url = $(this).attr('href');
+				var iframeTag = '<iframe src="" frameborder="0"></iframe>';
+				var $layer = $('.layer');
+				var nw = $layer.find('.new-window');
+
+				$layer.find('iframe').remove();
+				$layer.append(iframeTag);
+				$layer.show();
+				$layer.find('iframe').attr('src', url);
+				nw.attr('href', url);
+				$('.link a').not($(this).css('color', 'red')).removeAttr('style');
+			}
+		});
+
+		$('.layer .btn-close').on('click', function() {
+			$('.layer').hide();
+			$('.link a').removeAttr('style');
+		});
+
+		$('.layer .btns button').on('click', function() {
+			var size = $(this).text();
+			var preview = $('.layer');
+
+			if (size == 280) {
+				preview.css({
+					width: 280,
+					height: 600
+				});
+			} else if (size == 320) {
+				preview.css({
+					width: 320,
+					height: 564
+				});
+			} else if (size == 360) {
+				preview.css({
+					width: 360,
+					height: 640
+				});
+			} else if (size == 375) {
+				preview.css({
+					width: 375,
+					height: 667
+				});
+			} else if (size == 414) {
+				preview.css({
+					width: 414,
+					height: 736
+				});
+			} else if (size == 586) {
+				preview.css({
+					width: 586,
+					height: 781
+				});
+			} else if (size == '새창') {
+				preview.css({
+					width: 375,
+					height: 667
+				});
+			}
+
+			$('.layer .btns button').not($(this).addClass('on')).removeClass('on');
+		});
+
+		// to top
+		var scrollDiv = document.createElement('div');
+		$(scrollDiv).attr('id', 'toTop').html('<a href="#none">↑ 처음으로 이동</a>').appendTo('body');
+		$(window).scroll(function() {
+			if ($(this).scrollTop() !== 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		});
+		$('#toTop').click(function() {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 600);
+		});
+
+		sessionStorage.setItem("theme", "")
+		$("#themeList").change(function(){
+			sessionStorage.setItem("theme", $(this).val())
+		})
+
+	});
+</script>
+</body>
+</html>
