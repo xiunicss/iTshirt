@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>팀 만들기</title>
+		<link rel="stylesheet" href="../resources/css/base.css">
+		<script src="../resources/js/jquery-1.11.1.min.js"></script>
+		<script src="../resources/js/ui.js"></script>
+		<script src="../resources/js/jquery.touchSwipe.js"></script>
+	</head>
+<body>
+    <!-- wrapper -->
+	<div class="wrapper bg-white" id="wrapper">
+		<!-- sub header -->
+		<header>
+			<button type="button" class="btn-prev">
+				<span class="sr-only">이전페이지로 가기</span>
+			</button>
+			<h1 class="sub-title">팀 만들기</h1>
+			<div>
+				<a href="#" class="btn-home"><span class="sr-only">메인으로 가기</span></a>
+				<button type="button" class="btn-menu" onclick="UI.layerPop('.menu-layer');">
+					<span class="sr-only">메뉴 보기</span>
+				</button>
+			</div>
+		</header>
+		<!-- sub header -->
+		<!-- contents -->
+		<div class="contents maketeam" id="contents">
+			<div class="top-title">
+        	    <h2>팀 이름을<br>입력해 주세요.</h2>
+			</div>
+			<fieldset class="form">
+				<legend>팀 이름을 입력</legend>
+				<dl>
+					<dt>
+						<div class="label">팀 이름</div>
+					</dt>
+					<dd class="form-control">
+						<input type="text" value="" placeholder="팀 이름을 입력해 주세요.">
+					</dd>
+				</dl>
+			</fieldset>
+
+			<div class="page-btns fixed-float">
+				<button type="button" class="btn-lg-primary">다음</button>
+			</div>
+
+        </div><!-- //contents -->
+              
+	</div><!-- // wrapper -->
+
+
+</html>
