@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>팀 만들기</title>
+		<link rel="stylesheet" href="../resources/css/base.css">
+		<script src="../resources/js/jquery-1.11.1.min.js"></script>
+		<script src="../resources/js/ui.js"></script>
+		<script src="../resources/js/jquery.touchSwipe.js"></script>
+	</head>
+<body>
+    <!-- wrapper -->
+	<div class="wrapper bg-white" id="wrapper">
+		<!-- sub header -->
+		<header>
+			<button type="button" class="btn-prev">
+				<span class="sr-only">이전페이지로 가기</span>
+			</button>
+			<h1 class="sub-title">팀 만들기</h1>
+			<div>
+				<a href="#" class="btn-home"><span class="sr-only">메인으로 가기</span></a>
+				<button type="button" class="btn-menu" onclick="UI.layerPop('.menu-layer');">
+					<span class="sr-only">메뉴 보기</span>
+				</button>
+			</div>
+		</header>
+		<!-- sub header -->
+		<!-- contents -->
+		<div class="contents maketeam" id="contents">
+			<div class="top-title">
+				<h2>주로 운동하는 시간을<br>
+					알려주세요.</h2>
+				<p>운동시간이 맞는 사람들을 모을 수 있어요!</p>
+			</div>
+
+			<h3 class="title-d3">운동 요일</h3>	 
+			<div class="form-chk-set">
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox1" checked="">
+                    <label for="checkbox1">월</label>
+                </span> 
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox2">
+                    <label for="checkbox2">화</label>
+                </span>
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox3" >
+                    <label for="checkbox3">수</label>
+                </span>
+				<span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox1" checked="">
+                    <label for="checkbox1">목</label>
+                </span> 
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox2">
+                    <label for="checkbox2">금</label>
+                </span>
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox3" >
+                    <label for="checkbox3">토</label>
+                </span>
+				<span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox3" >
+                    <label for="checkbox3">일</label>
+                </span>
+            </div>
+
+			<h3 class="title-d3">운동 시간</h3>	 
+			<div class="form-chk-set">
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox1" checked="">
+                    <label for="checkbox1">아침</label>
+                </span> 
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox2">
+                    <label for="checkbox2">낮</label>
+                </span>
+                <span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox3" >
+                    <label for="checkbox3">저녁</label>
+                </span>
+				<span class="form-chk">
+                    <input type="checkbox" name="" id="checkbox1">
+                    <label for="checkbox1">심야</label>
+                </span> 
+            </div>
+
+			<div class="page-btns fixed-float">
+				<button type="button" class="btn-lg-secondary">뒤로</button>
+				<button type="button" class="btn-lg-primary">다음</button>
+			</div>
+
+        </div><!-- //contents -->
+              
+	</div><!-- // wrapper -->
+
+
+</html>

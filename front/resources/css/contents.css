@@ -4,3 +4,10 @@
 .sns-login{width: 100%;}
 .sns-login li + li{margin-top: 8px;}
 .sns-login li button{width: 100%;}
+
+/* 팀만들기 */
+.top-title{margin-bottom: 3.25rem;margin-top: 2.5rem;}
+.top-title h2{font-size: 1.5rem;font-weight: 500;line-height: 1.4;}
+.top-title p{font-size: 0.875rem;font-weight: 400;color: var(--cm-gray700);margin-top: 0.875rem;}
+.btn-area.flex-col{display: flex;flex-direction: column;gap: 0.5rem;}
+.btn-area.flex-col button{width: 100%;}
